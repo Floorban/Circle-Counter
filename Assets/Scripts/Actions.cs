@@ -9,4 +9,7 @@ public static class Actions
     public static Action<People> onClickPpl;
     public static Action onMouseExitPpl;
 
+    public static Action OnLevelStart;
+    public static Action OnLevelEnd;
+
 }
