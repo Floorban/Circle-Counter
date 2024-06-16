@@ -18,6 +18,7 @@ public class RevolverController : MonoBehaviour
 
     [Header("Shooting Logic")]
     public bool canShoot;
+    int shootCount = 0;
     public float fireCoolDown;
     float currentCoolDown;
     [SerializeField] float shootRange;
@@ -42,13 +43,17 @@ public class RevolverController : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0)) 
         {
-            if (canShoot)
+            if (canShoot && shootCount < 6)
             {
                 if (currentCoolDown <= 0f)
                 {
                     TryShoot();
                     currentCoolDown = fireCoolDown;
                 }
+            }
+            else
+            {
+                Debug.Log("can't shoot no more");
             }
         }
 
@@ -65,9 +70,12 @@ public class RevolverController : MonoBehaviour
         for (int i = 1; i < originalHoles.Count; i++)
         {
             int nextIndex = (selectedSlotIndex + i) % originalHoles.Count;
-            currentHoles.Add(originalHoles[nextIndex]);
-            currentHoles[i].image.color = Color.white;
+            currentHoles.Add(originalHoles[nextIndex]);;
+            currentHoles[i].image.color = Color.black;
         }
+
+        int halfSize = currentHoles.Count / 2;
+        currentHoles.RemoveRange(0, halfSize);
     }
     public void TryShoot()
     {
@@ -99,7 +107,7 @@ public class RevolverController : MonoBehaviour
             }
 
             bulletNum--;
-
+            shootCount++;
         }
         else
         {
@@ -128,31 +136,30 @@ public class RevolverController : MonoBehaviour
     {
         if (inChamber)
         {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-            canShoot = true;
             CloseChamber();
             inChamber = false;
         }
         else
         {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-            canShoot = false;
             OpenChamber();
             inChamber = true;
         }
     }
     public void OpenChamber()
     {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        canShoot = false;
         chamber.ResetChamber();
         bulletNum = 0;
-        //chamberPanel.SetActive(true);
         inventoryPanel.SetActive(true);
     }
     public void CloseChamber()
     {
-        //chamberPanel.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        canShoot = true;
+        shootCount = 0;
         inventoryPanel.SetActive(false);
         RandomizeChamber();
     }

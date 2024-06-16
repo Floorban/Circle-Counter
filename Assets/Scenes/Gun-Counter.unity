@@ -6786,7 +6786,7 @@ MonoBehaviour:
   bulletNum: 0
   bulletNumText: {fileID: 1945456686}
   canShoot: 0
-  fireCoolDown: 1
+  fireCoolDown: 0.2
   shootRange: 5
   playerCam: {fileID: 709779230}
 --- !u!1001 &1666953912

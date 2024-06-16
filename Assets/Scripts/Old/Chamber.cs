@@ -66,6 +66,7 @@ public class Chamber : MonoBehaviour
                 inventory.ownedBullets.Add(holes[i].myBullet);
                 holes[i].myBullet.gameObject.SetActive(true);
                 holes[i].myBullet = null;
+                holes[i].image.color = Color.white;
             }
         }
 
@@ -74,7 +75,7 @@ public class Chamber : MonoBehaviour
             inventory.ownedBullets[i].ResetBullet();
         }
 
-        //FindObjectOfType<Player>().reward = 0;
+        FindObjectOfType<Player>().reward = 0;
     }
 
     public void EnableHoles()
