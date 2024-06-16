@@ -154,7 +154,7 @@ public class RevolverController : MonoBehaviour
         shootCount++;
         currentHoles.RemoveAt(0);
 
-        if (player.shootSelf && bulletNum > 0)
+        if (player.shootSelf && bulletNum >= 0)
         {
             player.UpdateEnergy();
         }
