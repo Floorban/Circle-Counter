@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -12,20 +13,25 @@ public class Player : MonoBehaviour
     public int maxHp;
     public bool isDead;
     public int gold;
-    [Range (0, 1f)] public float tension;
 
     [Header("UI")]
-    [SerializeField] Image tensionBar;
-    [SerializeField] TextMeshProUGUI tensionText;
+    [SerializeField] Image EnergyBar;
+    [SerializeField] TextMeshProUGUI EnergyText;
+    [SerializeField] Image hpBar;
+    [SerializeField] TextMeshProUGUI hpText;
+    [SerializeField] TextMeshProUGUI rewardText;
+    [SerializeField] TextMeshProUGUI goldText;
 
+    public bool shootSelf;
+    public int reward;
+    void EndRound()
+    {
+        Debug.Log("round ends");
+        SceneManager.LoadScene(0);
+    }
     void Start()
     {
         InitializeStatus();
-    }
-    private void Update()
-    {
-        tensionBar.fillAmount = tension / 1f;
-        tensionText.text = $"Tension {tension}";
     }
     public void InitializeStatus()
     {
@@ -35,12 +41,24 @@ public class Player : MonoBehaviour
     public void TakeDamage(int dmg)
     {
         hp -= dmg;
-        Actions.OnDamageCaused.Invoke();
+        UpdateUI() ;
 
         if (hp <= 0)
         {
             isDead = true;
-            Actions.OnLevelFinished.Invoke();
+            EndRound();
         }
+    }
+    public void UpdateGold()
+    {
+        gold += reward;
+        UpdateUI();
+    }
+    public void UpdateUI()
+    {
+      /*  hpBar.fillAmount = (float)hp / (float)maxHp;
+        hpText.text = $"My Hp: {hp}";
+        rewardText.text = $"Earn: ${reward} each shot";
+        goldText.text = $"Gold: ${gold}";*/
     }
 }

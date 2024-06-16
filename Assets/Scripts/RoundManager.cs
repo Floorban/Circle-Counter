@@ -17,7 +17,7 @@ public class RoundManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI hpText;
     [SerializeField] TextMeshProUGUI rewardText;
     [SerializeField] TextMeshProUGUI goldText;
-    private void OnEnable()
+/*    private void OnEnable()
     {
         Actions.OnDamageCaused += UpdateUI;
         Actions.OnLevelFinished += EndRound;
@@ -26,7 +26,7 @@ public class RoundManager : MonoBehaviour
     {
         Actions.OnDamageCaused -= UpdateUI;
         Actions.OnLevelFinished -= EndRound;
-    }
+    }*/
     private void Awake()
     {
         instance = this;

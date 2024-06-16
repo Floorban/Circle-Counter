@@ -92,7 +92,7 @@ public class Chamber : MonoBehaviour
         }
 
         hole.myBullet = inventory.selectedBullet;
-        RoundManager.instance.reward += inventory.selectedBullet.reward;
+        FindObjectOfType<Player>().reward += inventory.selectedBullet.reward;
         inventory.selectedBullet.gameObject.SetActive(false);
         inventory.ownedBullets.Remove(inventory.selectedBullet);
         inventory.EnableButtons();

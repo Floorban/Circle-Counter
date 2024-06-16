@@ -4658,9 +4658,14 @@ MonoBehaviour:
   maxHp: 5
   isDead: 0
   gold: 0
-  tension: 0
   tensionBar: {fileID: 1641997490}
   tensionText: {fileID: 769818755}
+  hpBar: {fileID: 0}
+  hpText: {fileID: 0}
+  rewardText: {fileID: 0}
+  goldText: {fileID: 0}
+  shootSelf: 0
+  reward: 0
 --- !u!114 &1641997490 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3749219574906502685, guid: effbb445d51df414b8a9b3a69f2a7540,
@@ -5103,9 +5108,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08bf01faea30e48438daa304a56ce1f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  senX: 1000
-  senY: 1000
-  orientation: {fileID: 0}
 --- !u!1 &1836027097
 GameObject:
   m_ObjectHideFlags: 0

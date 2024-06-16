@@ -5,24 +5,44 @@ using TMPro;
 
 public class RevolverController : MonoBehaviour
 {
-    [SerializeField] GameObject chamberPanel;
-    [SerializeField] GameObject inventoryPanel;
+    [Header ("Chamber")]
     Chamber chamber;
     Inventory inventory;
     Player player;
-
+    bool inChamber;
+    [SerializeField] GameObject chamberPanel;
+    [SerializeField] GameObject inventoryPanel;
     public List<Hole> currentHoles;
     public int bulletNum;
     [SerializeField] TextMeshProUGUI bulletNumText;
+
+    [Header("Shooting Logic")]
+    public float fireCoolDown;
+    float currentCoolDown;
+    [SerializeField] float shootRange;
+    [SerializeField] Transform playerCam;
     void Start()
     {
         chamber = chamberPanel.GetComponentInChildren<Chamber>();
         inventory = inventoryPanel.GetComponentInChildren<Inventory>();
         player = FindObjectOfType<Player>();
+
+        currentCoolDown = fireCoolDown;
     }
     private void Update()
     {
-        bulletNumText.text = $"Bullets In Chamber: {bulletNum}";
+        bulletNumText.text = $"{bulletNum} / 6";
+
+        if (Input.GetMouseButtonDown(0)) 
+        {
+            if (currentCoolDown <= 0f)
+            {
+                TryShoot();
+                currentCoolDown = fireCoolDown;
+            }
+        }
+
+        currentCoolDown -= Time.deltaTime;
     }
     public void RandomizeChamber()
     {
@@ -50,18 +70,17 @@ public class RevolverController : MonoBehaviour
 
             if (currentBullet.isReal)
             {
-                float randomValue = Random.value;
-
-                if (player.tension < randomValue)
+                if (player.shootSelf)
                 {
-                    RoundManager.instance.player.TakeDamage(currentBullet.dmg);
+                    player.TakeDamage(currentBullet.dmg);
                     Destroy(currentBullet.gameObject);
                     inventory.ownedBullets.Remove(currentBullet);
                 }
                 else
                 {
-                    player.gold -= 5;
-                    Debug.Log("bullet in the celling");
+                    ShootAt(currentBullet);
+                    Destroy(currentBullet.gameObject);
+                    inventory.ownedBullets.Remove(currentBullet);
                 }
             }
             else
@@ -78,8 +97,31 @@ public class RevolverController : MonoBehaviour
 
         if (bulletNum > 0)
         {
-            player.tension += 0.1f * bulletNum;
             RoundManager.instance.UpdateGold();
+        }
+    }
+    void ShootAt(Bullet bullet)
+    {
+        Ray gunRay = new Ray(playerCam.position, playerCam.forward);
+        if (Physics.Raycast(gunRay, out RaycastHit hitInfo, shootRange))
+        {
+            if (hitInfo.collider.gameObject.TryGetComponent(out Entity enemy)) 
+            {
+                enemy.TakeDamage(bullet.dmg);
+            }
+        }
+    }
+    public void CheckChamber()
+    {
+        if (inChamber)
+        {
+            CloseChamber();
+            inChamber = false;
+        }
+        else
+        {
+            OpenChamber();
+            inChamber = true;
         }
     }
     public void OpenChamber()
@@ -92,7 +134,6 @@ public class RevolverController : MonoBehaviour
     {
         chamberPanel.SetActive(false);
         inventoryPanel.SetActive(false);
-
         RandomizeChamber();
     }
 }

@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     public float interactRange;
     [SerializeField] GameObject interactPanel;
     [SerializeField] TextMeshProUGUI interactText;
+    Player player;
 
     [Header("Movement")]
     private float moveSpeed;
@@ -74,6 +75,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        player = GetComponent<Player>();
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
 
@@ -130,6 +132,11 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyUp(crouchKey))
         {
             transform.localScale = new Vector3(transform.localScale.x, startYScale, transform.localScale.z);
+        }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            player.shootSelf = !player.shootSelf;
         }
     }
 

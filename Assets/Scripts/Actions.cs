@@ -5,8 +5,8 @@ using UnityEngine;
 
 public static class Actions
 {
-    public static Action OnLevelFinished;
-    public static Action OnDamageCaused;
+/*    public static Action OnLevelFinished;
+    public static Action OnDamageCaused;*/
 
     public static Action OnShoot;
     public static Action<Bullet> OnReload;
