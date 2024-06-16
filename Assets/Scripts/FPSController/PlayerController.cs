@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] WeaponSway weaponSway;
     [SerializeField] ViewBobbing viewBob;
     [SerializeField] Animator handAnimator;
+    [SerializeField] GameObject normalView;
+    [SerializeField] GameObject selfView;
 
     [Header("Interaction")]
     public Transform interactorSource;
@@ -138,7 +140,18 @@ public class PlayerController : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
         {
             player.shootSelf = !player.shootSelf;
-            handAnimator.SetBool("Shoot_Self", player.shootSelf);
+
+            if (player.shootSelf)
+            {
+                handAnimator.SetTrigger("ToSelf");
+            }
+            else
+            {
+                handAnimator.SetTrigger("ToNormal");
+
+                /*   normalView.gameObject.SetActive(false);
+                   selfView.gameObject.SetActive(true);*/
+            }
         }
     }
 

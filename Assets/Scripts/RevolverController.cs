@@ -24,6 +24,7 @@ public class RevolverController : MonoBehaviour
     [SerializeField] float shootRange;
     [SerializeField] Transform playerCam;
     [SerializeField] Animator gunAnimator;
+    [SerializeField] Animator self_gunAnimator;
     void Start()
     {
         canShoot = false;
@@ -54,26 +55,43 @@ public class RevolverController : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            if (!canShoot && !isShot)
-            {
-                gunAnimator.SetTrigger("Ready");
-                canShoot = true;
-            }
-            else if (canShoot && !isShot)
+            if (canShoot)
             {
                 if (currentCoolDown <= 0f)
                 {
                     TryShoot();
                     gunAnimator.SetTrigger("Shoot");
+                    self_gunAnimator.SetTrigger("Shoot");
                     currentCoolDown = fireCoolDown;
-                    isShot = true;
                 }
-            }
-            else if (isShot)
-            {
-                gunAnimator.SetTrigger("Reload");
-                canShoot = false;
-                isShot = false;
+
+                /*  if (!canShoot && !isShot)
+                  {
+                      gunAnimator.SetTrigger("Ready");
+                      self_gunAnimator.SetTrigger("Ready");
+
+                      canShoot = true;
+                  }
+                  else if (canShoot && !isShot)
+                  {
+                      if (currentCoolDown <= 0f)
+                      {
+                          TryShoot();
+                          gunAnimator.SetTrigger("Shoot");
+                          self_gunAnimator.SetTrigger("Shoot");
+
+                          currentCoolDown = fireCoolDown;
+                          isShot = true;
+                      }
+                  }
+                  else if (isShot)
+                  {
+                      gunAnimator.SetTrigger("Reload");
+                      self_gunAnimator.SetTrigger("Reload");
+
+                      canShoot = false;
+                      isShot = false;
+                  }*/
             }
         }
     }
@@ -176,7 +194,7 @@ public class RevolverController : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        //canShoot = true;
+        canShoot = true;
         shootCount = 0;
         inventoryPanel.SetActive(false);
         canControl = true;
