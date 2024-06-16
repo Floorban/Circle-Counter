@@ -15,6 +15,7 @@ public class NPCController : MonoBehaviour, IInteractable
     [SerializeField] float amplitudeMax;
     private Vector3 startPosition;
     private float timeCounter = 0;
+    [SerializeField] string prompt;
 
     void Start()
     {
@@ -52,8 +53,12 @@ public class NPCController : MonoBehaviour, IInteractable
         }
     }
 
-    public void OnInteract()
+    public void OnInteract(string prompt)
     {
         Debug.Log(gameObject.name + "im here");
+    }
+    public string GetPrompt()
+    {
+        return prompt;
     }
 }

@@ -4,7 +4,8 @@ using UnityEngine;
 using TMPro;
 interface IInteractable
 {
-    public void OnInteract();
+    public void OnInteract(string prompt);
+    string GetPrompt();
 }
 public class PlayerController : MonoBehaviour
 {
@@ -263,18 +264,21 @@ public class PlayerController : MonoBehaviour
             if (hitInfo.collider.gameObject.TryGetComponent(out IInteractable interactObj))
             {
                 interactPanel.SetActive(true);
-                interactText.text = $"{hitInfo.collider.gameObject.name} ('E')";
+                interactText.text = $"{interactObj.GetPrompt()} ('E')";
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    interactObj.OnInteract();
+                    interactObj.OnInteract(interactObj.GetPrompt());
                 }
+            }
+            else
+            {
+                interactPanel.SetActive(false);
             }
         }
         else
         {
             interactPanel.SetActive(false);
         }
-
     }
     private void OnDrawGizmos()
     {

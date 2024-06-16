@@ -8,6 +8,7 @@ public class Door : MonoBehaviour, IInteractable
     Timer timer;
     public bool isStartDoor;
     public Transform tpPoint;
+    [SerializeField] string prompt;
 
     void Start()
     {
@@ -15,23 +16,26 @@ public class Door : MonoBehaviour, IInteractable
         timer = FindObjectOfType<Timer>();
     }
 
-    public void OnInteract()
+    public void OnInteract(string prompt)
     {
-            if (!isStartDoor)
-            {
-                timer.canRun = false;
-                Debug.Log("level ends");
-            }
-            else
-            {
-                timer.canRun = true;
-                Debug.Log("level starts");
-            }
+        if (!isStartDoor)
+        {
+            timer.canRun = false;
+            Debug.Log("level ends");
+        }
+        else
+        {
+            timer.canRun = true;
+            Debug.Log("level starts");
+        }
 
-            player.SetActive(false);
-            player.transform.position = tpPoint.position;
-            player.SetActive(true);
-            timer.ShakeTimer();
+        player.SetActive(false);
+        player.transform.position = tpPoint.position;
+        player.SetActive(true);
+        timer.ShakeTimer();
     }
- 
+    public string GetPrompt()
+    {
+        return prompt;
+    }
 }
