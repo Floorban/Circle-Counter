@@ -17,7 +17,7 @@ public class RevolverController : MonoBehaviour
     [SerializeField] TextMeshProUGUI bulletNumText;
 
     [Header("Shooting Logic")]
-    public bool canShoot, isShot;
+    public bool canControl, canShoot, isShot;
     int shootCount = 0;
     public float fireCoolDown;
     float currentCoolDown;
@@ -44,8 +44,15 @@ public class RevolverController : MonoBehaviour
         }
 
         bulletNumText.text = $"{bulletNum} / 6";
+        currentCoolDown -= Time.deltaTime;
 
-        if (Input.GetMouseButtonDown(0)) 
+        HandleControl();
+    }
+    void HandleControl()
+    {
+        if (!canControl) return;
+
+        if (Input.GetMouseButtonDown(0))
         {
             if (!canShoot && !isShot)
             {
@@ -66,11 +73,9 @@ public class RevolverController : MonoBehaviour
             {
                 gunAnimator.SetTrigger("Reload");
                 canShoot = false;
-                isShot= false;
+                isShot = false;
             }
         }
-
-        currentCoolDown -= Time.deltaTime;
     }
     public void RandomizeChamber()
     {
@@ -165,14 +170,16 @@ public class RevolverController : MonoBehaviour
         chamber.ResetChamber();
         bulletNum = 0;
         inventoryPanel.SetActive(true);
+        canControl = false;
     }
     public void CloseChamber()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        canShoot = true;
+        //canShoot = true;
         shootCount = 0;
         inventoryPanel.SetActive(false);
+        canControl = true;
         RandomizeChamber();
     }
 }
