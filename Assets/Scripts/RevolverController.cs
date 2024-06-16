@@ -17,14 +17,18 @@ public class RevolverController : MonoBehaviour
     [SerializeField] TextMeshProUGUI bulletNumText;
 
     [Header("Shooting Logic")]
-    public bool canShoot;
+    public bool canShoot, isShot;
     int shootCount = 0;
     public float fireCoolDown;
     float currentCoolDown;
     [SerializeField] float shootRange;
     [SerializeField] Transform playerCam;
+    [SerializeField] Animator gunAnimator;
     void Start()
     {
+        canShoot = false;
+        isShot = false;
+        shootCount = 0;
         chamber = chamberPanel.GetComponentInChildren<Chamber>();
         inventory = inventoryPanel.GetComponentInChildren<Inventory>();
         player = FindObjectOfType<Player>();
@@ -43,17 +47,26 @@ public class RevolverController : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0)) 
         {
-            if (canShoot && shootCount < 6)
+            if (!canShoot && !isShot)
+            {
+                gunAnimator.SetTrigger("Ready");
+                canShoot = true;
+            }
+            else if (canShoot && !isShot)
             {
                 if (currentCoolDown <= 0f)
                 {
                     TryShoot();
+                    gunAnimator.SetTrigger("Shoot");
                     currentCoolDown = fireCoolDown;
+                    isShot = true;
                 }
             }
-            else
+            else if (isShot)
             {
-                Debug.Log("can't shoot no more");
+                gunAnimator.SetTrigger("Reload");
+                canShoot = false;
+                isShot= false;
             }
         }
 
