@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     public float camTiltSpeed = 2f;
     [SerializeField] WeaponSway weaponSway;
     [SerializeField] ViewBobbing viewBob;
+    [SerializeField] Animator handAnimator;
 
     [Header("Interaction")]
     public Transform interactorSource;
@@ -137,6 +138,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
         {
             player.shootSelf = !player.shootSelf;
+            handAnimator.SetBool("Shoot_Self", player.shootSelf);
         }
     }
 

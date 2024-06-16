@@ -74,8 +74,7 @@ public class RevolverController : MonoBehaviour
             currentHoles[i].image.color = Color.black;
         }
 
-        int halfSize = currentHoles.Count / 2;
-        currentHoles.RemoveRange(0, halfSize);
+        chamber.StartReloadAnimation();
     }
     public void TryShoot()
     {

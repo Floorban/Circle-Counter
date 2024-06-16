@@ -30,6 +30,7 @@ public class Chamber : MonoBehaviour
     }
     void Start()
     {
+        rectTransform = GetComponent<RectTransform>();
         inventory = FindObjectOfType<Inventory>();
         InitializeChamber();
     }
@@ -105,5 +106,34 @@ public class Chamber : MonoBehaviour
         {
             holes[i].button.enabled = false;
         }
+    }
+
+    public float rotations = 3f; 
+    public float duration = 2f;  
+
+    private RectTransform rectTransform;
+
+
+    public void StartReloadAnimation()
+    {
+        StartCoroutine(RotateCylinder());
+    }
+
+    private IEnumerator RotateCylinder()
+    {
+        float startRotation = rectTransform.rotation.eulerAngles.z;
+        float endRotation = startRotation + 360f * rotations;
+        float elapsedTime = 0f;
+
+        while (elapsedTime < duration)
+        {
+            float zRotation = Mathf.Lerp(startRotation, endRotation, elapsedTime / duration) % 360f;
+            rectTransform.rotation = Quaternion.Euler(0, 0, zRotation);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        // Ensure the final rotation is exactly the start rotation
+        rectTransform.rotation = Quaternion.Euler(0, 0, startRotation);
     }
 }
