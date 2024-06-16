@@ -118,6 +118,10 @@ public class Chamber : MonoBehaviour
     {
         StartCoroutine(RotateCylinder());
     }
+    public void EndShootAnimation()
+    {
+        StartCoroutine(RotateCylinderOneBullet());
+    }
 
     private IEnumerator RotateCylinder()
     {
@@ -135,5 +139,23 @@ public class Chamber : MonoBehaviour
 
         // Ensure the final rotation is exactly the start rotation
         rectTransform.rotation = Quaternion.Euler(0, 0, startRotation);
+    }
+    private IEnumerator RotateCylinderOneBullet()
+    {
+        float startRotation = rectTransform.rotation.eulerAngles.z;
+        float endRotation = startRotation + 60f; // 60 degrees clockwise
+        float elapsedTime = 0f;
+        float duration = 0.2f; // Adjust this for how long you want the rotation to take
+
+        while (elapsedTime < duration)
+        {
+            float zRotation = Mathf.Lerp(startRotation, endRotation, elapsedTime / duration) % 360f;
+            rectTransform.rotation = Quaternion.Euler(0, 0, zRotation);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        // Ensure the final rotation is exactly 60 degrees clockwise from the start
+        rectTransform.rotation = Quaternion.Euler(0, 0, endRotation % 360f);
     }
 }

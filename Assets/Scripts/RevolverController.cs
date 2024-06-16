@@ -62,6 +62,7 @@ public class RevolverController : MonoBehaviour
                     TryShoot();
                     gunAnimator.SetTrigger("Shoot");
                     self_gunAnimator.SetTrigger("Shoot");
+                    chamber.EndShootAnimation();
                     currentCoolDown = fireCoolDown;
                 }
 
@@ -107,9 +108,11 @@ public class RevolverController : MonoBehaviour
         {
             int nextIndex = (selectedSlotIndex + i) % originalHoles.Count;
             currentHoles.Add(originalHoles[nextIndex]);;
+        }
+        for (int i = 0; i < currentHoles.Count; i++)
+        {
             currentHoles[i].image.color = Color.black;
         }
-
         chamber.StartReloadAnimation();
     }
     public void TryShoot()
@@ -196,6 +199,8 @@ public class RevolverController : MonoBehaviour
         Cursor.visible = false;
         canShoot = true;
         shootCount = 0;
+        inventory.DisableBulletButton();
+         Actions.OnBulletDeselected();
         inventoryPanel.SetActive(false);
         canControl = true;
         RandomizeChamber();
