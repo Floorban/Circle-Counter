@@ -142,16 +142,16 @@ public class RevolverController : MonoBehaviour
             }
 
             bulletNum--;
-            shootCount++;
         }
         else
         {
             Debug.Log("no bullet");
         }
 
+        shootCount++;
         currentHoles.RemoveAt(0);
 
-        if (bulletNum > 0)
+        if (player.shootSelf && bulletNum > 0)
         {
             player.UpdateEnergy();
         }

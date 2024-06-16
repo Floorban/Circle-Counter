@@ -3355,9 +3355,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orientation: {fileID: 1880663843}
-  camTrans: {fileID: 1903960420}
-  camTiltAngle: 10
-  camTiltSpeed: 10
   weaponSway: {fileID: 1625975500}
   viewBob: {fileID: 1625975503}
   handAnimator: {fileID: 1625975506}
@@ -3779,6 +3776,8 @@ MonoBehaviour:
   senX: 1000
   senY: 1000
   orientation: {fileID: 1880663843}
+  camTiltAngle: 100
+  camTiltSpeed: 2
 --- !u!1001 &712717648
 PrefabInstance:
   m_ObjectHideFlags: 0

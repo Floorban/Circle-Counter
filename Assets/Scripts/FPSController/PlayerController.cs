@@ -11,9 +11,6 @@ public class PlayerController : MonoBehaviour
 {
     [Header("Motion")]
     public Transform orientation;
-    public Transform camTrans;
-    public float camTiltAngle = 5f;
-    public float camTiltSpeed = 2f;
     [SerializeField] WeaponSway weaponSway;
     [SerializeField] ViewBobbing viewBob;
     [SerializeField] Animator handAnimator;
@@ -272,13 +269,6 @@ public class PlayerController : MonoBehaviour
     private Vector3 GetSlopeMoveDirection()
     {
         return Vector3.ProjectOnPlane(moveDirection, slopeHit.normal).normalized;
-    }
-    private void HandleCameraTilt()
-    {
-        float targetAngle = horizontalInput * camTiltAngle;
-
-        Quaternion targetRotation = Quaternion.Euler(0, camTrans.localEulerAngles.y, targetAngle);
-        camTrans.localRotation = Quaternion.Slerp(camTrans.localRotation, targetRotation, Time.deltaTime * camTiltSpeed);
     }
     void InteractWith()
     {
