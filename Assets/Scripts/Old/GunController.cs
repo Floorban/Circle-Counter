@@ -116,7 +116,7 @@ public class GunController : MonoBehaviour
             if (currentBulletsList[0].isReal)
             {
                 animator.SetTrigger("Fire");
-                GameManager.instance.currentOpponent.TakeDamage(currentBulletsList[0].dmg + addedDmg);
+                //GameManager.instance.currentOpponent.TakeDamage(currentBulletsList[0].dmg + addedDmg);
                 dmgText.text = $"Damage Caused:  {currentBulletsList[0].dmg + addedDmg}";
             }
             else

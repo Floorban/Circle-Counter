@@ -27,6 +27,14 @@ public class Player : MonoBehaviour
 
     public bool shootSelf;
     public int reward;
+    private void OnEnable()
+    {
+        Actions.OnLevelEnd += InitializeStatus;
+    }
+    private void OnDisable()
+    {
+        Actions.OnLevelEnd -= InitializeStatus;
+    }
     void EndRound()
     {
         Debug.Log("round ends");
@@ -54,6 +62,7 @@ public class Player : MonoBehaviour
     {
         hp = maxHp;
         energy = maxEnergy;
+        isHome = true;
         isDead = false;
     }
     public void TakeDamage(int dmg)

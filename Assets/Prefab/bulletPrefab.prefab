@@ -151,8 +151,11 @@ MonoBehaviour:
   image: {fileID: 0}
   isReal: 0
   isUsed: 0
+  inShop: 0
   dmg: 0
+  reward: 0
   price: 0
+  activeChance: 0
   button: {fileID: 0}
   isSelected: 0
   attributeText: {fileID: 2769590291309930720}
@@ -204,8 +207,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 55.8, y: 28}
-  m_SizeDelta: {x: 80, y: 100}
+  m_AnchoredPosition: {x: -220, y: 220}
+  m_SizeDelta: {x: 360, y: 380}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5873785153059232114
 CanvasRenderer:
@@ -279,8 +282,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 80, y: 100}
+  m_AnchoredPosition: {x: 0.000015259, y: -0.000015259}
+  m_SizeDelta: {x: 350, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6611914753672580688
 CanvasRenderer:
@@ -337,8 +340,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 55
+  m_fontSizeBase: 55
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
