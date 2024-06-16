@@ -783,22 +783,22 @@ PrefabInstance:
     - target: {fileID: 5509418480806001464, guid: 5108bbc4334037449a8e70c01a9c39b5,
         type: 3}
       propertyPath: m_Color.a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5509418480806001464, guid: 5108bbc4334037449a8e70c01a9c39b5,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.82444817
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5509418480806001464, guid: 5108bbc4334037449a8e70c01a9c39b5,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.9079525
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5509418480806001464, guid: 5108bbc4334037449a8e70c01a9c39b5,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.9150943
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5876189714626334471, guid: 5108bbc4334037449a8e70c01a9c39b5,
         type: 3}
@@ -3062,7 +3062,7 @@ MonoBehaviour:
   hpText: {fileID: 0}
   rewardText: {fileID: 0}
   goldText: {fileID: 0}
-  shootSelf: 0
+  shootSelf: 1
   reward: 0
 --- !u!4 &652989115 stripped
 Transform:
@@ -3884,22 +3884,22 @@ PrefabInstance:
     - target: {fileID: 5509418480806001464, guid: 5108bbc4334037449a8e70c01a9c39b5,
         type: 3}
       propertyPath: m_Color.a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5509418480806001464, guid: 5108bbc4334037449a8e70c01a9c39b5,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.82444817
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5509418480806001464, guid: 5108bbc4334037449a8e70c01a9c39b5,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.9079525
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5509418480806001464, guid: 5108bbc4334037449a8e70c01a9c39b5,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.9150943
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5876189714626334471, guid: 5108bbc4334037449a8e70c01a9c39b5,
         type: 3}
@@ -5770,22 +5770,22 @@ PrefabInstance:
     - target: {fileID: 5509418480806001464, guid: 5108bbc4334037449a8e70c01a9c39b5,
         type: 3}
       propertyPath: m_Color.a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5509418480806001464, guid: 5108bbc4334037449a8e70c01a9c39b5,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.82444817
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5509418480806001464, guid: 5108bbc4334037449a8e70c01a9c39b5,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.9079525
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5509418480806001464, guid: 5108bbc4334037449a8e70c01a9c39b5,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.9150943
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5876189714626334471, guid: 5108bbc4334037449a8e70c01a9c39b5,
         type: 3}
@@ -6318,22 +6318,22 @@ PrefabInstance:
     - target: {fileID: 5509418480806001464, guid: 5108bbc4334037449a8e70c01a9c39b5,
         type: 3}
       propertyPath: m_Color.a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5509418480806001464, guid: 5108bbc4334037449a8e70c01a9c39b5,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.82444817
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5509418480806001464, guid: 5108bbc4334037449a8e70c01a9c39b5,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.9079525
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5509418480806001464, guid: 5108bbc4334037449a8e70c01a9c39b5,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.9150943
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5876189714626334471, guid: 5108bbc4334037449a8e70c01a9c39b5,
         type: 3}
@@ -6785,6 +6785,7 @@ MonoBehaviour:
   currentHoles: []
   bulletNum: 0
   bulletNumText: {fileID: 1945456686}
+  canShoot: 0
   fireCoolDown: 1
   shootRange: 5
   playerCam: {fileID: 709779230}
@@ -6809,22 +6810,22 @@ PrefabInstance:
     - target: {fileID: 5509418480806001464, guid: 5108bbc4334037449a8e70c01a9c39b5,
         type: 3}
       propertyPath: m_Color.a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5509418480806001464, guid: 5108bbc4334037449a8e70c01a9c39b5,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.82444817
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5509418480806001464, guid: 5108bbc4334037449a8e70c01a9c39b5,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.9079525
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5509418480806001464, guid: 5108bbc4334037449a8e70c01a9c39b5,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.9150943
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5876189714626334471, guid: 5108bbc4334037449a8e70c01a9c39b5,
         type: 3}
@@ -8829,22 +8830,22 @@ PrefabInstance:
     - target: {fileID: 5509418480806001464, guid: 5108bbc4334037449a8e70c01a9c39b5,
         type: 3}
       propertyPath: m_Color.a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5509418480806001464, guid: 5108bbc4334037449a8e70c01a9c39b5,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.82444817
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5509418480806001464, guid: 5108bbc4334037449a8e70c01a9c39b5,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.9079525
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5509418480806001464, guid: 5108bbc4334037449a8e70c01a9c39b5,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.9150943
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5876189714626334471, guid: 5108bbc4334037449a8e70c01a9c39b5,
         type: 3}

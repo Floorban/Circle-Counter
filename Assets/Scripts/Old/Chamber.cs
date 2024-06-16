@@ -74,7 +74,7 @@ public class Chamber : MonoBehaviour
             inventory.ownedBullets[i].ResetBullet();
         }
 
-        RoundManager.instance.reward = 0;
+        //FindObjectOfType<Player>().reward = 0;
     }
 
     public void EnableHoles()

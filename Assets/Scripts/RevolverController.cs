@@ -17,6 +17,7 @@ public class RevolverController : MonoBehaviour
     [SerializeField] TextMeshProUGUI bulletNumText;
 
     [Header("Shooting Logic")]
+    public bool canShoot;
     public float fireCoolDown;
     float currentCoolDown;
     [SerializeField] float shootRange;
@@ -28,17 +29,26 @@ public class RevolverController : MonoBehaviour
         player = FindObjectOfType<Player>();
 
         currentCoolDown = fireCoolDown;
+        inChamber = true;
     }
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            CheckChamber();
+        }
+
         bulletNumText.text = $"{bulletNum} / 6";
 
         if (Input.GetMouseButtonDown(0)) 
         {
-            if (currentCoolDown <= 0f)
+            if (canShoot)
             {
-                TryShoot();
-                currentCoolDown = fireCoolDown;
+                if (currentCoolDown <= 0f)
+                {
+                    TryShoot();
+                    currentCoolDown = fireCoolDown;
+                }
             }
         }
 
@@ -56,6 +66,7 @@ public class RevolverController : MonoBehaviour
         {
             int nextIndex = (selectedSlotIndex + i) % originalHoles.Count;
             currentHoles.Add(originalHoles[nextIndex]);
+            currentHoles[i].image.color = Color.white;
         }
     }
     public void TryShoot()
@@ -66,7 +77,6 @@ public class RevolverController : MonoBehaviour
 
         if (currentBullet != null)
         {
-            bulletNum--;
 
             if (currentBullet.isReal)
             {
@@ -87,6 +97,9 @@ public class RevolverController : MonoBehaviour
             {
                 Debug.Log("fake bullet");
             }
+
+            bulletNum--;
+
         }
         else
         {
@@ -97,7 +110,7 @@ public class RevolverController : MonoBehaviour
 
         if (bulletNum > 0)
         {
-            RoundManager.instance.UpdateGold();
+            player.UpdateGold();
         }
     }
     void ShootAt(Bullet bullet)
@@ -115,24 +128,31 @@ public class RevolverController : MonoBehaviour
     {
         if (inChamber)
         {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+            canShoot = true;
             CloseChamber();
             inChamber = false;
         }
         else
         {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            canShoot = false;
             OpenChamber();
             inChamber = true;
         }
     }
     public void OpenChamber()
     {
+        chamber.ResetChamber();
         bulletNum = 0;
-        chamberPanel.SetActive(true);
+        //chamberPanel.SetActive(true);
         inventoryPanel.SetActive(true);
     }
     public void CloseChamber()
     {
-        chamberPanel.SetActive(false);
+        //chamberPanel.SetActive(false);
         inventoryPanel.SetActive(false);
         RandomizeChamber();
     }
