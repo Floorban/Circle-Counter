@@ -140,18 +140,20 @@ public class PlayerController : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
         {
             player.shootSelf = !player.shootSelf;
+            normalView.gameObject.SetActive(!player.shootSelf);
+            selfView.gameObject.SetActive(player.shootSelf);
 
-            if (player.shootSelf)
-            {
-                handAnimator.SetTrigger("ToSelf");
-            }
-            else
-            {
-                handAnimator.SetTrigger("ToNormal");
+            /*            if (player.shootSelf)
+                        {
+                            handAnimator.SetTrigger("ToSelf");
+                        }
+                        else
+                        {
+                            handAnimator.SetTrigger("ToNormal");
 
-                /*   normalView.gameObject.SetActive(false);
-                   selfView.gameObject.SetActive(true);*/
-            }
+                            //normalView.gameObject.SetActive(false);
+                            //selfView.gameObject.SetActive(true);
+                        }*/
         }
     }
 
