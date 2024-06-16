@@ -1,19 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
-public class NPCController : MonoBehaviour
+public class NPCController : MonoBehaviour, IInteractable
 {
-    [SerializeField] GameObject player;
-
-    [SerializeField] float idleAnimSpeed;
-    [SerializeField] float moveAmplitude;
-
+    [Header ("Anim")]
+    GameObject player;
+    float idleAnimSpeed;
+    float moveAmplitude;
     [SerializeField] float speedMin;
     [SerializeField] float speedMax;
     [SerializeField] float amplitudeMin;
     [SerializeField] float amplitudeMax;
-
     private Vector3 startPosition;
     private float timeCounter = 0;
 
@@ -51,5 +50,10 @@ public class NPCController : MonoBehaviour
 
             timeCounter -= 2 * Mathf.PI;
         }
+    }
+
+    public void OnInteract()
+    {
+        Debug.Log(gameObject.name + "im here");
     }
 }

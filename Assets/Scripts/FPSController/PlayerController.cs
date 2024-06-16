@@ -1,16 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
+interface IInteractable
+{
+    public void OnInteract();
+}
 public class PlayerController : MonoBehaviour
 {
+    [Header("Motion")]
     public Transform orientation;
     public Transform camTrans;
     public float camTiltAngle = 5f;
     public float camTiltSpeed = 2f;
-
     [SerializeField] WeaponSway weaponSway;
     [SerializeField] ViewBobbing viewBob;
+
+    [Header("Interaction")]
+    public Transform interactorSource;
+    public float interactRange;
+    [SerializeField] GameObject interactPanel;
+    [SerializeField] TextMeshProUGUI interactText;
 
     [Header("Movement")]
     private float moveSpeed;
@@ -79,6 +89,7 @@ public class PlayerController : MonoBehaviour
         MyInput();
         SpeedControl();
         StateHandler();
+        InteractWith();
 
         // handle drag
         if (grounded)
@@ -239,11 +250,38 @@ public class PlayerController : MonoBehaviour
     }
     private void HandleCameraTilt()
     {
-        // Determine the target rotation angle based on horizontal input
         float targetAngle = horizontalInput * camTiltAngle;
 
-        // Interpolate the camera's rotation towards the target angle
         Quaternion targetRotation = Quaternion.Euler(0, camTrans.localEulerAngles.y, targetAngle);
         camTrans.localRotation = Quaternion.Slerp(camTrans.localRotation, targetRotation, Time.deltaTime * camTiltSpeed);
+    }
+    void InteractWith()
+    {
+        Ray r = new Ray(interactorSource.position, interactorSource.forward);
+        if (Physics.Raycast(r, out RaycastHit hitInfo, interactRange))
+        {
+            if (hitInfo.collider.gameObject.TryGetComponent(out IInteractable interactObj))
+            {
+                interactPanel.SetActive(true);
+                interactText.text = $"{hitInfo.collider.gameObject.name} ('E')";
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    interactObj.OnInteract();
+                }
+            }
+        }
+        else
+        {
+            interactPanel.SetActive(false);
+        }
+
+    }
+    private void OnDrawGizmos()
+    {
+        if (interactorSource != null)
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawLine(interactorSource.position, interactorSource.position + interactorSource.forward * interactRange);
+        }
     }
 }
