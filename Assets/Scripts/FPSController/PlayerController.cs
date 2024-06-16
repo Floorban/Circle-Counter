@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 interface IInteractable
 {
-    public void OnInteract(string prompt);
+    public void OnInteract();
     string GetPrompt();
 }
 public class PlayerController : MonoBehaviour
@@ -281,7 +281,7 @@ public class PlayerController : MonoBehaviour
                 interactText.text = $"{interactObj.GetPrompt()} ('E')";
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    interactObj.OnInteract(interactObj.GetPrompt());
+                    interactObj.OnInteract();
                 }
             }
             else

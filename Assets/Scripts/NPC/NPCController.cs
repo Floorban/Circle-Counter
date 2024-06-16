@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class NPCController : MonoBehaviour, IInteractable
+public class NPCController : MonoBehaviour
 {
     [Header ("Anim")]
     GameObject player;
@@ -15,9 +15,8 @@ public class NPCController : MonoBehaviour, IInteractable
     [SerializeField] float amplitudeMax;
     private Vector3 startPosition;
     private float timeCounter = 0;
-    [SerializeField] string prompt;
 
-    void Start()
+    protected virtual void Start()
     {
         player = FindAnyObjectByType<PlayerController>().gameObject;
 
@@ -25,7 +24,7 @@ public class NPCController : MonoBehaviour, IInteractable
         StartCoroutine(IdleAnim());
     }
 
-    void Update()
+    protected virtual void Update()
     {
         transform.LookAt(player.transform.position);
     }
@@ -53,12 +52,12 @@ public class NPCController : MonoBehaviour, IInteractable
         }
     }
 
-    public void OnInteract(string prompt)
-    {
-        Debug.Log(gameObject.name + "im here");
+/*    public virtual void OnInteract() 
+    { 
+        Debug.Log("NPCController interacted with");
     }
     public string GetPrompt()
     {
         return prompt;
-    }
+    }*/
 }

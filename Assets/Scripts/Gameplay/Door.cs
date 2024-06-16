@@ -16,7 +16,7 @@ public class Door : MonoBehaviour, IInteractable
         timer = FindObjectOfType<Timer>();
     }
 
-    public void OnInteract(string prompt)
+    public void OnInteract()
     {
         if (!isStartDoor)
         {
