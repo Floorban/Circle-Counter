@@ -17,27 +17,21 @@ public class Door : MonoBehaviour, IInteractable
 
     public void OnInteract()
     {
-        Debug.Log("this is a door...");
-    }
-    private void OnTriggerStay(Collider other)
-    {
-
-            if (Input.GetKeyDown(KeyCode.F))
+            if (!isStartDoor)
             {
-                if (!isStartDoor)
-                {
-                    timer.canRun = false;
-                    Debug.Log("level ends");
-                }
-                else
-                {
-                    timer.canRun = true;
-                    Debug.Log("level starts");
-                }
-
-                timer.ShakeTimer();
-                player.transform.position = tpPoint.position;
+                timer.canRun = false;
+                Debug.Log("level ends");
             }
-        
+            else
+            {
+                timer.canRun = true;
+                Debug.Log("level starts");
+            }
+
+            player.SetActive(false);
+            player.transform.position = tpPoint.position;
+            player.SetActive(true);
+            timer.ShakeTimer();
     }
+ 
 }
