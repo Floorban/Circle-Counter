@@ -22,8 +22,7 @@ public class Player : MonoBehaviour
     [SerializeField] Image energyBar;
     [SerializeField] TextMeshProUGUI EnergyText;
     [SerializeField] Image hpBar;
-   /* [SerializeField] TextMeshProUGUI rewardText;
-    [SerializeField] TextMeshProUGUI goldText;*/
+    [SerializeField] TextMeshProUGUI goldText;
 
     public bool shootSelf;
     public int reward;
@@ -83,8 +82,6 @@ public class Player : MonoBehaviour
         hpBar.fillAmount = (float)hp / (float)maxHp;
         energyBar.fillAmount = energy / maxEnergy;
         EnergyText.text = $"Gain: {reward} energy each shot";
-        
-/*        rewardText.text = $"Earn: ${reward} each shot";
-        goldText.text = $"Gold: ${gold}";*/
+        goldText.text = $"Gold: ${gold}";
     }
 }

@@ -67,7 +67,7 @@ public class Bullet : MonoBehaviour
                 inventory.ownedBullets.Add(this);
                 this.gameObject.transform.SetParent(inventory.gameObject.transform);
                 player.gold -= price;
-                RoundManager.instance.UpdateUI();
+                //RoundManager.instance.UpdateUI();
             }
             else
             {
