@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class Hole : MonoBehaviour
+public class Hole : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     RevolverController gun;
 
@@ -14,7 +15,7 @@ public class Hole : MonoBehaviour
     public Image image;
     public Bullet myBullet;
 
-    [SerializeField] TextMeshProUGUI bulletAttributeText;
+    public TextMeshProUGUI bulletAttributeText;
     private void Start()
     {
         gun = FindObjectOfType<RevolverController>();
@@ -22,13 +23,7 @@ public class Hole : MonoBehaviour
         image = this.GetComponent<Image>();
         button.enabled = false;
     }
-    private void Update()
-    {
-        if (myBullet != null)
-            bulletAttributeText.text = $"Damage: {myBullet.dmg} \nReward: {myBullet.reward}";
-        else
-            bulletAttributeText.text = $"Empty Slot";
-    }
+
     public void LoadBullet()
     {
         isFull = true;
@@ -42,5 +37,18 @@ public class Hole : MonoBehaviour
     {
         isFull = false;
         image.color = Color.white;
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if (myBullet != null)
+            bulletAttributeText.text = $"Damage: {myBullet.dmg} \nReward: {myBullet.reward}";
+        else
+            bulletAttributeText.text = $"Empty Slot";
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        bulletAttributeText.text = string.Empty;
     }
 }

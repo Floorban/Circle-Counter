@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -10,6 +11,7 @@ public class UISelectHandler : MonoBehaviour, IPointerEnterHandler, IPointerExit
     {
         infoPanel.SetActive(false);
     }
+
     public void OnPointerEnter(PointerEventData eventData)
     {
         infoPanel.SetActive(true);

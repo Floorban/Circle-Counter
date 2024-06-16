@@ -46,22 +46,15 @@ public class Player : MonoBehaviour
     }
     private void Update()
     {
-        if (isHome)
-        {
-            energy = maxEnergy;
-        }
-        else
-        {
-            energy -= Time.deltaTime * energySpeed;
-
-        }
+        if (!isHome)
+        energy -= Time.deltaTime * energySpeed;
 
         UpdateUI();
     }
     public void InitializeStatus()
     {
         hp = maxHp;
-        energy = maxEnergy;
+        energy = maxEnergy / 2f;
         isHome = true;
         isDead = false;
     }
