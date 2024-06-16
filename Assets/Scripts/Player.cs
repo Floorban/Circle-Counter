@@ -11,16 +11,19 @@ public class Player : MonoBehaviour
     [Header("Attributes")]
     public int hp;
     public int maxHp;
+    public float energy;
+    public float maxEnergy;
+    public float energySpeed;
     public bool isDead;
     public int gold;
+    public bool isHome;
 
     [Header("UI")]
-    [SerializeField] Image EnergyBar;
+    [SerializeField] Image energyBar;
     [SerializeField] TextMeshProUGUI EnergyText;
     [SerializeField] Image hpBar;
-    [SerializeField] TextMeshProUGUI hpText;
-    [SerializeField] TextMeshProUGUI rewardText;
-    [SerializeField] TextMeshProUGUI goldText;
+   /* [SerializeField] TextMeshProUGUI rewardText;
+    [SerializeField] TextMeshProUGUI goldText;*/
 
     public bool shootSelf;
     public int reward;
@@ -33,15 +36,30 @@ public class Player : MonoBehaviour
     {
         InitializeStatus();
     }
+    private void Update()
+    {
+        if (isHome)
+        {
+            energy = maxEnergy;
+        }
+        else
+        {
+            energy -= Time.deltaTime * energySpeed;
+
+        }
+
+        UpdateUI();
+    }
     public void InitializeStatus()
     {
         hp = maxHp;
+        energy = maxEnergy;
         isDead = false;
     }
     public void TakeDamage(int dmg)
     {
         hp -= dmg;
-        UpdateUI() ;
+        //UpdateUI() ;
 
         if (hp <= 0)
         {
@@ -49,16 +67,22 @@ public class Player : MonoBehaviour
             EndRound();
         }
     }
-    public void UpdateGold()
+    public void UpdateEnergy()
     {
-        gold += reward;
-        UpdateUI();
+        energy += reward;
+        if (energy > maxEnergy) 
+        {
+            energy = maxEnergy;
+        }
+        //UpdateUI();
     }
     public void UpdateUI()
     {
-      /*  hpBar.fillAmount = (float)hp / (float)maxHp;
-        hpText.text = $"My Hp: {hp}";
-        rewardText.text = $"Earn: ${reward} each shot";
+        hpBar.fillAmount = (float)hp / (float)maxHp;
+        energyBar.fillAmount = energy / maxEnergy;
+        EnergyText.text = $"Gain: {reward} energy each shot";
+        
+/*        rewardText.text = $"Earn: ${reward} each shot";
         goldText.text = $"Gold: ${gold}";*/
     }
 }

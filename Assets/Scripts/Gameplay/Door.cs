@@ -21,11 +21,13 @@ public class Door : MonoBehaviour, IInteractable
         if (!isStartDoor)
         {
             timer.canRun = false;
+            player.GetComponent<Player>().isHome = true;
             Debug.Log("level ends");
         }
         else
         {
             timer.canRun = true;
+            player.GetComponent<Player>().isHome = false;
             Debug.Log("level starts");
         }
 

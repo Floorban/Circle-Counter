@@ -35,7 +35,7 @@ public class Hole : MonoBehaviour
         button.enabled = false;
         image.color = Color.yellow;
         Actions.OnHoleSelected(this);
-        FindObjectOfType<Player>().UpdateUI();
+        //FindObjectOfType<Player>().UpdateUI();
         gun.bulletNum++;    
     }
     public void ResetHole()

@@ -118,7 +118,7 @@ public class RevolverController : MonoBehaviour
 
         if (bulletNum > 0)
         {
-            player.UpdateGold();
+            player.UpdateEnergy();
         }
     }
     void ShootAt(Bullet bullet)
