@@ -6,10 +6,12 @@ public class AmmoTrader : NPCController, IInteractable
 {
     [SerializeField] string prompt;
     [SerializeField] GameObject shopPanel;
-    bool inShop;
+    public bool inShop;
     protected override void Start()
     {
-        base.Start(); 
+        base.Start();
+        inShop = true;
+        shopPanel.SetActive(true);
     }
 
     protected override void Update()
@@ -30,10 +32,12 @@ public class AmmoTrader : NPCController, IInteractable
     
     public void OnInteract()
     {
+        Debug.Log("test 1");
         shopPanel.SetActive(true);
         inShop = true;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        Debug.Log("test 2");
     }
     public string GetPrompt()
     {

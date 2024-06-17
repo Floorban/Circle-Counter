@@ -13,6 +13,10 @@ public class PlayerCam : MonoBehaviour
     float xRotation;
     float yRotation;
 
+    [Header("Cam Shake")]
+    [SerializeField] AnimationCurve shakeCurve;
+    [SerializeField] float duration = 1f;
+    [SerializeField] float intensity = 1f;
     void Update()
     {
         float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * senX;
@@ -24,6 +28,8 @@ public class PlayerCam : MonoBehaviour
         transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
         orientation.rotation = Quaternion.Euler(0, yRotation, 0);
         HandleCameraTilt();
+        if (Input.GetKeyDown(KeyCode.F))
+            ShakeCam();
     }
     private void HandleCameraTilt()
     {
@@ -32,5 +38,24 @@ public class PlayerCam : MonoBehaviour
 
         Quaternion targetRotation = Quaternion.Euler(0, transform.localEulerAngles.y, targetAngle);
         transform.localRotation = Quaternion.Slerp(transform.localRotation, targetRotation, Time.deltaTime * camTiltSpeed);
+    }
+    public void ShakeCam()
+    {
+        StartCoroutine(Shake());
+    }
+    IEnumerator Shake()
+    {
+        Vector2 startPos = new Vector2(transform.localPosition.x, transform.localPosition.y);
+        float elapsedTime = 0f;
+
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.deltaTime;
+            float _intensity = shakeCurve.Evaluate(elapsedTime / duration) * intensity;
+            transform.localPosition = startPos + Random.insideUnitCircle * _intensity;
+            yield return null;
+        }
+
+        transform.localPosition = startPos;
     }
 }

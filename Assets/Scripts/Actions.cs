@@ -23,4 +23,6 @@ public static class Actions
     public static Action OnLevelStart;
     public static Action OnLevelEnd;
 
+    public static Action OnPanelOpen;
+    public static Action OnPanelClosed;
 }
