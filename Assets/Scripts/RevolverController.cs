@@ -153,8 +153,7 @@ public class RevolverController : MonoBehaviour
             }
 
             bulletNum--;
-            Instantiate(bulletPrefab, shootTran1);
-            Instantiate(bulletPrefab, shootTran2);
+            StartCoroutine(InstantiateBulletVisual());
         }
         else
         {
@@ -168,6 +167,21 @@ public class RevolverController : MonoBehaviour
         {
             player.UpdateEnergy();
         }
+    }
+    IEnumerator InstantiateBulletVisual()
+    {
+        yield return new WaitForSeconds(0.5f);
+
+        if (player.shootSelf)
+        {
+            Instantiate(bulletPrefab, shootTran2.position, Quaternion.identity);
+        }
+        else
+        {
+            Instantiate(bulletPrefab, shootTran1.position, Quaternion.identity);
+        }
+
+        yield return null;
     }
     void ShootAt(Bullet bullet)
     {
