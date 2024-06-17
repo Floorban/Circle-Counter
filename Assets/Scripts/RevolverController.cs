@@ -25,6 +25,11 @@ public class RevolverController : MonoBehaviour
     [SerializeField] Transform playerCam;
     [SerializeField] Animator gunAnimator;
     [SerializeField] Animator self_gunAnimator;
+    public ParticleSystem shootPrc1;
+    public ParticleSystem shootPrc2;
+    public Transform shootTran1;
+    public Transform shootTran2;
+    public GameObject bulletPrefab;
     void Start()
     {
         canShoot = false;
@@ -62,6 +67,9 @@ public class RevolverController : MonoBehaviour
                     TryShoot();
                     gunAnimator.SetTrigger("Shoot");
                     self_gunAnimator.SetTrigger("Shoot");
+                    shootPrc1.Play();
+                    shootPrc2.Play();
+                    FindObjectOfType<PlayerCam>().ShakeCam();
                     chamber.EndShootAnimation();
                     currentCoolDown = fireCoolDown;
                 }
@@ -145,6 +153,8 @@ public class RevolverController : MonoBehaviour
             }
 
             bulletNum--;
+            Instantiate(bulletPrefab, shootTran1);
+            Instantiate(bulletPrefab, shootTran2);
         }
         else
         {
