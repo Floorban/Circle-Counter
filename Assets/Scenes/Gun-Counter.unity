@@ -7084,7 +7084,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &323748554
 Transform:
   m_ObjectHideFlags: 0
@@ -9373,6 +9373,7 @@ MonoBehaviour:
   orientation: {fileID: 1880663843}
   camTiltAngle: 100
   camTiltSpeed: 2
+  canControl: 1
   shakeCurve:
     serializedVersion: 2
     m_Curve:
@@ -11673,6 +11674,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   holes: []
+  inventory: {fileID: 0}
   rotations: 6
   duration: 0.8
 --- !u!114 &1131707974
@@ -19050,6 +19052,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chamberPanel: {fileID: 930389341}
   inventoryPanel: {fileID: 1037941414}
+  shopPanel: {fileID: 1754895871}
   currentHoles: []
   bulletNum: 0
   bulletNumText: {fileID: 1945456686}

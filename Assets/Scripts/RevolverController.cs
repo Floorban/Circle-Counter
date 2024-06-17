@@ -12,6 +12,7 @@ public class RevolverController : MonoBehaviour
     bool inChamber;
     [SerializeField] GameObject chamberPanel;
     [SerializeField] GameObject inventoryPanel;
+    [SerializeField] GameObject shopPanel;
     public List<Hole> currentHoles;
     public int bulletNum;
     [SerializeField] TextMeshProUGUI bulletNumText;
@@ -32,15 +33,19 @@ public class RevolverController : MonoBehaviour
     public GameObject bulletPrefab;
     void Start()
     {
-        canShoot = false;
-        isShot = false;
+        StartCoroutine(SetUp());
         shootCount = 0;
         chamber = chamberPanel.GetComponentInChildren<Chamber>();
         inventory = inventoryPanel.GetComponentInChildren<Inventory>();
         player = FindObjectOfType<Player>();
 
         currentCoolDown = fireCoolDown;
-        inChamber = true;
+        /*        canShoot = false;
+                isShot = false;
+                inChamber = true;*/
+        canControl = true;
+        canShoot = true;
+        inChamber = false;
     }
     private void Update()
     {
@@ -74,6 +79,7 @@ public class RevolverController : MonoBehaviour
                     currentCoolDown = fireCoolDown;
                 }
 
+                /// manual shoot setting
                 /*  if (!canShoot && !isShot)
                   {
                       gunAnimator.SetTrigger("Ready");
@@ -209,8 +215,7 @@ public class RevolverController : MonoBehaviour
     }
     public void OpenChamber()
     {
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        FindAnyObjectByType<PlayerCam>().LockCam();
         canShoot = false;
         chamber.ResetChamber();
         bulletNum = 0;
@@ -219,8 +224,7 @@ public class RevolverController : MonoBehaviour
     }
     public void CloseChamber()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        FindAnyObjectByType<PlayerCam>().UnlockCam();
         canShoot = true;
         shootCount = 0;
         inventory.DisableBulletButton();
@@ -228,5 +232,16 @@ public class RevolverController : MonoBehaviour
         inventoryPanel.SetActive(false);
         canControl = true;
         RandomizeChamber();
+
+        gunAnimator.SetTrigger("Ready");
+        self_gunAnimator.SetTrigger("Ready");
+    }
+
+    IEnumerator SetUp()
+    {
+        yield return new WaitForSeconds(0.1f);
+
+        inventoryPanel.SetActive(false);
+        shopPanel.SetActive(false);
     }
 }

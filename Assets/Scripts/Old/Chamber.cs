@@ -5,7 +5,7 @@ using UnityEngine;
 public class Chamber : MonoBehaviour
 {
     public List<Hole> holes;
-    Inventory inventory;
+    [SerializeField] Inventory inventory;
 
     void Awake()
     {
@@ -71,10 +71,10 @@ public class Chamber : MonoBehaviour
             }
         }
 
-        for (int i = 0;i < inventory.ownedBullets.Count ;i++) 
-        {
-            inventory.ownedBullets[i].ResetBullet();
-        }
+            for (int i = 0; i < inventory.ownedBullets.Count; i++)
+            {
+                inventory.ownedBullets[i].ResetBullet();
+            }
 
         FindObjectOfType<Player>().reward = 0;
     }

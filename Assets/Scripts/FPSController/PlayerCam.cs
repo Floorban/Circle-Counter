@@ -12,13 +12,19 @@ public class PlayerCam : MonoBehaviour
     public float camTiltSpeed = 2f;
     float xRotation;
     float yRotation;
+    public bool canControl;
 
     [Header("Cam Shake")]
     [SerializeField] AnimationCurve shakeCurve;
     [SerializeField] float duration = 1f;
     [SerializeField] float intensity = 1f;
+    private void Start()
+    {
+        UnlockCam();
+    }
     void Update()
     {
+        if (!canControl) return;
         float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * senX;
         float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * senY;
 
@@ -28,8 +34,18 @@ public class PlayerCam : MonoBehaviour
         transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
         orientation.rotation = Quaternion.Euler(0, yRotation, 0);
         HandleCameraTilt();
-        if (Input.GetKeyDown(KeyCode.F))
-            ShakeCam();
+    }
+    public void LockCam()
+    {
+        canControl = false;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+    public void UnlockCam()
+    {
+        canControl = true;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
     private void HandleCameraTilt()
     {
