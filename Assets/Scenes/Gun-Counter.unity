@@ -19034,8 +19034,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ambientSounds: []
   sfxSounds:
+  - name: LoadBullet
+    audioClip: {fileID: 8300000, guid: 9c9d448cbb7b0ee439f0a571466cd27b, type: 3}
+  - name: RollChamber
+    audioClip: {fileID: 8300000, guid: 2916bc4a5319b36498d2002c373c1604, type: 3}
   - name: Fire
-    audioClip: {fileID: 8300000, guid: d973394cde8d198468e1fe4b99425d48, type: 3}
+    audioClip: {fileID: 8300000, guid: 2ca8290020fb81e45ae94128c5a50517, type: 3}
+  - name: DryFire
+    audioClip: {fileID: 8300000, guid: a3a92dfd7eac5f94e8fa031b2d44627e, type: 3}
+  - name: NextBullet
+    audioClip: {fileID: 8300000, guid: 45335e018f8932047a5b4ffc0d49c165, type: 3}
+  - name: NextHole
+    audioClip: {fileID: 8300000, guid: 2da7baa67a193ad4caa069bcd25279aa, type: 3}
+  - name: OpenChamber
+    audioClip: {fileID: 8300000, guid: be42a4b395d34a94aa7d1b14d9e84bdd, type: 3}
   ambientSrc: {fileID: 196312528}
   sfxSrc: {fileID: 1578598436}
 --- !u!4 &1592427013

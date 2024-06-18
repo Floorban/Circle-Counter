@@ -70,11 +70,11 @@ public class RevolverController : MonoBehaviour
                 if (currentCoolDown <= 0f)
                 {
                     TryShoot();
-                    gunAnimator.SetTrigger("Shoot");
+/*                    gunAnimator.SetTrigger("Shoot");
                     self_gunAnimator.SetTrigger("Shoot");
                     shootPrc1.Play();
                     shootPrc2.Play();
-                    chamber.EndShootAnimation();
+                    chamber.EndShootAnimation();*/
                     currentCoolDown = fireCoolDown;
                 }
 
@@ -132,6 +132,11 @@ public class RevolverController : MonoBehaviour
     {
         if (currentHoles.Count <= 0) return;
 
+        gunAnimator.SetTrigger("Shoot");
+        self_gunAnimator.SetTrigger("Shoot");
+        shootPrc1.Play();
+        shootPrc2.Play();
+        chamber.EndShootAnimation();
         Bullet currentBullet = currentHoles[0].myBullet;
 
         if (currentBullet != null)
@@ -160,11 +165,14 @@ public class RevolverController : MonoBehaviour
             FindObjectOfType<SoundManager>().PlaySound("Fire", 1);
             FindObjectOfType<PlayerCam>().ShakeCam();
             bulletNum--;
+            isShot = true;
             StartCoroutine(InstantiateBulletVisual());
         }
         else
         {
             Debug.Log("no bullet");
+            isShot = false;
+            FindObjectOfType<SoundManager>().PlaySound("DryFire", 1);
         }
 
         shootCount++;
@@ -222,6 +230,7 @@ public class RevolverController : MonoBehaviour
         bulletNum = 0;
         inventoryPanel.SetActive(true);
         canControl = false;
+        FindObjectOfType<SoundManager>().PlaySound("OpenChamber", 0.5f);
     }
     public void CloseChamber()
     {
@@ -233,7 +242,7 @@ public class RevolverController : MonoBehaviour
         inventoryPanel.SetActive(false);
         canControl = true;
         RandomizeChamber();
-
+        FindObjectOfType<SoundManager>().PlaySound("RollChamber", 1);
         gunAnimator.SetTrigger("Ready");
         self_gunAnimator.SetTrigger("Ready");
     }

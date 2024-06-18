@@ -30,7 +30,7 @@ public class Hole : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         button.enabled = false;
         image.color = Color.yellow;
         Actions.OnHoleSelected(this);
-        //FindObjectOfType<Player>().UpdateUI();
+        FindObjectOfType<SoundManager>().PlaySound("LoadBullet", 1);
         gun.bulletNum++;    
     }
     public void ResetHole()
