@@ -67,6 +67,20 @@ public class Entity : MonoBehaviour
         hp = maxHp;
         isDead = false;
     }
+    public void AttackPlayer()
+    {
+        Vector3 kickPos = transform.position + transform.forward * 0.5f + Vector3.up * 0.87f;
+        Collider[] cols = Physics.OverlapSphere(kickPos, 0.8f);
+        foreach (Collider col in cols)
+        {
+            if (col.gameObject == gameObject) continue;
+            Rigidbody cr = col.GetComponent<Rigidbody>();
+            if (!cr) continue;
+            Vector3 cp = col.ClosestPoint(kickPos);
+            //Instantiate(kickEffect, cp, Quaternion.identity);
+            if (cr.CompareTag("Player")) cr.AddForceAtPosition((cp - (transform.position - transform.forward + Vector3.down * 2f)) * 100, cp);
+        }
+    }
 
     public void TakeDamage(int dmg)
     {
