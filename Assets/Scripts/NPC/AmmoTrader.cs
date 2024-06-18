@@ -33,6 +33,7 @@ public class AmmoTrader : NPCController, IInteractable
                 inShop = true;
                 FindAnyObjectByType<PlayerCam>().LockCam();
                 FindObjectOfType<RevolverController>().canControl = false;
+                FindObjectOfType<SoundManager>().PlayAmbient("TraderVoice1");
             }
         }
     }

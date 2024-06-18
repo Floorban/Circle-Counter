@@ -52,6 +52,7 @@ public class Bullet : MonoBehaviour
             if (isSelected)
             {
                 image.color = Color.red;
+                FindObjectOfType<SoundManager>().PlaySound("BulletSelect", 1);
                 Actions.OnBulletSelected(this);
             }
             else

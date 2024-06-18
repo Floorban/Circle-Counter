@@ -19032,7 +19032,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bc94ed652db2e84ebe1ec68c87b2fae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ambientSounds: []
+  ambientSounds:
+  - name: TraderVoice1
+    audioClip: {fileID: 8300000, guid: 67684ff61a1d50b4da87f4826c4eb74c, type: 3}
+  - name: TraderVoice2
+    audioClip: {fileID: 8300000, guid: 60e4f8d1b6f38fc44a63777fbd3e370c, type: 3}
+  - name: TraderVoice3
+    audioClip: {fileID: 8300000, guid: 34163dbcd675e4d4789d7fd1324b1094, type: 3}
+  - name: TraderVoice4
+    audioClip: {fileID: 8300000, guid: 9f959c3683d70d543821ef35aa97749b, type: 3}
   sfxSounds:
   - name: LoadBullet
     audioClip: {fileID: 8300000, guid: 9c9d448cbb7b0ee439f0a571466cd27b, type: 3}
@@ -19048,6 +19056,8 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: 2da7baa67a193ad4caa069bcd25279aa, type: 3}
   - name: OpenChamber
     audioClip: {fileID: 8300000, guid: be42a4b395d34a94aa7d1b14d9e84bdd, type: 3}
+  - name: BulletSelect
+    audioClip: {fileID: 8300000, guid: 659793e229faf9e42bab125bd0611fde, type: 3}
   ambientSrc: {fileID: 196312528}
   sfxSrc: {fileID: 1578598436}
 --- !u!4 &1592427013
