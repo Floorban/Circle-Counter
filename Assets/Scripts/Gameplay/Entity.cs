@@ -35,8 +35,7 @@ public class Entity : MonoBehaviour
 
     protected virtual void Update()
     {
-        transform.LookAt(player.transform.position);
-        transform.position = Vector3.MoveTowards(transform.position, player.transform.position, moveSpeed);
+        //transform.LookAt(player.transform.position);
     }
 
     IEnumerator IdleAnim()

@@ -32,6 +32,7 @@ public class EnemyAgent : MonoBehaviour
     public int dmg;
     public int attackCooldown;
     bool canAttack, attacking;
+    [SerializeField] Transform attackTrans;
 
     [Header("FOV")]
     public float radius;
@@ -45,14 +46,14 @@ public class EnemyAgent : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        state = EnemyState.Follow;
+        state = EnemyState.Idle;
         centerPoint = transform.position;
         playerRef = GameObject.FindGameObjectWithTag("Player");
-        //centerPoint = FindObjectOfType<NavMeshSurface>().transform;
+        centerPoint = transform.position;
     }
     void Update()
     {
-        canAttack = Physics.CheckSphere(transform.position, attackRange, targetMask);
+        canAttack = Physics.CheckBox(transform.position, new Vector3(attackRange/2, attackRange/2, attackRange/2), transform.rotation, targetMask);
         FieldOfViewCheck();
         HandleStateTransitions();
         UpdateCurrentState();
@@ -177,9 +178,18 @@ public class EnemyAgent : MonoBehaviour
 
         if (!attacking)
         {
-           /* playerRef.GetComponent<FPSAgents>().ApplyDamage(dmg);
-            Debug.Log("attacking player!" + playerRef.GetComponent<FPSAgents>().health);*/
-            //End attack 
+            Vector3 attackPos = attackTrans.position;
+            Collider[] cols = Physics.OverlapSphere(attackPos, 1f);
+            foreach (Collider col in cols)
+            {
+                if (col.gameObject == playerRef) continue;
+                Rigidbody cr = col.GetComponent<Rigidbody>();
+                if (!cr) continue;
+                Vector3 cp = col.ClosestPoint(attackPos);
+                //Instantiate(kickEffect, cp, Quaternion.identity);
+                cr.AddForceAtPosition((cp - (transform.position - transform.forward)) * dmg, cp);
+                Debug.Log("attack");
+            }
             attacking = true;
             Invoke("ResetAttack", attackCooldown);
         }
@@ -224,8 +234,10 @@ public class EnemyAgent : MonoBehaviour
         Handles.color = Color.yellow;
         Handles.DrawWireArc(centerPoint, Vector3.up, Vector3.forward, 360, patrolZoneRange);
 
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, attackRange);
+        /*    Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(transform.position, attackRange);*/
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireCube(transform.position, new Vector3(attackRange, attackRange, attackRange));
 
         Handles.color = Color.blue;
         Handles.DrawWireArc(transform.position, Vector3.up, Vector3.forward, 360, nextPointDistance);
