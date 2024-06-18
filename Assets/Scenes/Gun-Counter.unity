@@ -11785,7 +11785,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   holes: []
   inventory: {fileID: 0}
-  rotations: 6
+  rotations: 5
   duration: 0.8
 --- !u!114 &1131707974
 MonoBehaviour:

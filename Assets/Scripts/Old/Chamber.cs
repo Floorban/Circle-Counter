@@ -108,15 +108,16 @@ public class Chamber : MonoBehaviour
         }
     }
 
-    public float rotations = 3f; 
-    public float duration = 2f;  
+    public int rotations; 
+    public float duration;  
 
     private RectTransform rectTransform;
 
 
     public void StartReloadAnimation()
     {
-        StartCoroutine(RotateCylinder());
+        //StartCoroutine(RotateCylinder());
+        FindObjectOfType<RevolverController>().StartRotateCylinder(rectTransform, rotations, duration);
     }
     public void EndShootAnimation()
     {

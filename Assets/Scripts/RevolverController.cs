@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class RevolverController : MonoBehaviour
 {
@@ -58,6 +59,34 @@ public class RevolverController : MonoBehaviour
         currentCoolDown -= Time.deltaTime;
 
         HandleControl();
+    }
+    public void StartRotateCylinder(RectTransform trans, int rot, float dur)
+    {
+        StartCoroutine(RotateCylinder(trans, rot, dur));
+    }
+    IEnumerator RotateCylinder(RectTransform rectTransform, int rotations, float duration)
+    {
+        float startRotation = rectTransform.rotation.eulerAngles.z;
+
+        int currentHoleIndex = chamber.holes.IndexOf(currentHoles[0]);
+
+        float anglePerHole = 360f / chamber.holes.Count;
+        float targetRotation = currentHoleIndex * anglePerHole;
+
+        float endRotation = startRotation + 360f * rotations + targetRotation;
+
+        float elapsedTime = 0f;
+
+        while (elapsedTime < duration)
+        {
+            float zRotation = Mathf.Lerp(startRotation, endRotation, elapsedTime / duration) % 360f;
+            rectTransform.rotation = Quaternion.Euler(0, 0, zRotation);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        rectTransform.rotation = Quaternion.Euler(0, 0, targetRotation);
+        Debug.Log(targetRotation);
     }
     void HandleControl()
     {
@@ -124,7 +153,7 @@ public class RevolverController : MonoBehaviour
         }
         for (int i = 0; i < currentHoles.Count; i++)
         {
-            currentHoles[i].image.color = Color.black;
+            currentHoles[i].image.color = Color.gray;
         }
         chamber.StartReloadAnimation();
     }
@@ -182,6 +211,7 @@ public class RevolverController : MonoBehaviour
         }
 
         shootCount++;
+        currentHoles[0].image.color = Color.black;
         currentHoles.RemoveAt(0);
         chamber.EndShootAnimation();
 
