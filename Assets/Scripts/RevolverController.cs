@@ -74,7 +74,6 @@ public class RevolverController : MonoBehaviour
                     self_gunAnimator.SetTrigger("Shoot");
                     shootPrc1.Play();
                     shootPrc2.Play();
-                    FindObjectOfType<PlayerCam>().ShakeCam();
                     chamber.EndShootAnimation();
                     currentCoolDown = fireCoolDown;
                 }
@@ -158,6 +157,8 @@ public class RevolverController : MonoBehaviour
                 Debug.Log("fake bullet");
             }
 
+            FindObjectOfType<SoundManager>().PlaySound("Fire", 1);
+            FindObjectOfType<PlayerCam>().ShakeCam();
             bulletNum--;
             StartCoroutine(InstantiateBulletVisual());
         }
