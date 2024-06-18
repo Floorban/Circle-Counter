@@ -9269,7 +9269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 0
-  maxHp: 5
+  maxHp: 20
   energy: 0
   maxEnergy: 100
   energySpeed: 5
@@ -19269,7 +19269,7 @@ MonoBehaviour:
   - name: NextHole
     audioClip: {fileID: 8300000, guid: 2da7baa67a193ad4caa069bcd25279aa, type: 3}
   - name: OpenChamber
-    audioClip: {fileID: 8300000, guid: be42a4b395d34a94aa7d1b14d9e84bdd, type: 3}
+    audioClip: {fileID: 8300000, guid: fd2dc9080b8f6714c85ed1652bc15af0, type: 3}
   - name: BulletSelect
     audioClip: {fileID: 8300000, guid: 659793e229faf9e42bab125bd0611fde, type: 3}
   - name: BuyBullet

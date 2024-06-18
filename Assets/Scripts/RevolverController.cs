@@ -197,7 +197,6 @@ public class RevolverController : MonoBehaviour
             shootPrc2.Play();
             FindObjectOfType<SoundManager>().PlaySound("Fire", 1);
             FindObjectOfType<PlayerCam>().ShakeCam();
-            bulletNum--;
             isShot = true;
             StartCoroutine(InstantiateBulletVisual());
         }
@@ -214,10 +213,15 @@ public class RevolverController : MonoBehaviour
         currentHoles[0].image.color = Color.black;
         currentHoles.RemoveAt(0);
         chamber.EndShootAnimation();
-
-        if (player.shootSelf && bulletNum >= 0)
+        if (player.shootSelf && bulletNum > 0)
         {
             player.UpdateEnergy();
+
+            if (isShot)
+            {
+                bulletNum--;
+                isShot = false;
+            }
         }
     }
     IEnumerator InstantiateBulletVisual()
