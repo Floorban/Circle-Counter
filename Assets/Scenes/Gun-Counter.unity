@@ -19354,6 +19354,7 @@ MonoBehaviour:
   canControl: 0
   canShoot: 0
   isShot: 0
+  canChamber: 1
   fireCoolDown: 1
   shootRange: 5
   playerCam: {fileID: 709779230}
