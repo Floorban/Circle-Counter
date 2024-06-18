@@ -131,12 +131,12 @@ public class RevolverController : MonoBehaviour
     public void TryShoot()
     {
         if (currentHoles.Count <= 0) return;
-
+/*
         gunAnimator.SetTrigger("Shoot");
         self_gunAnimator.SetTrigger("Shoot");
         shootPrc1.Play();
         shootPrc2.Play();
-        chamber.EndShootAnimation();
+        chamber.EndShootAnimation();*/
         Bullet currentBullet = currentHoles[0].myBullet;
 
         if (currentBullet != null)
@@ -162,6 +162,10 @@ public class RevolverController : MonoBehaviour
                 Debug.Log("fake bullet");
             }
 
+            gunAnimator.SetTrigger("Shoot");
+            self_gunAnimator.SetTrigger("Shoot");
+            shootPrc1.Play();
+            shootPrc2.Play();
             FindObjectOfType<SoundManager>().PlaySound("Fire", 1);
             FindObjectOfType<PlayerCam>().ShakeCam();
             bulletNum--;
@@ -172,11 +176,14 @@ public class RevolverController : MonoBehaviour
         {
             Debug.Log("no bullet");
             isShot = false;
+            gunAnimator.SetTrigger("DryFire");
+            self_gunAnimator.SetTrigger("DryFire");
             FindObjectOfType<SoundManager>().PlaySound("DryFire", 1);
         }
 
         shootCount++;
         currentHoles.RemoveAt(0);
+        chamber.EndShootAnimation();
 
         if (player.shootSelf && bulletNum >= 0)
         {
