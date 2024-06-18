@@ -26,6 +26,8 @@ public class Hole : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public void LoadBullet()
     {
+        if (isFull) return;
+
         isFull = true;
         button.enabled = false;
         image.color = Color.yellow;

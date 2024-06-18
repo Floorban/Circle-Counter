@@ -77,6 +77,7 @@ public class Bullet : MonoBehaviour
             else
             {
                 Debug.Log("not enough gold");
+                FindObjectOfType<SoundManager>().PlayAmbient("TraderVoice1");
             }
         }
     }

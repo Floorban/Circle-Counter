@@ -37,6 +37,11 @@ public class Player : MonoBehaviour
     void EndRound()
     {
         Debug.Log("round ends");
+        StartCoroutine(NextRound());
+    }
+    IEnumerator NextRound()
+    {
+        yield return new WaitForSeconds(0.07f);
         SceneManager.LoadScene(0);
     }
     void Start()
@@ -65,6 +70,7 @@ public class Player : MonoBehaviour
         if (hp <= 0)
         {
             isDead = true;
+            FindObjectOfType<SoundManager>().PlaySound("Fire", 1f);
             EndRound();
         }
     }

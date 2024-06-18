@@ -9241,6 +9241,7 @@ MonoBehaviour:
   walkSpeed: 7
   sprintSpeed: 10
   groundDrag: 3
+  canMove: 0
   jumpForce: 5
   jumpCooldown: 0.5
   airMultiplier: 0.4
@@ -9268,7 +9269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 0
-  maxHp: 20
+  maxHp: 5
   energy: 0
   maxEnergy: 100
   energySpeed: 5

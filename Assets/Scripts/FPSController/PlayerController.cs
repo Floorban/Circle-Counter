@@ -28,8 +28,8 @@ public class PlayerController : MonoBehaviour
     private float moveSpeed;
     public float walkSpeed;
     public float sprintSpeed;
-
     public float groundDrag;
+    public bool canMove;
 
     [Header("Jumping")]
     public float jumpForce;
@@ -80,7 +80,7 @@ public class PlayerController : MonoBehaviour
         rb.freezeRotation = true;
 
         readyToJump = true;
-
+        canMove = true;
         startYScale = transform.localScale.y;
     }
 
@@ -108,6 +108,8 @@ public class PlayerController : MonoBehaviour
 
     private void MyInput()
     {
+        if (!canMove) return;
+
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
 
@@ -192,6 +194,7 @@ public class PlayerController : MonoBehaviour
 
     private void MovePlayer()
     {
+        if (!canMove) return;
         // calculate movement direction
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 

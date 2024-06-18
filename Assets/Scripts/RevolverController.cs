@@ -272,6 +272,7 @@ public class RevolverController : MonoBehaviour
         inventoryPanel.SetActive(true);
         canControl = false;
         FindObjectOfType<SoundManager>().PlaySound("OpenChamber", 0.5f);
+        player.GetComponent<PlayerController>().canMove = false;
     }
     public void CloseChamber()
     {
@@ -288,6 +289,7 @@ public class RevolverController : MonoBehaviour
         FindObjectOfType<SoundManager>().PlaySound("RollChamber", 1);
         gunAnimator.SetTrigger("Ready");
         self_gunAnimator.SetTrigger("Ready");
+        player.GetComponent<PlayerController>().canMove = true;
     }
     public void OpenChamberP()
     {
@@ -298,6 +300,7 @@ public class RevolverController : MonoBehaviour
         bulletNum = 0;
         inventoryPanel.SetActive(true);
         canControl = false;
+        player.GetComponent<PlayerController>().canMove = false;
     }
     public void CloseChamberP()
     {
@@ -309,6 +312,7 @@ public class RevolverController : MonoBehaviour
         Actions.OnBulletDeselected();
         inventoryPanel.SetActive(false);
         canControl = true;
+        player.GetComponent<PlayerController>().canMove = true;
     }
 
     IEnumerator SetUp()
