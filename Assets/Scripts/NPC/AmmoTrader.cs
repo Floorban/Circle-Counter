@@ -17,35 +17,25 @@ public class AmmoTrader : NPCController, IInteractable
     protected override void Update()
     {
         base.Update();
-
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            if (inShop)
-            {
-                shopPanel.SetActive(false);
-                inShop = false;
-                FindAnyObjectByType<PlayerCam>().UnlockCam();
-                FindObjectOfType<RevolverController>().canControl = true;
-            }
-            else
-            {
-                shopPanel.SetActive(true);
-                inShop = true;
-                FindAnyObjectByType<PlayerCam>().LockCam();
-                FindObjectOfType<RevolverController>().canControl = false;
-                FindObjectOfType<SoundManager>().PlayAmbient("TraderVoice1");
-            }
-        }
     }
 
     public void OnInteract()
     {
-        Debug.Log("test 1");
-        shopPanel.SetActive(true);
-        inShop = true;
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-        Debug.Log("test 2");
+        if (inShop)
+        {
+            shopPanel.SetActive(false);
+            inShop = false;
+            FindAnyObjectByType<PlayerCam>().UnlockCam();
+            FindObjectOfType<RevolverController>().CloseChamberP();
+        }
+        else
+        {
+            shopPanel.SetActive(true);
+            inShop = true;
+            FindAnyObjectByType<PlayerCam>().LockCam();
+            FindObjectOfType<RevolverController>().OpenChamberP();
+            FindObjectOfType<SoundManager>().PlayAmbient("TraderVoice1");
+        }
     }
     public string GetPrompt()
     {

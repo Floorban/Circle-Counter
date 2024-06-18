@@ -441,11 +441,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2285665061054972063, guid: cb7868e6625014544ae61a9218eb71cd,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2127922425}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb7868e6625014544ae61a9218eb71cd, type: 3}
 --- !u!1 &48881260
 GameObject:
@@ -7189,11 +7185,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2285665061054972063, guid: cb7868e6625014544ae61a9218eb71cd,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1400482514}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb7868e6625014544ae61a9218eb71cd, type: 3}
 --- !u!1 &323748553
 GameObject:
@@ -10002,12 +9994,6 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
---- !u!1 &891823665 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2285665061054972063, guid: cb7868e6625014544ae61a9218eb71cd,
-    type: 3}
-  m_PrefabInstance: {fileID: 311780864}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &894765231
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11712,11 +11698,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2285665061054972063, guid: cb7868e6625014544ae61a9218eb71cd,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2059350921}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb7868e6625014544ae61a9218eb71cd, type: 3}
 --- !u!1 &1124603483 stripped
 GameObject:
@@ -13335,25 +13317,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 311780864}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1400482514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 891823665}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebc0b58efc4329248a67f358c97f19b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speedMin: 1.5
-  speedMax: 3
-  amplitudeMin: 0.05
-  amplitudeMax: 0.15
-  prompt: Bullet Trader
-  shopPanel: {fileID: 1754895871}
-  inShop: 0
 --- !u!1 &1401173050
 GameObject:
   m_ObjectHideFlags: 0
@@ -19058,6 +19021,8 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: be42a4b395d34a94aa7d1b14d9e84bdd, type: 3}
   - name: BulletSelect
     audioClip: {fileID: 8300000, guid: 659793e229faf9e42bab125bd0611fde, type: 3}
+  - name: BuyBullet
+    audioClip: {fileID: 8300000, guid: 21d690d9743c2454495dc26d197b0396, type: 3}
   ambientSrc: {fileID: 196312528}
   sfxSrc: {fileID: 1578598436}
 --- !u!4 &1592427013
@@ -24400,31 +24365,6 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
---- !u!1 &2059350918 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2285665061054972063, guid: cb7868e6625014544ae61a9218eb71cd,
-    type: 3}
-  m_PrefabInstance: {fileID: 1098041764}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2059350921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2059350918}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebc0b58efc4329248a67f358c97f19b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speedMin: 1.5
-  speedMax: 3
-  amplitudeMin: 0.05
-  amplitudeMax: 0.15
-  prompt: Bullet Trader
-  shopPanel: {fileID: 1754895871}
-  inShop: 0
 --- !u!1001 &2060175791
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25008,31 +24948,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1792974345}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2127922422 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2285665061054972063, guid: cb7868e6625014544ae61a9218eb71cd,
-    type: 3}
-  m_PrefabInstance: {fileID: 35108790}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2127922425
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2127922422}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebc0b58efc4329248a67f358c97f19b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speedMin: 1.5
-  speedMax: 3
-  amplitudeMin: 0.05
-  amplitudeMax: 0.15
-  prompt: Bullet Trader
-  shopPanel: {fileID: 1754895871}
-  inShop: 0
 --- !u!1001 &2132599127
 PrefabInstance:
   m_ObjectHideFlags: 0

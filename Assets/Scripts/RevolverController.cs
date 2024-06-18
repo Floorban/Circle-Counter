@@ -18,7 +18,7 @@ public class RevolverController : MonoBehaviour
     [SerializeField] TextMeshProUGUI bulletNumText;
 
     [Header("Shooting Logic")]
-    public bool canControl, canShoot, isShot;
+    public bool canControl, canShoot, isShot, canChamber;
     int shootCount = 0;
     public float fireCoolDown;
     float currentCoolDown;
@@ -211,6 +211,8 @@ public class RevolverController : MonoBehaviour
     }
     public void CheckChamber()
     {
+        if (!canChamber) return;
+
         if (inChamber)
         {
             CloseChamber();
@@ -224,6 +226,8 @@ public class RevolverController : MonoBehaviour
     }
     public void OpenChamber()
     {
+        if (inChamber) return;
+
         FindAnyObjectByType<PlayerCam>().LockCam();
         canShoot = false;
         chamber.ResetChamber();
@@ -234,17 +238,40 @@ public class RevolverController : MonoBehaviour
     }
     public void CloseChamber()
     {
+        if (!inChamber) return;
+
         FindAnyObjectByType<PlayerCam>().UnlockCam();
         canShoot = true;
         shootCount = 0;
         inventory.DisableBulletButton();
-         Actions.OnBulletDeselected();
+        Actions.OnBulletDeselected();
         inventoryPanel.SetActive(false);
         canControl = true;
         RandomizeChamber();
         FindObjectOfType<SoundManager>().PlaySound("RollChamber", 1);
         gunAnimator.SetTrigger("Ready");
         self_gunAnimator.SetTrigger("Ready");
+    }
+    public void OpenChamberP()
+    {
+        canChamber = false;
+        FindAnyObjectByType<PlayerCam>().LockCam();
+        canShoot = false;
+        chamber.ResetChamber();
+        bulletNum = 0;
+        inventoryPanel.SetActive(true);
+        canControl = false;
+    }
+    public void CloseChamberP()
+    {
+        canChamber = true;
+        FindAnyObjectByType<PlayerCam>().UnlockCam();
+        canShoot = true;
+        shootCount = 0;
+        inventory.DisableBulletButton();
+        Actions.OnBulletDeselected();
+        inventoryPanel.SetActive(false);
+        canControl = true;
     }
 
     IEnumerator SetUp()

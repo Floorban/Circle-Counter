@@ -71,6 +71,7 @@ public class Bullet : MonoBehaviour
                 inShop = false;
                 Actions.OnBulletDeselected();
                 ResetBullet();
+                FindObjectOfType<SoundManager>().PlaySound("BuyBullet", 0.6f);
                 //RoundManager.instance.UpdateUI();
             }
             else
