@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     public float energy;
     public float maxEnergy;
     public float energySpeed;
+    public float energyMultiplier = 1f;
     public bool isDead;
     public int gold;
     public bool isHome;
@@ -51,7 +52,7 @@ public class Player : MonoBehaviour
     private void Update()
     {
         if (!isHome)
-        energy -= Time.deltaTime * energySpeed;
+        energy -= Time.deltaTime * energySpeed * energyMultiplier;
 
         UpdateUI();
     }
@@ -62,6 +63,7 @@ public class Player : MonoBehaviour
         isHome = true;
         isDead = false;
     }
+    
     public void TakeDamage(int dmg)
     {
         hp -= dmg;

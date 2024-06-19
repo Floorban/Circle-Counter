@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using static UnityEngine.EventSystems.EventTrigger;
+
 interface IInteractable
 {
     public void OnInteract();
@@ -158,6 +160,9 @@ public class PlayerController : MonoBehaviour
 
     private void StateHandler()
     {
+        if (player.energy <= 0) canMove = false;
+        else canMove = true;
+
         // Mode - Crouching
         if (Input.GetKey(crouchKey))
         {
@@ -173,6 +178,7 @@ public class PlayerController : MonoBehaviour
             weaponSway.multiplier = 10f;
             viewBob.EffectSpeed = 10f;
             viewBob.EffectIntensity = 0.1f;
+            player.energyMultiplier = 2f;
         }
 
         // Mode - Walking
@@ -183,6 +189,7 @@ public class PlayerController : MonoBehaviour
             weaponSway.multiplier = 5f;
             viewBob.EffectSpeed = 5f;
             viewBob.EffectIntensity = 0.03f;
+            player.energyMultiplier = 1f;
         }
 
         // Mode - Air
