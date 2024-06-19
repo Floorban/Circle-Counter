@@ -48,6 +48,18 @@ public class EnemyAgent : MonoBehaviour
     public LayerMask obstructionMask;
     public bool canSeePlayer;
 
+    [Header("Visual")]
+    [SerializeField] GameObject spriteObj;
+    SpriteRenderer spriteRend;
+    float idleAnimSpeed;
+    float moveAmplitude;
+    [SerializeField] float speedMin;
+    [SerializeField] float speedMax;
+    [SerializeField] float amplitudeMin;
+    [SerializeField] float amplitudeMax;
+    private Vector3 startPosition;
+    private float timeCounter = 0;
+
     private void OnEnable()
     {
         Actions.OnLevelStart += StartLevel;
@@ -63,6 +75,7 @@ public class EnemyAgent : MonoBehaviour
     }
     void Start()
     {
+        UpDownVisual();
         agent = GetComponent<NavMeshAgent>();
         state = EnemyState.Idle;
         centerPoint = transform.position;
@@ -76,6 +89,34 @@ public class EnemyAgent : MonoBehaviour
         FieldOfViewCheck();
         HandleStateTransitions();
         UpdateCurrentState();
+    }
+    void UpDownVisual()
+    {
+        spriteRend = spriteObj.GetComponent<SpriteRenderer>();
+        startPosition = spriteObj.transform.position;
+        StartCoroutine(IdleAnim(spriteObj.transform));
+    }
+    IEnumerator IdleAnim(Transform targetTrans)
+    {
+        while (true)
+        {
+            idleAnimSpeed = Random.Range(speedMin, speedMax);
+            moveAmplitude = Random.Range(amplitudeMin, amplitudeMax);
+
+            float initialTime = timeCounter;
+
+            // Complete one full cycle of sine wave (2 * Mathf.PI radians)
+            while (timeCounter < initialTime + 2 * Mathf.PI)
+            {
+                timeCounter += Time.deltaTime * idleAnimSpeed;
+                float newY = startPosition.y + Mathf.Sin(timeCounter) * moveAmplitude;
+                targetTrans.position = new Vector3(transform.position.x, newY, transform.position.z);
+
+                yield return null;
+            }
+
+            timeCounter -= 2 * Mathf.PI;
+        }
     }
     void HandleStateTransitions()
     {
@@ -140,6 +181,7 @@ public class EnemyAgent : MonoBehaviour
     }
     void Patrol()
     {
+        spriteRend.color = Color.white;
         agent.speed = 1f;
 
         if (agent.remainingDistance <= agent.stoppingDistance)
@@ -182,6 +224,8 @@ public class EnemyAgent : MonoBehaviour
     }
     void ChaseTarget(Transform target, float chaseSpeed)
     {
+        spriteRend.color = Color.red;
+
         // Move towards the target
         agent.SetDestination(target.position);
         agent.speed = chaseSpeed;
@@ -192,6 +236,7 @@ public class EnemyAgent : MonoBehaviour
     }
     void Attack()
     {
+        spriteRend.color = Color.red;
         agent.SetDestination(transform.position);
         transform.LookAt(playerRef.transform);
 

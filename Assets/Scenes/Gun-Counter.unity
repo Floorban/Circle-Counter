@@ -11769,7 +11769,7 @@ MonoBehaviour:
   hp: 0
   maxHp: 10
   energy: 0
-  maxEnergy: 50
+  maxEnergy: 500
   energySpeed: 2
   energyMultiplier: 0
   isDead: 0
@@ -33910,7 +33910,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1624445629
 Transform:
   m_ObjectHideFlags: 0
