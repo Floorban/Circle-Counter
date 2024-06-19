@@ -11633,9 +11633,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 0
-  maxHp: 20
+  maxHp: 10
   energy: 0
-  maxEnergy: 100
+  maxEnergy: 50
   energySpeed: 2
   energyMultiplier: 0
   isDead: 0
@@ -22782,7 +22782,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1262063580
 Transform:
   m_ObjectHideFlags: 0
@@ -33640,7 +33640,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1624445629
 Transform:
   m_ObjectHideFlags: 0
@@ -33755,7 +33755,7 @@ MonoBehaviour:
   isShot: 0
   canChamber: 1
   fireCoolDown: 1
-  shootRange: 20
+  shootRange: 50
   playerCam: {fileID: 709779230}
   gunAnimator: {fileID: 802103705}
   self_gunAnimator: {fileID: 323748555}
@@ -46319,7 +46319,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &4679807612237494493
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -53,9 +53,7 @@ public class Player : MonoBehaviour
     }
     private void Update()
     {
-        if (!isHome)
-        energy -= Time.deltaTime * energySpeed * energyMultiplier;
-
+        HandleSanity();
         UpdateUI();
     }
     public void InitializeStatus()
@@ -65,7 +63,14 @@ public class Player : MonoBehaviour
         isHome = true;
         isDead = false;
     }
-    
+    public void HandleSanity()
+    {
+        if (!isHome)
+            energy -= Time.deltaTime * energySpeed * energyMultiplier;
+
+        if (energy <= 0)
+            EndRound();
+    }
     public void TakeDamage(int dmg)
     {
         hp -= dmg;
@@ -74,7 +79,7 @@ public class Player : MonoBehaviour
         if (hp <= 0)
         {
             isDead = true;
-            FindObjectOfType<SoundManager>().PlaySound("Fire", 1f);
+            //FindObjectOfType<SoundManager>().PlaySound("Fire", 1f);
             EndRound();
         }
     }
