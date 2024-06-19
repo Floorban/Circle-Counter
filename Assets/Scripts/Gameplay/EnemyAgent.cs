@@ -182,13 +182,22 @@ public class EnemyAgent : MonoBehaviour
             Collider[] cols = Physics.OverlapSphere(attackPos, 1f);
             foreach (Collider col in cols)
             {
-                if (col.gameObject == playerRef) continue;
-                Rigidbody cr = col.GetComponent<Rigidbody>();
-                if (!cr) continue;
-                Vector3 cp = col.ClosestPoint(attackPos);
-                //Instantiate(kickEffect, cp, Quaternion.identity);
-                cr.AddForceAtPosition((cp - (transform.position - transform.forward)) * dmg, cp);
-                Debug.Log("attack");
+                //if (col.gameObject == gameObject) continue;
+                if (col.gameObject == playerRef)
+                {
+                    Rigidbody playerRb = col.gameObject.GetComponentInParent<Rigidbody>();
+                    if (playerRb != null)
+                    {
+                        Vector3 forceDirection = (col.transform.position - transform.position).normalized;
+                        float forceMagnitude = dmg;
+                        playerRb.AddForce(forceDirection * forceMagnitude, ForceMode.Impulse);
+                        Debug.Log("Player pushed with force: " + forceDirection * forceMagnitude);
+                    }
+                    else
+                    {
+                        Debug.Log("target no found");
+                    }
+                }
             }
             attacking = true;
             Invoke("ResetAttack", attackCooldown);

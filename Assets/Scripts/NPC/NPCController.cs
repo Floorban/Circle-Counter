@@ -18,7 +18,7 @@ public class NPCController : MonoBehaviour
 
     protected virtual void Start()
     {
-        player = FindAnyObjectByType<PlayerController>().gameObject;
+        player = FindAnyObjectByType<PlayerCam>().gameObject;
 
         startPosition = transform.position;
         StartCoroutine(IdleAnim());

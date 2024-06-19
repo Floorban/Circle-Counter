@@ -128,8 +128,8 @@ MonoBehaviour:
   canPatrol: 1
   centerPoint: {x: 0, y: 0, z: 0}
   isHit: 0
-  attackRange: 0.5
-  dmg: 100
+  attackRange: 1
+  dmg: 10
   attackCooldown: 1
   attackTrans: {fileID: 5678149450159272993}
   radius: 8
@@ -251,7 +251,7 @@ Transform:
   m_GameObject: {fileID: 9153532473802488924}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.083}
+  m_LocalPosition: {x: 0, y: 0, z: 0.1667}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
