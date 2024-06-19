@@ -315,6 +315,7 @@ public class RevolverController : MonoBehaviour
         inventoryPanel.SetActive(true);
         canControl = false;
         player.GetComponent<PlayerController>().canMove = false;
+        chamberPanel.SetActive(false);
     }
     public void CloseChamberP()
     {
@@ -327,6 +328,7 @@ public class RevolverController : MonoBehaviour
         inventoryPanel.SetActive(false);
         canControl = true;
         player.GetComponent<PlayerController>().canMove = true;
+        chamberPanel.SetActive(true);
     }
     public void PauseGame()
     {

@@ -101,7 +101,7 @@ public class Player : MonoBehaviour
          }*/
         energyBar.fillAmount = energy / maxEnergy;
         EnergyText.text = $"Gain: {reward} sanity each shot";
-        goldText.text = $"Gold: ${gold}";
+        goldText.text = $"${gold}";
 
         Color energyColor = Color.Lerp(Color.red, Color.green, (energy / maxEnergy));
         energyBar.color = energyColor;
