@@ -213,9 +213,9 @@ public class RevolverController : MonoBehaviour
         currentHoles[0].image.color = Color.black;
         currentHoles.RemoveAt(0);
         chamber.EndShootAnimation();
-        if (player.shootSelf && bulletNum > 0)
+        if (bulletNum > 0)
         {
-            player.UpdateEnergy();
+            if (player.shootSelf) player.UpdateEnergy();
 
             if (isShot)
             {
