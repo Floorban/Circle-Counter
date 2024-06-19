@@ -7,6 +7,7 @@ public class PlayerCam : MonoBehaviour
     [Header ("Sensitivity")]
     public float senX;
     public float senY;
+    public float maxSenAmount;
     public Transform orientation;
     public float camTiltAngle = 5f;
     public float camTiltSpeed = 2f;
@@ -34,6 +35,14 @@ public class PlayerCam : MonoBehaviour
         transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
         orientation.rotation = Quaternion.Euler(0, yRotation, 0);
         HandleCameraTilt();
+    }
+
+    public void MouseSen(float value)
+    {
+        float localValue = value * maxSenAmount;
+
+        senX = localValue;
+        senY = localValue;
     }
     public void LockCam()
     {
