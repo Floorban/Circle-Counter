@@ -349,6 +349,7 @@ public class RevolverController : MonoBehaviour
             player.GetComponent<PlayerController>().canMove = true;
             pausePanel.SetActive(false);
             Time.timeScale = 1f;
+            isPaused = false;
         }
     }
     IEnumerator SetUp()
