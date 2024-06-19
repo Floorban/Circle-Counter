@@ -23,7 +23,9 @@ public class Player : MonoBehaviour
     [SerializeField] Image energyBar;
     [SerializeField] TextMeshProUGUI EnergyText;
     [SerializeField] Image hpBar;
+    [SerializeField] Image[] hps;
     [SerializeField] TextMeshProUGUI goldText;
+    [SerializeField] float lerpSpeed;
 
     public bool shootSelf;
     public int reward;
@@ -87,9 +89,21 @@ public class Player : MonoBehaviour
     }
     public void UpdateUI()
     {
-        hpBar.fillAmount = (float)hp / (float)maxHp;
+        hpBar.fillAmount = Mathf.Lerp(hpBar.fillAmount, (float)hp / (float)maxHp, lerpSpeed);
+        /* for (int i = 0; i < hps.Length; i++) 
+         {
+             hps[i].enabled = !DisplayHp(hp, i);
+         }*/
         energyBar.fillAmount = energy / maxEnergy;
-        EnergyText.text = $"Gain: {reward} energy each shot";
+        EnergyText.text = $"Gain: {reward} point each shot";
         goldText.text = $"Gold: ${gold}";
+
+        Color energyColor = Color.Lerp(Color.red, Color.green, (energy / maxEnergy));
+        energyBar.color = energyColor;
+    }
+
+    bool DisplayHp(float _health, int pointNum)
+    {
+        return ((pointNum * 6) >= _health) ;
     }
 }
