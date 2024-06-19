@@ -244,7 +244,7 @@ public class RevolverController : MonoBehaviour
         Ray gunRay = new Ray(playerCam.position, playerCam.forward);
         if (Physics.Raycast(gunRay, out RaycastHit hitInfo, shootRange))
         {
-            if (hitInfo.collider.gameObject.TryGetComponent(out Entity enemy)) 
+            if (hitInfo.collider.gameObject.TryGetComponent(out EnemyAgent enemy)) 
             {
                 enemy.TakeDamage(bullet.dmg);
             }

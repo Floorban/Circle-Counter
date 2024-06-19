@@ -34,6 +34,11 @@ public class EnemyAgent : MonoBehaviour
     bool canAttack, attacking;
     [SerializeField] Transform attackTrans;
 
+    [Header("Health")]
+    public int hp;
+    public int maxHp;
+    public bool isDead;
+
     [Header("FOV")]
     public float radius;
     [Range(0, 360)]
@@ -50,6 +55,7 @@ public class EnemyAgent : MonoBehaviour
         centerPoint = transform.position;
         playerRef = GameObject.FindGameObjectWithTag("Player");
         centerPoint = transform.position;
+        hp = maxHp;
     }
     void Update()
     {
@@ -207,6 +213,16 @@ public class EnemyAgent : MonoBehaviour
     {
         attacking = false;
         isHit = false;
+    }
+    public void TakeDamage(int dmg)
+    {
+        hp -= dmg;
+
+        if (hp <= 0)
+        {
+            isDead = true;
+            Destroy(gameObject);
+        }
     }
     void FieldOfViewCheck()
     {
