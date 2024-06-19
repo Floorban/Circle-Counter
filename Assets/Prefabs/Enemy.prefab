@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
-  activated: 1
+  activated: 0
   agent: {fileID: 0}
   patrolZoneRange: 5
   nextPointDistance: 3

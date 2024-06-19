@@ -48,6 +48,19 @@ public class EnemyAgent : MonoBehaviour
     public LayerMask obstructionMask;
     public bool canSeePlayer;
 
+    private void OnEnable()
+    {
+        Actions.OnLevelStart += StartLevel;
+    }
+    private void OnDisable()
+    {
+        Actions.OnLevelStart -= StartLevel;
+    }
+
+    void StartLevel()
+    {
+        activated = true;
+    }
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();

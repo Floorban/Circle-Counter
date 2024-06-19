@@ -95,7 +95,7 @@ public class Player : MonoBehaviour
              hps[i].enabled = !DisplayHp(hp, i);
          }*/
         energyBar.fillAmount = energy / maxEnergy;
-        EnergyText.text = $"Gain: {reward} point each shot";
+        EnergyText.text = $"Gain: {reward} sanity each shot";
         goldText.text = $"Gold: ${gold}";
 
         Color energyColor = Color.Lerp(Color.red, Color.green, (energy / maxEnergy));
