@@ -32,8 +32,13 @@ public class RevolverController : MonoBehaviour
     public Transform shootTran1;
     public Transform shootTran2;
     public GameObject bulletPrefab;
+
+    [Header("Pause Menu")]
+    [SerializeField] GameObject pausePanel;
+    public bool isPaused;
     void Start()
     {
+        pausePanel.SetActive(false);
         StartCoroutine(SetUp());
         shootCount = 0;
         chamber = chamberPanel.GetComponentInChildren<Chamber>();
@@ -53,6 +58,11 @@ public class RevolverController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             CheckChamber();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            PauseGame();
         }
 
         bulletNumText.text = $"{bulletNum} / 6";
@@ -318,7 +328,29 @@ public class RevolverController : MonoBehaviour
         canControl = true;
         player.GetComponent<PlayerController>().canMove = true;
     }
-
+    public void PauseGame()
+    {
+        if (!isPaused)
+        {
+            canShoot = false;
+            canControl = false;
+            canChamber = false;
+            FindAnyObjectByType<PlayerCam>().LockCam();
+            player.GetComponent<PlayerController>().canMove = false;
+            pausePanel.SetActive(true);
+            Time.timeScale = 0f;
+            isPaused = true;
+        }
+        else
+        {
+            canControl = true;
+            canChamber = true;
+            FindAnyObjectByType<PlayerCam>().UnlockCam();
+            player.GetComponent<PlayerController>().canMove = true;
+            pausePanel.SetActive(false);
+            Time.timeScale = 1f;
+        }
+    }
     IEnumerator SetUp()
     {
         yield return new WaitForSeconds(0.1f);
