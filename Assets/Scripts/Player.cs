@@ -5,6 +5,9 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.Rendering.Universal;
+using UnityEngine.Rendering;
+using static UnityEngine.Rendering.DebugUI;
 
 public class Player : MonoBehaviour
 {
@@ -26,6 +29,10 @@ public class Player : MonoBehaviour
     [SerializeField] Image[] hps;
     [SerializeField] TextMeshProUGUI goldText;
     [SerializeField] float lerpSpeed;
+
+    [Header("Post Processing")]
+    [SerializeField] Volume volume;
+    Vignette vignette;
 
     public bool shootSelf;
     public int reward;
@@ -49,12 +56,17 @@ public class Player : MonoBehaviour
     }
     void Start()
     {
+        if (volume.profile.TryGet(out Vignette vignette))
+        {
+            this.vignette = vignette;
+        }
         InitializeStatus();
     }
     private void Update()
     {
         HandleSanity();
         UpdateUI();
+        UpdateVignetteIntensity();
     }
     public void InitializeStatus()
     {
@@ -70,6 +82,14 @@ public class Player : MonoBehaviour
 
         if (energy <= 0)
             EndRound();
+    }
+    void UpdateVignetteIntensity()
+    {
+        if (vignette != null)
+        {
+            float targetIntensity = 0.8f - (energy / maxEnergy);
+            vignette.intensity.value = Mathf.Lerp(vignette.intensity.value, targetIntensity, lerpSpeed * Time.deltaTime);
+        }
     }
     public void TakeDamage(int dmg)
     {
@@ -94,7 +114,7 @@ public class Player : MonoBehaviour
     }
     public void UpdateUI()
     {
-        hpBar.fillAmount = Mathf.Lerp(hpBar.fillAmount, (float)hp / (float)maxHp, lerpSpeed);
+        hpBar.fillAmount = Mathf.Lerp(hpBar.fillAmount, (float)hp / (float)maxHp, lerpSpeed * Time.deltaTime);
         /* for (int i = 0; i < hps.Length; i++) 
          {
              hps[i].enabled = !DisplayHp(hp, i);
@@ -105,10 +125,5 @@ public class Player : MonoBehaviour
 
         Color energyColor = Color.Lerp(Color.red, Color.green, (energy / maxEnergy));
         energyBar.color = energyColor;
-    }
-
-    bool DisplayHp(float _health, int pointNum)
-    {
-        return ((pointNum * 6) >= _health) ;
     }
 }

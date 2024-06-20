@@ -130,7 +130,7 @@ MonoBehaviour:
   centerPoint: {x: 0, y: 0, z: 0}
   isHit: 0
   attackRange: 1
-  dmg: 10
+  dmg: 20
   attackCooldown: 1
   attackTrans: {fileID: 5678149450159272993}
   hp: 0
