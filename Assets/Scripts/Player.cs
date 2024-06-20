@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
     [Header("UI")]
     [SerializeField] Image energyBar;
     [SerializeField] TextMeshProUGUI EnergyText;
+    [SerializeField] TextMeshProUGUI hpText;
     [SerializeField] Image hpBar;
     [SerializeField] Image[] hps;
     [SerializeField] TextMeshProUGUI goldText;
@@ -87,7 +88,7 @@ public class Player : MonoBehaviour
     {
         if (vignette != null)
         {
-            float targetIntensity = 0.8f - (energy / maxEnergy);
+            float targetIntensity = 0.85f - (energy / maxEnergy);
             vignette.intensity.value = Mathf.Lerp(vignette.intensity.value, targetIntensity, lerpSpeed * Time.deltaTime);
         }
     }
@@ -115,6 +116,7 @@ public class Player : MonoBehaviour
     public void UpdateUI()
     {
         hpBar.fillAmount = Mathf.Lerp(hpBar.fillAmount, (float)hp / (float)maxHp, lerpSpeed * Time.deltaTime);
+        hpText.text = $"HP: {hp} / {maxHp}";
         /* for (int i = 0; i < hps.Length; i++) 
          {
              hps[i].enabled = !DisplayHp(hp, i);
