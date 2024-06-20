@@ -59,6 +59,7 @@ public class EnemyAgent : MonoBehaviour
     [SerializeField] float amplitudeMax;
     private Vector3 startPosition;
     private float timeCounter = 0;
+    Animator animator;
 
     private void OnEnable()
     {
@@ -75,7 +76,7 @@ public class EnemyAgent : MonoBehaviour
     }
     void Start()
     {
-        UpDownVisual();
+        PlayAnim();
         agent = GetComponent<NavMeshAgent>();
         state = EnemyState.Idle;
         centerPoint = transform.position;
@@ -90,8 +91,9 @@ public class EnemyAgent : MonoBehaviour
         HandleStateTransitions();
         UpdateCurrentState();
     }
-    void UpDownVisual()
+    void PlayAnim()
     {
+        animator = GetComponent<Animator>();
         spriteRend = spriteObj.GetComponent<SpriteRenderer>();
         startPosition = spriteObj.transform.position;
         StartCoroutine(IdleAnim(spriteObj.transform));
@@ -252,6 +254,7 @@ public class EnemyAgent : MonoBehaviour
                     Rigidbody playerRb = col.gameObject.GetComponentInParent<Rigidbody>();
                     if (playerRb != null)
                     {
+                        animator.SetTrigger("Attack");
                         Vector3 forceDirection = (col.transform.position - transform.position).normalized;
                         float forceMagnitude = dmg;
                         playerRb.AddForce(forceDirection * forceMagnitude, ForceMode.Impulse);
