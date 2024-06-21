@@ -30,6 +30,7 @@ public class Player : MonoBehaviour
     [SerializeField] Image[] hps;
     [SerializeField] TextMeshProUGUI goldText;
     [SerializeField] float lerpSpeed;
+    RevolverController revolver;
 
     [Header("Post Processing")]
     [SerializeField] Volume volume;
@@ -61,6 +62,7 @@ public class Player : MonoBehaviour
         {
             this.vignette = vignette;
         }
+        revolver = FindObjectOfType<RevolverController>();  
         InitializeStatus();
     }
     private void Update()
@@ -122,10 +124,14 @@ public class Player : MonoBehaviour
              hps[i].enabled = !DisplayHp(hp, i);
          }*/
         energyBar.fillAmount = energy / maxEnergy;
-        EnergyText.text = $"Gain: {reward} sanity each shot";
         goldText.text = $"${gold}";
 
         Color energyColor = Color.Lerp(Color.red, Color.green, (energy / maxEnergy));
         energyBar.color = energyColor;
+
+        if (revolver.bulletNum > 0)
+        EnergyText.text = $"Gain: {reward} sanity each shot";
+        else
+        EnergyText.text = $"No Bullets! Gain: {0} sanity each shot";
     }
 }
