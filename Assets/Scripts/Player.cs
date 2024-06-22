@@ -90,7 +90,7 @@ public class Player : MonoBehaviour
     {
         if (vignette != null)
         {
-            float targetIntensity = 0.85f - (energy / maxEnergy);
+            float targetIntensity = 0.75f - (energy / maxEnergy);
             vignette.intensity.value = Mathf.Lerp(vignette.intensity.value, targetIntensity, lerpSpeed * Time.deltaTime);
         }
     }

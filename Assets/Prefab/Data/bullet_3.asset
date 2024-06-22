@@ -18,5 +18,5 @@ MonoBehaviour:
   isUsed: 0
   dmg: 10
   price: 20
-  reward: 5
+  reward: 10
   activeChance: 0

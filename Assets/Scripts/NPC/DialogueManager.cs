@@ -6,24 +6,29 @@ using UnityEngine;
 public class DialogueManager : MonoBehaviour
 {
     //Animator animator;
+    [SerializeField] GameObject dialoguePanel;
     [SerializeField] TextMeshProUGUI text;
     [SerializeField] string[] dialogues;
     [SerializeField] float typeSpeed;
     int index;
-    void Start()
-    {
-        StartCoroutine(StartTutorial());
-    }
-    IEnumerator StartTutorial()
-    {
-        yield return new WaitForSeconds(0f);
-        //animator = GetComponent<Animator>();
-        text.text = string.Empty;
-        StartDialogue();
-    }
+    public bool canTalk;
+
     private void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        HandleDialogue();
+    }
+
+    public void StartDialogue()
+    {
+        canTalk = true;
+        index = 0;
+        StartCoroutine(TypeTextLine());
+    }
+    public void HandleDialogue()
+    {
+        if (!canTalk) return;
+
+        if (Input.GetKeyDown(KeyCode.E))
         {
             if (text.text == dialogues[index])
             {
@@ -36,15 +41,9 @@ public class DialogueManager : MonoBehaviour
             }
         }
     }
-
-    void StartDialogue()
-    {
-        index = 0;
-        StartCoroutine(TypeTextLine());
-    }
     IEnumerator TypeTextLine()
     {
-        FindObjectOfType<SoundManager>().PlaySound("Typing", 1f);
+        //FindObjectOfType<SoundManager>().PlaySound("Typing", 1f);
 
         foreach (char c in dialogues[index].ToCharArray())
         {
@@ -63,6 +62,8 @@ public class DialogueManager : MonoBehaviour
         else
         {
             //if (animator) animator.SetTrigger("Exit");
+            text.text = string.Empty;
+            dialoguePanel.SetActive(false);
         }
     }
 }
