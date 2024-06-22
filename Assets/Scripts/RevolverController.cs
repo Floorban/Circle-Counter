@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class RevolverController : MonoBehaviour
 {
-    [Header ("Chamber")]
+    [Header("Chamber")]
     Chamber chamber;
     Inventory inventory;
     Player player;
@@ -35,9 +35,21 @@ public class RevolverController : MonoBehaviour
 
     [Header("Pause Menu")]
     [SerializeField] GameObject pausePanel;
-    public bool isPaused;
+    public bool isPaused, canPause;
+
+    /*    private void OnEnable()
+        {
+            Actions.OnPanelOpen += ToggleCanPause;
+            Actions.OnPanelClosed += ToggleCanPause;
+        }
+        private void OnDisable()
+        {
+            Actions.OnPanelOpen -= ToggleCanPause;
+            Actions.OnPanelClosed -= ToggleCanPause;
+        }*/
     void Start()
     {
+        canPause = true;
         pausePanel.SetActive(false);
         StartCoroutine(SetUp());
         shootCount = 0;
@@ -109,11 +121,11 @@ public class RevolverController : MonoBehaviour
                 if (currentCoolDown <= 0f)
                 {
                     TryShoot();
-/*                    gunAnimator.SetTrigger("Shoot");
-                    self_gunAnimator.SetTrigger("Shoot");
-                    shootPrc1.Play();
-                    shootPrc2.Play();
-                    chamber.EndShootAnimation();*/
+                    /*                    gunAnimator.SetTrigger("Shoot");
+                                        self_gunAnimator.SetTrigger("Shoot");
+                                        shootPrc1.Play();
+                                        shootPrc2.Play();
+                                        chamber.EndShootAnimation();*/
                     currentCoolDown = fireCoolDown;
                 }
 
@@ -159,7 +171,7 @@ public class RevolverController : MonoBehaviour
         for (int i = 1; i < originalHoles.Count; i++)
         {
             int nextIndex = (selectedSlotIndex + i) % originalHoles.Count;
-            currentHoles.Add(originalHoles[nextIndex]);;
+            currentHoles.Add(originalHoles[nextIndex]); ;
         }
         for (int i = 0; i < currentHoles.Count; i++)
         {
@@ -170,12 +182,12 @@ public class RevolverController : MonoBehaviour
     public void TryShoot()
     {
         if (currentHoles.Count <= 0) return;
-/*
-        gunAnimator.SetTrigger("Shoot");
-        self_gunAnimator.SetTrigger("Shoot");
-        shootPrc1.Play();
-        shootPrc2.Play();
-        chamber.EndShootAnimation();*/
+        /*
+                gunAnimator.SetTrigger("Shoot");
+                self_gunAnimator.SetTrigger("Shoot");
+                shootPrc1.Play();
+                shootPrc2.Play();
+                chamber.EndShootAnimation();*/
         Bullet currentBullet = currentHoles[0].myBullet;
 
         if (currentBullet != null)
@@ -254,7 +266,7 @@ public class RevolverController : MonoBehaviour
         Ray gunRay = new Ray(playerCam.position, playerCam.forward);
         if (Physics.Raycast(gunRay, out RaycastHit hitInfo, shootRange))
         {
-            if (hitInfo.collider.gameObject.TryGetComponent(out EnemyAgent enemy)) 
+            if (hitInfo.collider.gameObject.TryGetComponent(out EnemyAgent enemy))
             {
                 enemy.TakeDamage(bullet.dmg);
             }
@@ -332,7 +344,7 @@ public class RevolverController : MonoBehaviour
     }
     public void PauseGame()
     {
-        if (!isPaused)
+        if (!isPaused && canPause)
         {
             canShoot = false;
             canControl = false;
@@ -342,8 +354,10 @@ public class RevolverController : MonoBehaviour
             pausePanel.SetActive(true);
             Time.timeScale = 0f;
             isPaused = true;
+            canPause = false;
+
         }
-        else
+        else if (isPaused && !canPause)
         {
             canControl = true;
             canChamber = true;
@@ -352,6 +366,35 @@ public class RevolverController : MonoBehaviour
             pausePanel.SetActive(false);
             Time.timeScale = 1f;
             isPaused = false;
+            canPause = true;
+        }
+    }
+    public void OnShopPause(bool _isPaused, GameObject shopPanel)
+    {
+        if (!_isPaused)
+        {
+            canShoot = false;
+            canControl = false;
+            canChamber = false;
+            FindAnyObjectByType<PlayerCam>().LockCam();
+            player.GetComponent<PlayerController>().canMove = false;
+            shopPanel.SetActive(true);
+            OpenChamberP();
+            Time.timeScale = 0f;
+            isPaused = true;
+            canPause = true;
+        }
+        else
+        {
+            canControl = true;
+            canChamber = true;
+            FindAnyObjectByType<PlayerCam>().UnlockCam();
+            player.GetComponent<PlayerController>().canMove = true;
+            shopPanel.SetActive(false);
+            CloseChamberP();
+            Time.timeScale = 1f;
+            isPaused = false;
+            canPause = false;
         }
     }
     IEnumerator SetUp()

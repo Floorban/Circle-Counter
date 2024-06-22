@@ -23,17 +23,13 @@ public class AmmoTrader : NPCController, IInteractable
     {
         if (inShop)
         {
-            shopPanel.SetActive(false);
+            FindObjectOfType<RevolverController>().OnShopPause(inShop, shopPanel);
             inShop = false;
-            FindAnyObjectByType<PlayerCam>().UnlockCam();
-            FindObjectOfType<RevolverController>().CloseChamberP();
         }
         else
         {
-            shopPanel.SetActive(true);
+            FindObjectOfType<RevolverController>().OnShopPause(inShop, shopPanel);
             inShop = true;
-            FindAnyObjectByType<PlayerCam>().LockCam();
-            FindObjectOfType<RevolverController>().OpenChamberP();
             FindObjectOfType<SoundManager>().PlayAmbient("TraderVoice1");
         }
     }
