@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     [Header("Interaction")]
     public Transform interactorSource;
     public float interactRange;
-    [SerializeField] GameObject interactPanel;
+    public GameObject interactPanel;
     [SerializeField] TextMeshProUGUI interactText;
     Player player;
 
@@ -82,7 +82,6 @@ public class PlayerController : MonoBehaviour
         rb.freezeRotation = true;
 
         readyToJump = true;
-        canMove = true;
         startYScale = transform.localScale.y;
     }
 
@@ -160,6 +159,8 @@ public class PlayerController : MonoBehaviour
 
     private void StateHandler()
     {
+        if (!canMove) return;
+
         if (player.energy <= 0) canMove = false;
         else canMove = true;
 
@@ -228,6 +229,8 @@ public class PlayerController : MonoBehaviour
 
     private void SpeedControl()
     {
+        if (!canMove) return;
+
         // limiting speed on slope
         if (OnSlope() && !exitingSlope)
         {
@@ -251,6 +254,8 @@ public class PlayerController : MonoBehaviour
 
     private void Jump()
     {
+        if (!canMove) return;
+
         exitingSlope = true;
 
         // reset y velocity
@@ -282,6 +287,8 @@ public class PlayerController : MonoBehaviour
     }
     void InteractWith()
     {
+        if (!FindObjectOfType<RevolverController>().canInteract) return;
+
         Ray r = new Ray(interactorSource.position, interactorSource.forward);
         if (Physics.Raycast(r, out RaycastHit hitInfo, interactRange))
         {

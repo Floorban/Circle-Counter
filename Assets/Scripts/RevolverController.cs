@@ -34,6 +34,7 @@ public class RevolverController : MonoBehaviour
     public GameObject bulletPrefab;
 
     [Header("Pause Menu")]
+    public bool hasStarted;
     [SerializeField] GameObject pausePanel;
     public bool isPaused, canPause, canInteract;
 
@@ -65,9 +66,13 @@ public class RevolverController : MonoBehaviour
         canControl = true;
         canShoot = true;
         inChamber = false;
+
+        OnGameStart();
     }
     private void Update()
     {
+        if (!hasStarted) return;
+   
         if (Input.GetKeyDown(KeyCode.R))
         {
             CheckChamber();
@@ -343,6 +348,17 @@ public class RevolverController : MonoBehaviour
         player.GetComponent<PlayerController>().canMove = true;
         chamberPanel.SetActive(true);
     }
+    public void OnGameStart()
+    {
+        canShoot = false;
+        canControl = false;
+        canChamber = false;
+        player.GetComponent<PlayerController>().canMove = false;
+        FindAnyObjectByType<PlayerCam>().LockCam();
+        isPaused = false;
+        canPause = false;
+        canInteract = true;
+    }
     public void PauseGame()
     {
         if (!isPaused && canPause)
@@ -371,7 +387,7 @@ public class RevolverController : MonoBehaviour
             canInteract = true;
         }
     }
-    public void OnShopPause(bool _isPaused, GameObject shopPanel)
+    public void OnShopPause(bool _isPaused, GameObject _shopPanel)
     {
         if (!canInteract) return;
 
@@ -382,7 +398,7 @@ public class RevolverController : MonoBehaviour
             canChamber = false;
             FindAnyObjectByType<PlayerCam>().LockCam();
             player.GetComponent<PlayerController>().canMove = false;
-            shopPanel.SetActive(true);
+            _shopPanel.SetActive(true);
             OpenChamberP();
             Time.timeScale = 0f;
             canPause = false;
@@ -394,7 +410,7 @@ public class RevolverController : MonoBehaviour
             canChamber = true;
             FindAnyObjectByType<PlayerCam>().UnlockCam();
             player.GetComponent<PlayerController>().canMove = true;
-            shopPanel.SetActive(false);
+            _shopPanel.SetActive(false);
             CloseChamberP();
             Time.timeScale = 1f;
             canPause = true;

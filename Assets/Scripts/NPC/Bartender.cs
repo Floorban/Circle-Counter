@@ -7,9 +7,14 @@ public class Bartender : NPCController, IInteractable
     [SerializeField] string prompt;
     [SerializeField] GameObject shopPanel;
     public bool inShop;
+    RevolverController revolver;
+    DialogueManager dialogueManager;
+
     protected override void Start()
     {
         base.Start();
+        revolver = FindObjectOfType<RevolverController>();
+        dialogueManager = GetComponent<DialogueManager>(); 
     }
 
     protected override void Update()
@@ -19,20 +24,24 @@ public class Bartender : NPCController, IInteractable
 
     public void OnInteract()
     {
-        if (inShop)
+        if (!revolver.canInteract) return;
+
+        if (!dialogueManager.hasTalked)
         {
-            shopPanel.SetActive(false);
-            inShop = false;
-            FindAnyObjectByType<PlayerCam>().UnlockCam();
-            FindObjectOfType<RevolverController>().CloseChamberP();
+            dialogueManager.StartDialogue();
         }
         else
         {
-            shopPanel.SetActive(true);
-            inShop = true;
-            FindAnyObjectByType<PlayerCam>().LockCam();
-            FindObjectOfType<RevolverController>().OpenChamberP();
-            FindObjectOfType<SoundManager>().PlayAmbient("TraderVoice1");
+            if (inShop)
+            {
+                revolver.OnShopPause(inShop, shopPanel);
+                inShop = false;
+            }
+            else
+            {
+                revolver.OnShopPause(inShop, shopPanel);
+                inShop = true;
+            }
         }
     }
     public string GetPrompt()

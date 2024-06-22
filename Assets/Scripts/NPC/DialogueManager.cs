@@ -11,7 +11,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] string[] dialogues;
     [SerializeField] float typeSpeed;
     int index;
-    public bool canTalk;
+    public bool canTalk, hasTalked;
 
     private void Update()
     {
@@ -20,8 +20,11 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue()
     {
+        dialoguePanel.SetActive(true);
         canTalk = true;
         index = 0;
+        FindObjectOfType<RevolverController>().canInteract = false;
+        FindObjectOfType<PlayerController>().interactPanel.SetActive(false);
         StartCoroutine(TypeTextLine());
     }
     public void HandleDialogue()
@@ -48,7 +51,7 @@ public class DialogueManager : MonoBehaviour
         foreach (char c in dialogues[index].ToCharArray())
         {
             text.text += c;
-            yield return new WaitForSeconds(typeSpeed);
+            yield return new WaitForSeconds(typeSpeed * Time.deltaTime);
         }
     }
     void NextLine()
@@ -64,6 +67,9 @@ public class DialogueManager : MonoBehaviour
             //if (animator) animator.SetTrigger("Exit");
             text.text = string.Empty;
             dialoguePanel.SetActive(false);
+            hasTalked = true;
+            FindObjectOfType<RevolverController>().canInteract = true;
+            //GetComponent<Bartender>().OnInteract();
         }
     }
 }

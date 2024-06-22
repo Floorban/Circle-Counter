@@ -7,9 +7,11 @@ public class AmmoTrader : NPCController, IInteractable
     [SerializeField] string prompt;
     [SerializeField] GameObject shopPanel;
     public bool inShop;
+    RevolverController revolver;
     protected override void Start()
     {
         base.Start();
+        revolver = FindObjectOfType<RevolverController>();
         //inShop = true;
         //shopPanel.SetActive(true);
     }
@@ -21,16 +23,16 @@ public class AmmoTrader : NPCController, IInteractable
 
     public void OnInteract()
     {
-        if (!FindObjectOfType<RevolverController>().canInteract) return;
+        if (!revolver.canInteract) return;
 
         if (inShop)
         {
-            FindObjectOfType<RevolverController>().OnShopPause(inShop, shopPanel);
+            revolver.OnShopPause(inShop, shopPanel);
             inShop = false;
         }
         else
         {
-            FindObjectOfType<RevolverController>().OnShopPause(inShop, shopPanel);
+            revolver.OnShopPause(inShop, shopPanel);
             inShop = true;
         }
     }
