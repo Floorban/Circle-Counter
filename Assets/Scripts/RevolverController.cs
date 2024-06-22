@@ -35,7 +35,7 @@ public class RevolverController : MonoBehaviour
 
     [Header("Pause Menu")]
     [SerializeField] GameObject pausePanel;
-    public bool isPaused, canPause;
+    public bool isPaused, canPause, canInteract;
 
     /*    private void OnEnable()
         {
@@ -50,6 +50,7 @@ public class RevolverController : MonoBehaviour
     void Start()
     {
         canPause = true;
+        canInteract = true;
         pausePanel.SetActive(false);
         StartCoroutine(SetUp());
         shootCount = 0;
@@ -355,7 +356,7 @@ public class RevolverController : MonoBehaviour
             Time.timeScale = 0f;
             isPaused = true;
             canPause = false;
-
+            canInteract = false;
         }
         else if (isPaused && !canPause)
         {
@@ -367,10 +368,13 @@ public class RevolverController : MonoBehaviour
             Time.timeScale = 1f;
             isPaused = false;
             canPause = true;
+            canInteract = true;
         }
     }
     public void OnShopPause(bool _isPaused, GameObject shopPanel)
     {
+        if (!canInteract) return;
+
         if (!_isPaused)
         {
             canShoot = false;
@@ -381,10 +385,10 @@ public class RevolverController : MonoBehaviour
             shopPanel.SetActive(true);
             OpenChamberP();
             Time.timeScale = 0f;
-            isPaused = true;
-            canPause = true;
+            canPause = false;
+            FindObjectOfType<SoundManager>().PlayAmbient("TraderVoice1");
         }
-        else
+        else if (_isPaused)
         {
             canControl = true;
             canChamber = true;
@@ -393,8 +397,7 @@ public class RevolverController : MonoBehaviour
             shopPanel.SetActive(false);
             CloseChamberP();
             Time.timeScale = 1f;
-            isPaused = false;
-            canPause = false;
+            canPause = true;
         }
     }
     IEnumerator SetUp()

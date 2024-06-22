@@ -21,6 +21,8 @@ public class AmmoTrader : NPCController, IInteractable
 
     public void OnInteract()
     {
+        if (!FindObjectOfType<RevolverController>().canInteract) return;
+
         if (inShop)
         {
             FindObjectOfType<RevolverController>().OnShopPause(inShop, shopPanel);
@@ -30,7 +32,6 @@ public class AmmoTrader : NPCController, IInteractable
         {
             FindObjectOfType<RevolverController>().OnShopPause(inShop, shopPanel);
             inShop = true;
-            FindObjectOfType<SoundManager>().PlayAmbient("TraderVoice1");
         }
     }
     public string GetPrompt()
