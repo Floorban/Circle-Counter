@@ -26,15 +26,14 @@ public class AmmoShop : MonoBehaviour
         while (selectedAmmo.Count < maxAmmoNum)
         {
             Projectile randomAmmo = availableProjectiles[Random.Range(0, availableProjectiles.Length)];
-            if (!selectedAmmo.Contains(randomAmmo))
-            {
-                selectedAmmo.Add(randomAmmo);
 
-                GameObject drinkItem = Instantiate(bulletPrefab, ammoShopContainer);
-                Bullet drinkItemScript = drinkItem.GetComponent<Bullet>();
-                drinkItemScript.projectile = randomAmmo;
-                drinkItemScript.inShop = true;
-            }
+            selectedAmmo.Add(randomAmmo);
+
+            GameObject drinkItem = Instantiate(bulletPrefab, ammoShopContainer);
+            Bullet drinkItemScript = drinkItem.GetComponent<Bullet>();
+            drinkItemScript.projectile = randomAmmo;
+            drinkItemScript.inShop = true;
+
         }
     }
 }

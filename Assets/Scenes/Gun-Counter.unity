@@ -37713,7 +37713,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1363373159915496976, guid: e2c75324c2e4d26408bda69ec241d7fa,
     type: 3}
   ammoShopContainer: {fileID: 1558133984}
-  maxAmmoNum: 3
+  maxAmmoNum: 2
 --- !u!1001 &1567104646
 PrefabInstance:
   m_ObjectHideFlags: 0
