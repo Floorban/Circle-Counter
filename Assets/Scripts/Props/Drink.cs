@@ -30,6 +30,7 @@ public class HealthDrink : Drink
     private void OnEnable()
     {
         description = $"Increases health by {healthBoost}.";
+        targetType = TargetType.Player;
     }
 
     public override void ShowFunction(string drinkDescription)
