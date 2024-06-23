@@ -1,14 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class DrinkItem : MonoBehaviour
 {
     public Drink drink;
-
     public Image icon;
-    public Text drinkNameText;
+    public TextMeshProUGUI drinkNameText;
+    public TextMeshProUGUI attributeText;
 
     private void Start()
     {
@@ -19,9 +20,9 @@ public class DrinkItem : MonoBehaviour
         }
     }
 
-    public void UseDrink(Player player)
+    public void UseDrink(IDrinkEffect target)
     {
-        drink.Use(player);
-        Destroy(gameObject); 
+        drink.ApplyTo(target);
+        Destroy(gameObject);
     }
 }

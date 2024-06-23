@@ -9,7 +9,7 @@ using UnityEngine.Rendering.Universal;
 using UnityEngine.Rendering;
 using static UnityEngine.Rendering.DebugUI;
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour, IDrinkEffect
 {
     [Header("Attributes")]
     public int hp;
@@ -77,6 +77,20 @@ public class Player : MonoBehaviour
         energy = maxEnergy / 2f;
         isHome = true;
         isDead = false;
+    }
+    public void ApplyEffect(Drink drink)
+    {
+        switch (drink)
+        {
+            case HealthDrink healthDrink:
+                hp += healthDrink.healthBoost;
+                break;
+            case EnergyDrink energyDrink:
+                energy += energyDrink.energyBoost;
+                break;
+            case DamageDrink damageDrink:
+                break;
+        }
     }
     public void HandleSanity()
     {

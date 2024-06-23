@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-public class RevolverController : MonoBehaviour
+public class RevolverController : MonoBehaviour, IDrinkEffect
 {
     [Header("Chamber")]
     Chamber chamber;
@@ -87,6 +87,20 @@ public class RevolverController : MonoBehaviour
         currentCoolDown -= Time.deltaTime;
 
         HandleControl();
+    }
+    public void ApplyEffect(Drink drink)
+    {
+        switch (drink)
+        {
+            case HealthDrink healthDrink:
+                // Handle healthDrink effect on PlayerController if needed
+                break;
+            case EnergyDrink energyDrink:
+                // Handle energyDrink effect on PlayerController if needed
+                break;
+            case DamageDrink damageDrink:
+                break;
+        }
     }
     public void StartRotateCylinder(RectTransform trans, int rot, float dur)
     {

@@ -9,7 +9,7 @@ interface IInteractable
     public void OnInteract();
     string GetPrompt();
 }
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, IDrinkEffect
 {
     [Header("Motion")]
     public Transform orientation;
@@ -106,7 +106,20 @@ public class PlayerController : MonoBehaviour
     {
         MovePlayer();
     }
-
+    public void ApplyEffect(Drink drink)
+    {
+        switch (drink)
+        {
+            case HealthDrink healthDrink:
+                // Handle healthDrink effect on PlayerController if needed
+                break;
+            case EnergyDrink energyDrink:
+                // Handle energyDrink effect on PlayerController if needed
+                break;
+            case DamageDrink damageDrink:
+                break;
+        }
+    }
     private void MyInput()
     {
         if (!canMove) return;
