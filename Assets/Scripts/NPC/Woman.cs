@@ -25,12 +25,12 @@ public class Woman : NPCController, IInteractable
 
         if (inShop)
         {
-            revolver.OnAmmoShopPause(inShop, shopPanel);
+            revolver.OnShopPause(inShop, shopPanel);
             inShop = false;
         }
         else
         {
-            revolver.OnAmmoShopPause(inShop, shopPanel);
+            revolver.OnShopPause(inShop, shopPanel);
             inShop = true;
         }
     }

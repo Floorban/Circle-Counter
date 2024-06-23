@@ -9,6 +9,7 @@ public class Bartender : NPCController, IInteractable
     public bool inShop;
     RevolverController revolver;
     DialogueManager dialogueManager;
+    public GameObject chamberTextbox;
 
     protected override void Start()
     {
@@ -36,6 +37,7 @@ public class Bartender : NPCController, IInteractable
             {
                 revolver.OnShopPause(inShop, shopPanel);
                 inShop = false;
+                chamberTextbox.SetActive(true);
             }
             else
             {

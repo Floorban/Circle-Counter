@@ -11,7 +11,7 @@ public class RevolverController : MonoBehaviour, IDrinkEffect
     Inventory inventory;
     Player player;
     bool inChamber;
-    [SerializeField] GameObject chamberPanel;
+    public GameObject chamberPanel;
     [SerializeField] GameObject inventoryPanel;
     [SerializeField] GameObject shopPanel;
     public List<Hole> currentHoles;
