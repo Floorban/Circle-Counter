@@ -7,7 +7,7 @@ using TMPro;
 public class Bullet : MonoBehaviour
 {
     [Header ("Bullet Attributes")]
-    [SerializeField] Projectile projectile;
+    public Projectile projectile;
     public Image image;
     public bool isReal;
     public bool isUsed;
