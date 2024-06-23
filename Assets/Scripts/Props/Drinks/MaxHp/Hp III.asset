@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: HpDrink III
-  m_EditorClassIdentifier: Assembly-CSharp::HealthDrink
-  drinkName: HpDrink 3
+  m_Script: {fileID: 11500000, guid: 18157e61d8ac17e48913fa111109c47c, type: 3}
+  m_Name: Hp III
+  m_EditorClassIdentifier: 
+  drinkName: Hp 3
   drinkValue: 20
   icon: {fileID: 21300000, guid: e3dbf36bf5e7f754babb4cfc46ae637a, type: 3}
   description: Increases health by 0.

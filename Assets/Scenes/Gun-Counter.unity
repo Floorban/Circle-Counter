@@ -46308,9 +46308,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   availableDrinks:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 4b11de5542706974ea5f91f1e29ab4d2, type: 2}
+  - {fileID: 11400000, guid: 8308a3859aa8c1340978acf0f243bc31, type: 2}
+  - {fileID: 11400000, guid: c3d7297db74bf034485f0dc4e7d255bf, type: 2}
   drinkItemPrefab: {fileID: 3430698369605780390, guid: 172a73007f1016d4daaeb9b53b482e6a,
     type: 3}
   drinkShopContainer: {fileID: 1701244128}

@@ -82,7 +82,7 @@ public class Player : MonoBehaviour, IDrinkEffect
     {
         switch (drink)
         {
-            case HealthDrink healthDrink:
+            case MaxHpDrink healthDrink:
                 hp += healthDrink.healthBoost;
                 break;
             case EnergyDrink energyDrink:

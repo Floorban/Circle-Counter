@@ -110,7 +110,7 @@ public class PlayerController : MonoBehaviour, IDrinkEffect
     {
         switch (drink)
         {
-            case HealthDrink healthDrink:
+            case MaxHpDrink healthDrink:
                 // Handle healthDrink effect on PlayerController if needed
                 break;
             case EnergyDrink energyDrink:
