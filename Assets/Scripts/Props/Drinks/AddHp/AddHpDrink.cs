@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "NewMaxHealthDrink", menuName = "Drink/MaxHealthDrink")]
-public class MaxHpDrink : Drink
+[CreateAssetMenu(fileName = "NewAddHealthDrink", menuName = "Drink/AddHealthDrink")]
+public class AddHpDrink : Drink
 {
     public int healthBoost;
 
     private void OnEnable()
     {
-        description = $"Increases max health by {healthBoost}.";
+        description = $"Recover health.";
         targetType = TargetType.Player;
     }
 

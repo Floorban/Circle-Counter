@@ -8,6 +8,7 @@ public class DrinkItem : MonoBehaviour
 {
     public Drink drink;
     public Image icon;
+    public int cost;
     //public TextMeshProUGUI drinkNameText;
     public TextMeshProUGUI attributeText;
 
@@ -18,8 +19,9 @@ public class DrinkItem : MonoBehaviour
         if (drink != null)
         {
             icon.sprite = drink.icon;
+            cost = drink.drinkValue;
             //drinkNameText.text = drink.drinkName;
-            attributeText.text = drink.description;
+            attributeText.text = $"{drink.description} \n price: {cost}";
         }
     }
 
@@ -28,6 +30,7 @@ public class DrinkItem : MonoBehaviour
         IDrinkEffect target = GetTargetBasedOnType(drink.targetType);
         if (target != null)
         {
+            FindObjectOfType<Player>().gold -= cost;
             UseDrink(target);
         }
     }

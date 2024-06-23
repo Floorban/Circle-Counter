@@ -14,17 +14,17 @@ public class Player : MonoBehaviour, IDrinkEffect
     [Header("Attributes")]
     public int hp;
     public int maxHp;
-    public float energy;
-    public float maxEnergy;
-    public float energySpeed;
-    public float energyMultiplier = 1f;
+    public float sanity;
+    public float maxSanity;
+    public float sanitySpeed;
+    public float sanitySpeedMultiplier = 1f;
     public bool isDead;
     public int gold;
     public bool isHome;
 
     [Header("UI")]
-    [SerializeField] Image energyBar;
-    [SerializeField] TextMeshProUGUI EnergyText;
+    [SerializeField] Image sanityBar;
+    [SerializeField] TextMeshProUGUI sanityText;
     [SerializeField] TextMeshProUGUI hpText;
     [SerializeField] Image hpBar;
     [SerializeField] Image[] hps;
@@ -74,7 +74,7 @@ public class Player : MonoBehaviour, IDrinkEffect
     public void InitializeStatus()
     {
         hp = maxHp;
-        energy = maxEnergy / 2f;
+        sanity = maxSanity / 2f;
         isHome = true;
         isDead = false;
     }
@@ -82,29 +82,30 @@ public class Player : MonoBehaviour, IDrinkEffect
     {
         switch (drink)
         {
-            case MaxHpDrink healthDrink:
-                hp += healthDrink.healthBoost;
+            case MaxHpDrink maxHpDrink:
+                maxHp += maxHpDrink.healthBoost;
                 break;
-            case EnergyDrink energyDrink:
-                energy += energyDrink.energyBoost;
+            case AddHpDrink hpDrink:
+                hp = maxHp;
                 break;
-            case DamageDrink damageDrink:
+            case AddSanity sanityDrink:
+                sanity = maxSanity;
                 break;
         }
     }
     public void HandleSanity()
     {
         if (!isHome)
-            energy -= Time.deltaTime * energySpeed * energyMultiplier;
+            sanity -= Time.deltaTime * sanitySpeed * sanitySpeedMultiplier;
 
-        if (energy <= 0)
+        if (sanity <= 0)
             EndRound();
     }
     void UpdateVignetteIntensity()
     {
         if (vignette != null)
         {
-            float targetIntensity = 0.75f - (energy / maxEnergy);
+            float targetIntensity = 0.75f - (sanity / maxSanity);
             vignette.intensity.value = Mathf.Lerp(vignette.intensity.value, targetIntensity, lerpSpeed * Time.deltaTime);
         }
     }
@@ -122,10 +123,10 @@ public class Player : MonoBehaviour, IDrinkEffect
     }
     public void UpdateEnergy()
     {
-        energy += reward;
-        if (energy > maxEnergy) 
+        sanity += reward;
+        if (sanity > maxSanity) 
         {
-            energy = maxEnergy;
+            sanity = maxSanity;
         }
         //UpdateUI();
     }
@@ -137,15 +138,15 @@ public class Player : MonoBehaviour, IDrinkEffect
          {
              hps[i].enabled = !DisplayHp(hp, i);
          }*/
-        energyBar.fillAmount = energy / maxEnergy;
+        sanityBar.fillAmount = sanity / maxSanity;
         goldText.text = $"${gold}";
 
-        Color energyColor = Color.Lerp(Color.red, Color.green, (energy / maxEnergy));
-        energyBar.color = energyColor;
+        Color energyColor = Color.Lerp(Color.red, Color.green, (sanity / maxSanity));
+        sanityBar.color = energyColor;
 
         if (revolver.bulletNum > 0)
-        EnergyText.text = $"Gain: {reward} sanity each shot";
+        sanityText.text = $"Gain: {reward} sanity each shot";
         else
-        EnergyText.text = $"No Bullets! Gain: {0} sanity each shot";
+        sanityText.text = $"No Bullets! Gain: {0} sanity each shot";
     }
 }

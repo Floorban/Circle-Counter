@@ -69,6 +69,7 @@ public class DialogueManager : MonoBehaviour
             dialoguePanel.SetActive(false);
             hasTalked = true;
             FindObjectOfType<RevolverController>().canInteract = true;
+            FindObjectOfType<RevolverController>().hasStarted = true;
             //GetComponent<Bartender>().OnInteract();
         }
     }

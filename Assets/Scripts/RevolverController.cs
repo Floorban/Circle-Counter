@@ -390,6 +390,7 @@ public class RevolverController : MonoBehaviour, IDrinkEffect
         }
         else if (isPaused && !canPause)
         {
+            canShoot = true;
             canControl = true;
             canChamber = true;
             FindAnyObjectByType<PlayerCam>().UnlockCam();

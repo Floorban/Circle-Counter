@@ -174,7 +174,7 @@ public class PlayerController : MonoBehaviour, IDrinkEffect
     {
         if (!canMove) return;
 
-        if (player.energy <= 0) canMove = false;
+        if (player.sanity <= 0) canMove = false;
         else canMove = true;
 
         // Mode - Crouching
@@ -192,7 +192,7 @@ public class PlayerController : MonoBehaviour, IDrinkEffect
             weaponSway.multiplier = 10f;
             viewBob.EffectSpeed = 10f;
             viewBob.EffectIntensity = 0.1f;
-            player.energyMultiplier = 2f;
+            player.sanitySpeedMultiplier = 2f;
         }
 
         // Mode - Walking
@@ -203,7 +203,7 @@ public class PlayerController : MonoBehaviour, IDrinkEffect
             weaponSway.multiplier = 5f;
             viewBob.EffectSpeed = 5f;
             viewBob.EffectIntensity = 0.03f;
-            player.energyMultiplier = 1f;
+            player.sanitySpeedMultiplier = 1f;
         }
 
         // Mode - Air
@@ -300,7 +300,11 @@ public class PlayerController : MonoBehaviour, IDrinkEffect
     }
     void InteractWith()
     {
-        if (!FindObjectOfType<RevolverController>().canInteract) return;
+        if (!FindObjectOfType<RevolverController>().canInteract)
+        {
+            interactPanel.SetActive(false);
+            return;
+        }
 
         Ray r = new Ray(interactorSource.position, interactorSource.forward);
         if (Physics.Raycast(r, out RaycastHit hitInfo, interactRange))
