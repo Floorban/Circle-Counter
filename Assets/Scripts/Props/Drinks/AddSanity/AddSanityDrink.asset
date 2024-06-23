@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   drinkName: AddSanityDrink
   drinkValue: 20
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 997bb69c61709ca47a267c2cdccc87d8, type: 3}
   description: Recover sanity.
   targetType: 0
   sanityBoost: 0

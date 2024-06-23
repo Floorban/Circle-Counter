@@ -285,6 +285,7 @@ MonoBehaviour:
   icon: {fileID: 0}
   cost: 0
   attributeText: {fileID: 1379217919405127586}
+  oneTimeUse: 1
 --- !u!114 &2169274511580786614
 MonoBehaviour:
   m_ObjectHideFlags: 0

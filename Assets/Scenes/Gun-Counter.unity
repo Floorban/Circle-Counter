@@ -11924,10 +11924,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4700781981063797686, guid: 172a73007f1016d4daaeb9b53b482e6a,
         type: 3}
+      propertyPath: uses
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4700781981063797686, guid: 172a73007f1016d4daaeb9b53b482e6a,
+        type: 3}
       propertyPath: drink
       value: 
       objectReference: {fileID: 11400000, guid: 02b9ee84d931a7c48a55a09131bc2aae,
         type: 2}
+    - target: {fileID: 4700781981063797686, guid: 172a73007f1016d4daaeb9b53b482e6a,
+        type: 3}
+      propertyPath: oneTimeUse
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8873395011572438430, guid: 172a73007f1016d4daaeb9b53b482e6a,
         type: 3}
       propertyPath: m_Pivot.x
@@ -29641,10 +29651,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4700781981063797686, guid: 172a73007f1016d4daaeb9b53b482e6a,
         type: 3}
+      propertyPath: uses
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4700781981063797686, guid: 172a73007f1016d4daaeb9b53b482e6a,
+        type: 3}
       propertyPath: drink
       value: 
       objectReference: {fileID: 11400000, guid: 9988b4cfd7a321940ba0505d675b08d9,
         type: 2}
+    - target: {fileID: 4700781981063797686, guid: 172a73007f1016d4daaeb9b53b482e6a,
+        type: 3}
+      propertyPath: oneTimeUse
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8873395011572438430, guid: 172a73007f1016d4daaeb9b53b482e6a,
         type: 3}
       propertyPath: m_Pivot.x

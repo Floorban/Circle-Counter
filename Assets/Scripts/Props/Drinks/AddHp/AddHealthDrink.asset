@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   drinkName: AddHpDrink
   drinkValue: 20
-  icon: {fileID: 0}
-  description: 
+  icon: {fileID: 21300000, guid: 3bebb8e8809d47d4281581fa9df614b2, type: 3}
+  description: Recover health.
   targetType: 0
   healthBoost: 0

@@ -11,6 +11,7 @@ public class DrinkItem : MonoBehaviour
     public int cost;
     //public TextMeshProUGUI drinkNameText;
     public TextMeshProUGUI attributeText;
+    public bool oneTimeUse;
 
     private void Start()
     {
@@ -54,6 +55,8 @@ public class DrinkItem : MonoBehaviour
     public void UseDrink(IDrinkEffect target)
     {
         drink.ApplyTo(target);
+
+        if (oneTimeUse) 
         Destroy(gameObject);
     }
 }
