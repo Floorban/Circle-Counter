@@ -27,12 +27,12 @@ public class AmmoTrader : NPCController, IInteractable
 
         if (inShop)
         {
-            revolver.OnShopPause(inShop, shopPanel);
+            revolver.OnAmmoShopPause(inShop, shopPanel);
             inShop = false;
         }
         else
         {
-            revolver.OnShopPause(inShop, shopPanel);
+            revolver.OnAmmoShopPause(inShop, shopPanel);
             inShop = true;
         }
     }

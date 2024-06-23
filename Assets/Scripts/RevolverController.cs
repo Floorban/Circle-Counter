@@ -387,7 +387,7 @@ public class RevolverController : MonoBehaviour
             canInteract = true;
         }
     }
-    public void OnShopPause(bool _isPaused, GameObject _shopPanel)
+    public void OnAmmoShopPause(bool _isPaused, GameObject _shopPanel)
     {
         if (!canInteract) return;
 
@@ -412,6 +412,33 @@ public class RevolverController : MonoBehaviour
             player.GetComponent<PlayerController>().canMove = true;
             _shopPanel.SetActive(false);
             CloseChamberP();
+            Time.timeScale = 1f;
+            canPause = true;
+        }
+    }
+    public void OnShopPause(bool _isPaused, GameObject _shopPanel)
+    {
+        if (!canInteract) return;
+
+        if (!_isPaused)
+        {
+            canShoot = false;
+            canControl = false;
+            canChamber = false;
+            FindAnyObjectByType<PlayerCam>().LockCam();
+            player.GetComponent<PlayerController>().canMove = false;
+            _shopPanel.SetActive(true);
+            Time.timeScale = 0f;
+            canPause = false;
+            FindObjectOfType<SoundManager>().PlayAmbient("TraderVoice1");
+        }
+        else if (_isPaused)
+        {
+            canControl = true;
+            canChamber = true;
+            FindAnyObjectByType<PlayerCam>().UnlockCam();
+            player.GetComponent<PlayerController>().canMove = true;
+            _shopPanel.SetActive(false);
             Time.timeScale = 1f;
             canPause = true;
         }
