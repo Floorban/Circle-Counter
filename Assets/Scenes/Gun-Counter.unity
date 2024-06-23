@@ -46813,7 +46813,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 130, y: -250}
+  m_AnchoredPosition: {x: 145, y: -550}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1701244129
@@ -46836,10 +46836,10 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 250, y: 250}
-  m_Spacing: {x: 70, y: 60}
+  m_CellSize: {x: 500, y: 500}
+  m_Spacing: {x: 200, y: 90}
   m_Constraint: 1
-  m_ConstraintCount: 4
+  m_ConstraintCount: 3
 --- !u!1001 &1714819979
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52952,7 +52952,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2032009963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56711,7 +56711,7 @@ GameObject:
   - component: {fileID: 7918501180774921857}
   - component: {fileID: 3129656636770102249}
   - component: {fileID: 8060265052724059559}
-  - component: {fileID: 7357717334965145496}
+  - component: {fileID: 8060265052724059560}
   - component: {fileID: 5202763687291198965}
   m_Layer: 5
   m_Name: bulletPrefab
@@ -56911,10 +56911,10 @@ RectTransform:
   - {fileID: 1918130063108750960}
   m_Father: {fileID: 1701244128}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 125, y: -125}
-  m_SizeDelta: {x: 250, y: 250}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2980547172789560379
 CanvasRenderer:
@@ -57188,30 +57188,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3434919446540859011}
   m_CullTransparentMesh: 1
---- !u!114 &7357717334965145496
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1363373159857074629}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed7eea132f298f9499dc9842440d5e2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 11400000, guid: 805891b1998f5c549b1ba0fe4a727398, type: 2}
-  image: {fileID: 0}
-  isReal: 0
-  isUsed: 0
-  inShop: 1
-  dmg: 0
-  reward: 0
-  price: 0
-  activeChance: 0
-  button: {fileID: 0}
-  isSelected: 0
-  attributeText: {fileID: 2769590291234275125}
 --- !u!222 &7918501180774921857
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -57264,9 +57240,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7357717334965145496}
-        m_TargetAssemblyTypeName: Bullet, Assembly-CSharp
-        m_MethodName: Selected
+      - m_Target: {fileID: 8060265052724059560}
+        m_TargetAssemblyTypeName: DrinkItem, Assembly-CSharp
+        m_MethodName: UseDrink
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -57276,6 +57252,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8060265052724059560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363373159857074629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fec2bef7cf0e3e4782d005f4010baa3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drink: {fileID: 0}
+  icon: {fileID: 0}
+  attributeText: {fileID: 2769590291234275125}
 --- !u!1 &8847143372496858221
 GameObject:
   m_ObjectHideFlags: 0

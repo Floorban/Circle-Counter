@@ -8,17 +8,34 @@ public interface IDrinkEffect
 public abstract class Drink : ScriptableObject
 {
     public string drinkName;
+    public int drinkValue;
     public Sprite icon;
-
-    public virtual void ApplyTo(IDrinkEffect target)
+    public string description;
+    public enum TargetType
     {
-        // Base apply effect, can be overridden by specific drinks
+        Player,
+        PlayerController,
     }
+
+    public TargetType targetType;
+    public virtual void ShowFunction(string drinkDescription) { }
+    public virtual void ApplyTo(IDrinkEffect target) { }
 }
+
 [CreateAssetMenu(fileName = "NewHealthDrink", menuName = "Drink/HealthDrink")]
 public class HealthDrink : Drink
 {
     public int healthBoost;
+
+    private void OnEnable()
+    {
+        description = $"Increases health by {healthBoost}.";
+    }
+
+    public override void ShowFunction(string drinkDescription)
+    {
+        drinkDescription = description;
+    }
 
     public override void ApplyTo(IDrinkEffect target)
     {
