@@ -2,11 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SoundManager : MonoBehaviour
 {
     public static SoundManager instance;
-
+    public bool isStart;
     public Sound[] ambientSounds, sfxSounds;
     public AudioSource ambientSrc, sfxSrc;
 
@@ -16,6 +17,17 @@ public class SoundManager : MonoBehaviour
     {
         if (instance != null)
             instance = this;
+    }
+    private void Start()
+    {
+        if (!isStart) return;
+        StartCoroutine(StartGame());
+    }
+    IEnumerator StartGame()
+    {
+        PlaySound("Start", 1f);
+        yield return new WaitForSeconds(7.5f);
+        SceneManager.LoadScene(1);
     }
     public void RandomizeAmbient(string name, int freq, int offset)
     {

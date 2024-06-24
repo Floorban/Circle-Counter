@@ -9,7 +9,7 @@ public class AddSanity : Drink
 
     private void OnEnable()
     {
-        description = $"Recover sanity.";
+        //description = $"Recover sanity.";
         targetType = TargetType.Player;
     }
 

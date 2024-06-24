@@ -21136,7 +21136,7 @@ MonoBehaviour:
   sanitySpeed: 1.5
   sanitySpeedMultiplier: 1
   isDead: 0
-  gold: 100
+  gold: 10
   addedGold: 0
   isHome: 0
   sanityBar: {fileID: 182893976}
@@ -37794,7 +37794,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b6d75e2e114270e4a95da0d41ea7cc76, type: 2}
   bulletPrefab: {fileID: 1363373159915496976, guid: e2c75324c2e4d26408bda69ec241d7fa,
     type: 3}
-  ammoShopContainer: {fileID: 1558133984}
+  ammoShopContainer: {fileID: 0}
   maxAmmoNum: 12
 --- !u!1001 &1567104646
 PrefabInstance:
@@ -42935,15 +42935,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bc94ed652db2e84ebe1ec68c87b2fae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isStart: 0
   ambientSounds:
   - name: TraderVoice1
-    audioClip: {fileID: 8300000, guid: 67684ff61a1d50b4da87f4826c4eb74c, type: 3}
+    audioClip: {fileID: 8300000, guid: 010f493a7b753ac4e8b6523a6a05a5b4, type: 3}
   - name: TraderVoice2
-    audioClip: {fileID: 8300000, guid: 60e4f8d1b6f38fc44a63777fbd3e370c, type: 3}
+    audioClip: {fileID: 8300000, guid: 98a01ce1f6971834ebcdb45eb145851e, type: 3}
   - name: TraderVoice3
-    audioClip: {fileID: 8300000, guid: 34163dbcd675e4d4789d7fd1324b1094, type: 3}
-  - name: TraderVoice4
-    audioClip: {fileID: 8300000, guid: 9f959c3683d70d543821ef35aa97749b, type: 3}
+    audioClip: {fileID: 8300000, guid: 8e91ce70b872df24f8e8f2df23f9800a, type: 3}
   sfxSounds:
   - name: LoadBullet
     audioClip: {fileID: 8300000, guid: 9c9d448cbb7b0ee439f0a571466cd27b, type: 3}

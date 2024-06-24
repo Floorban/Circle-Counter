@@ -58,7 +58,7 @@ public class Player : MonoBehaviour, IDrinkEffect
     IEnumerator NextRound()
     {
         yield return new WaitForSeconds(0.07f);
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(2);
     }
     void Start()
     {
