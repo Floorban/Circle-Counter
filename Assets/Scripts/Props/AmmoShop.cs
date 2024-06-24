@@ -9,11 +9,14 @@ public class AmmoShop : MonoBehaviour
     public Transform ammoShopContainer;
     public int maxAmmoNum;
 
-    private void Start()
+    private void OnEnable()
     {
-        InstantiateRandomBullets();
+        Actions.OnLevelEnd += InstantiateRandomBullets;
     }
-
+    private void OnDisable()
+    {
+        Actions.OnLevelEnd -= InstantiateRandomBullets;
+    }
     public void InstantiateRandomBullets()
     {
         // Clear existing drink items

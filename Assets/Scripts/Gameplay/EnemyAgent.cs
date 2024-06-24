@@ -317,13 +317,13 @@ public class EnemyAgent : MonoBehaviour
 
         return new Vector3(Mathf.Sin(angleInDegrees * Mathf.Deg2Rad), 0, Mathf.Cos(angleInDegrees * Mathf.Deg2Rad));
     }
-    void OnDrawGizmos()
+  /*  void OnDrawGizmos()
     {
         Handles.color = Color.yellow;
         Handles.DrawWireArc(centerPoint, Vector3.up, Vector3.forward, 360, patrolZoneRange);
 
-        /*    Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(transform.position, attackRange);*/
+        *//*    Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(transform.position, attackRange);*//*
         Gizmos.color = Color.magenta;
         Gizmos.DrawWireCube(transform.position, new Vector3(attackRange, attackRange, attackRange));
 
@@ -345,5 +345,5 @@ public class EnemyAgent : MonoBehaviour
             Handles.color = Color.green;
             Handles.DrawLine(transform.position, playerRef.transform.position);
         }
-    }
+    }*/
 }

@@ -10,12 +10,15 @@ public class Bartender : NPCController, IInteractable
     RevolverController revolver;
     DialogueManager dialogueManager;
     public GameObject chamberTextbox;
+    [SerializeField] DrinkShop shop;
+    public bool canSpawn;
 
     protected override void Start()
     {
         base.Start();
         revolver = FindObjectOfType<RevolverController>();
         dialogueManager = GetComponent<DialogueManager>(); 
+        shop = GetComponent<DrinkShop>();
     }
 
     protected override void Update()
@@ -44,6 +47,11 @@ public class Bartender : NPCController, IInteractable
                 revolver.OnAmmoShopPause(inShop, shopPanel);
                 inShop = true;
                 FindObjectOfType<SoundManager>().PlayAmbient("TraderVoice1");
+                if (canSpawn)
+                {
+                    shop.InstantiateRandomDrinks();
+                    canSpawn = false;
+                }
             }
         }
     }

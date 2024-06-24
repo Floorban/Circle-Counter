@@ -125,11 +125,11 @@ public class SpawnManager : MonoBehaviour
         foreach (GameObject enemy in enemies)
             Destroy(enemy);
     }
-    void OnDrawGizmos()
+/*    void OnDrawGizmos()
     {
         Handles.color = Color.blue;
         //Handles.DrawWireCube(playerTransform.position, notSpawnArea);
         Handles.DrawWireArc(playerTransform.position, Vector3.up, Vector3.forward, 360f, spawnConstrains);
         Handles.DrawWireArc(playerTransform.position, Vector3.up, Vector3.forward, 360f, spawnConstrains * spawnRadius);
-    }
+    }*/
 }

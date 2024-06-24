@@ -8,10 +8,13 @@ public class DrinkShop : MonoBehaviour
     public GameObject drinkItemPrefab; 
     public Transform drinkShopContainer;
     public int spawnNum;
-
-    private void Start()
+    private void OnEnable()
     {
-        InstantiateRandomDrinks();
+        Actions.OnLevelEnd += InstantiateRandomDrinks;
+    }
+    private void OnDisable()
+    {
+        Actions.OnLevelEnd -= InstantiateRandomDrinks;
     }
 
     public void InstantiateRandomDrinks()

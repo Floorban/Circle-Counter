@@ -8,10 +8,13 @@ public class AmmoTrader : NPCController, IInteractable
     [SerializeField] GameObject shopPanel;
     public bool inShop;
     RevolverController revolver;
+    [SerializeField] AmmoShop shop;
+    public bool canSpawn;
     protected override void Start()
     {
         base.Start();
         revolver = FindObjectOfType<RevolverController>();
+        shop = GetComponent<AmmoShop>();
         //inShop = true;
         //shopPanel.SetActive(true);
     }
@@ -35,6 +38,11 @@ public class AmmoTrader : NPCController, IInteractable
             revolver.OnAmmoShopPause(inShop, shopPanel);
             inShop = true;
             FindObjectOfType<SoundManager>().PlayAmbient("TraderVoice2");
+            if (canSpawn)
+            {
+                shop.InstantiateRandomBullets();
+                canSpawn = false;
+            }
         }
     }
     public string GetPrompt()
