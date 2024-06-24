@@ -42,6 +42,8 @@ public class Bullet : MonoBehaviour
     private void Update()
     {
         attributeText.text = $"Damage: {dmg} \nReward: {reward} \nPrice: {price}";
+
+        if (dmg <= 0) dmg = 0;
     }
     public void Selected()
     {

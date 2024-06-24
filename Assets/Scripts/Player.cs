@@ -20,6 +20,7 @@ public class Player : MonoBehaviour, IDrinkEffect
     public float sanitySpeedMultiplier = 1f;
     public bool isDead;
     public int gold;
+    public int addedGold;
     public bool isHome;
 
     [Header("UI")]
@@ -35,9 +36,12 @@ public class Player : MonoBehaviour, IDrinkEffect
     [Header("Post Processing")]
     [SerializeField] Volume volume;
     Vignette vignette;
+    public float vigIntensity;
 
     public bool shootSelf;
-    public int reward;
+    public int reward, addedReward;
+    public bool avoidFirstShot;
+
     private void OnEnable()
     {
         Actions.OnLevelEnd += InitializeStatus;
@@ -64,6 +68,7 @@ public class Player : MonoBehaviour, IDrinkEffect
         }
         revolver = FindObjectOfType<RevolverController>();  
         InitializeStatus();
+        vigIntensity = 0.85f;
     }
     private void Update()
     {
@@ -73,6 +78,7 @@ public class Player : MonoBehaviour, IDrinkEffect
     }
     public void InitializeStatus()
     {
+        gold += addedGold;
         hp = maxHp;
         sanity = maxSanity / 2f;
         isHome = true;
@@ -82,14 +88,32 @@ public class Player : MonoBehaviour, IDrinkEffect
     {
         switch (drink)
         {
-            case MaxHpDrink maxHpDrink:
-                maxHp += maxHpDrink.healthBoost;
-                break;
             case AddHpDrink hpDrink:
                 hp = maxHp;
                 break;
             case AddSanity sanityDrink:
                 sanity = maxSanity;
+                break;
+            case MaxHpDrink maxHpDrink:
+                maxHp += maxHpDrink.healthBoost;
+                break;
+            case MaxSanityDrink maxSanityDrink:
+                maxSanity += maxSanityDrink.sanityBoost;
+                break;
+            case SanitySpeedDrink sanitySpeedDrink:
+                sanitySpeedMultiplier = sanitySpeedDrink.sanitySpeedBoost;
+                break;
+            case VisionDrink visionDrink:
+                vigIntensity = visionDrink.visionBoost;
+                break;
+            case RewardPlusDrink rewardDrink:
+                addedReward += rewardDrink.rewardBoost;
+                break;
+            case PiggyBankDrink bankDrink:
+                 addedGold += bankDrink.goldBoost;
+                break;
+            case AvoidFirstShotDrink AFSDrink:
+                avoidFirstShot = true;
                 break;
         }
     }
@@ -105,12 +129,19 @@ public class Player : MonoBehaviour, IDrinkEffect
     {
         if (vignette != null)
         {
-            float targetIntensity = 0.75f - (sanity / maxSanity);
+            float targetIntensity = vigIntensity - (sanity / maxSanity);
             vignette.intensity.value = Mathf.Lerp(vignette.intensity.value, targetIntensity, lerpSpeed * Time.deltaTime);
         }
     }
     public void TakeDamage(int dmg)
     {
+        if (avoidFirstShot)
+        {
+            avoidFirstShot = false;
+            Debug.Log("First shot avoided!");
+            return;
+        }
+
         hp -= dmg;
         //UpdateUI() ;
 
@@ -123,7 +154,7 @@ public class Player : MonoBehaviour, IDrinkEffect
     }
     public void UpdateEnergy()
     {
-        sanity += reward;
+        sanity += reward + addedReward;
         if (sanity > maxSanity) 
         {
             sanity = maxSanity;
@@ -145,7 +176,7 @@ public class Player : MonoBehaviour, IDrinkEffect
         sanityBar.color = energyColor;
 
         if (revolver.bulletNum > 0)
-        sanityText.text = $"Gain: {reward} sanity each shot";
+        sanityText.text = $"Gain: {reward + addedReward} sanity each shot";
         else
         sanityText.text = $"No Bullets! Gain: {0} sanity each shot";
     }

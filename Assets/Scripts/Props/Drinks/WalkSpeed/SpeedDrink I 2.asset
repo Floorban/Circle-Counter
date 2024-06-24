@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18157e61d8ac17e48913fa111109c47c, type: 3}
-  m_Name: Hp I
+  m_Script: {fileID: 11500000, guid: 6664b69446ddb4344916e95b5aea8432, type: 3}
+  m_Name: SpeedDrink I 2
   m_EditorClassIdentifier: 
-  drinkName: Hp 1
-  drinkValue: 5
-  icon: {fileID: 21300000, guid: 84176bb896c7dab41abb5ad4a20eb891, type: 3}
-  description: Increases max health by 5.
-  targetType: 0
-  healthBoost: 5
+  drinkName: SpeedDrink 1
+  drinkValue: 50
+  icon: {fileID: 21300000, guid: 68489a1f214560a4db6b8aebca7c3c55, type: 3}
+  description: You move much faster
+  targetType: 1
+  speedBoost: 8

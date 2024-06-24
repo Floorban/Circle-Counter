@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18157e61d8ac17e48913fa111109c47c, type: 3}
-  m_Name: Hp I
+  m_Script: {fileID: 11500000, guid: 1937e0c457b013a49abaad298ea14b10, type: 3}
+  m_Name: Reward+Drink III
   m_EditorClassIdentifier: 
-  drinkName: Hp 1
-  drinkValue: 5
-  icon: {fileID: 21300000, guid: 84176bb896c7dab41abb5ad4a20eb891, type: 3}
-  description: Increases max health by 5.
+  drinkName: Reward+Drink 3
+  drinkValue: 20
+  icon: {fileID: 21300000, guid: 8e03b0bba1428ad4794d835c31c4e86d, type: 3}
+  description: Increases sanity reward from each shot by 0.
   targetType: 0
-  healthBoost: 5
+  rewardBoost: 3

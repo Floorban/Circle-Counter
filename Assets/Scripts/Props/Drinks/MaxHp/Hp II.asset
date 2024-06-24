@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   drinkName: Hp2
   drinkValue: 10
-  icon: {fileID: 21300000, guid: 34de89003d3ff36418ee5cdc45d1d983, type: 3}
-  description: 
+  icon: {fileID: 21300000, guid: 84176bb896c7dab41abb5ad4a20eb891, type: 3}
+  description: Increases max health by 10.
   targetType: 0
   healthBoost: 10

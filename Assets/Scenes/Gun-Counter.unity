@@ -21241,6 +21241,7 @@ MonoBehaviour:
   sanitySpeedMultiplier: 1
   isDead: 0
   gold: 100
+  addedGold: 0
   isHome: 0
   sanityBar: {fileID: 182893976}
   sanityText: {fileID: 357361999}
@@ -21256,8 +21257,10 @@ MonoBehaviour:
   goldText: {fileID: 1289297538}
   lerpSpeed: 3
   volume: {fileID: 832575518}
+  vigIntensity: 0
   shootSelf: 0
   reward: 0
+  addedReward: 0
 --- !u!4 &652989115 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 12480f3df5a83c34293af19166d07d0f,
@@ -27135,7 +27138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &832575518
 MonoBehaviour:
   m_ObjectHideFlags: 0

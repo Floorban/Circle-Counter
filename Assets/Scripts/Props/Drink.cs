@@ -15,43 +15,11 @@ public abstract class Drink : ScriptableObject
     {
         Player,
         PlayerController,
+        RevolverController,
+        Inventory,
     }
 
     public TargetType targetType;
     public virtual void ShowFunction(string drinkDescription) { }
     public virtual void ApplyTo(IDrinkEffect target) { }
-}
-
-// EnergyDrink
-[CreateAssetMenu(fileName = "NewEnergyDrink", menuName = "Drink/EnergyDrink")]
-public class EnergyDrink : Drink
-{
-    public float energyBoost;
-
-    public override void ApplyTo(IDrinkEffect target)
-    {
-        target.ApplyEffect(this);
-    }
-}
-
-// DamageDrink
-[CreateAssetMenu(fileName = "NewDamageDrink", menuName = "Drink/DamageDrink")]
-public class DamageDrink : Drink
-{
-    public int damageBoost;
-
-    public override void ApplyTo(IDrinkEffect target)
-    {
-        target.ApplyEffect(this);
-    }
-}
-
-// AvoidFirstShotDrink
-[CreateAssetMenu(fileName = "NewAvoidFirstShotDrink", menuName = "Drink/AvoidFirstShotDrink")]
-public class AvoidFirstShotDrink : Drink
-{
-    public override void ApplyTo(IDrinkEffect target)
-    {
-        target.ApplyEffect(this);
-    }
 }

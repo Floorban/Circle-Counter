@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18157e61d8ac17e48913fa111109c47c, type: 3}
-  m_Name: Hp I
+  m_Script: {fileID: 11500000, guid: 01af32b27ae543d44a1efde618f9dd33, type: 3}
+  m_Name: VisionDrink I 2
   m_EditorClassIdentifier: 
-  drinkName: Hp 1
-  drinkValue: 5
-  icon: {fileID: 21300000, guid: 84176bb896c7dab41abb5ad4a20eb891, type: 3}
-  description: Increases max health by 5.
+  drinkName: VisionDrink 3
+  drinkValue: 30
+  icon: {fileID: 21300000, guid: 18e769843683593408e8628940496f1b, type: 3}
+  description: 
   targetType: 0
-  healthBoost: 5
+  visionBoost: 0.6

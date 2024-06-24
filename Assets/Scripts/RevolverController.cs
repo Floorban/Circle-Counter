@@ -15,7 +15,7 @@ public class RevolverController : MonoBehaviour, IDrinkEffect
     [SerializeField] GameObject inventoryPanel;
     [SerializeField] GameObject shopPanel;
     public List<Hole> currentHoles;
-    public int bulletNum;
+    public int bulletNum;  
     [SerializeField] TextMeshProUGUI bulletNumText;
 
     [Header("Shooting Logic")]
@@ -94,11 +94,6 @@ public class RevolverController : MonoBehaviour, IDrinkEffect
         {
             case MaxHpDrink healthDrink:
                 // Handle healthDrink effect on PlayerController if needed
-                break;
-            case EnergyDrink energyDrink:
-                // Handle energyDrink effect on PlayerController if needed
-                break;
-            case DamageDrink damageDrink:
                 break;
         }
     }

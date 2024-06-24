@@ -110,13 +110,8 @@ public class PlayerController : MonoBehaviour, IDrinkEffect
     {
         switch (drink)
         {
-            case MaxHpDrink healthDrink:
-                // Handle healthDrink effect on PlayerController if needed
-                break;
-            case EnergyDrink energyDrink:
-                // Handle energyDrink effect on PlayerController if needed
-                break;
-            case DamageDrink damageDrink:
+            case SpeedDrink speedDrink:
+                walkSpeed += speedDrink.speedBoost;
                 break;
         }
     }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Inventory : MonoBehaviour
+public class Inventory : MonoBehaviour, IDrinkEffect
 {
     public List<Bullet> ownedBullets;
     Chamber chamber;
@@ -35,7 +35,29 @@ public class Inventory : MonoBehaviour
         chamber = FindObjectOfType<Chamber>();
         gridLayout = GetComponent<GridLayoutGroup>();
     }
-
+    public void ApplyEffect(Drink drink)
+    {
+        switch (drink)
+        {
+            case BulletPowerupDrink bulletDrink:
+                Bullet bulletToUpgrade = GetRandomBullet();
+                if (bulletToUpgrade != null)
+                    bulletToUpgrade.dmg -= bulletDrink.bulletDmgBoost;
+                break;
+        }
+    }
+    Bullet GetRandomBullet()
+    {
+        if (ownedBullets.Count > 0)
+        {
+            int randomIndex = Random.Range(0, ownedBullets.Count);
+            return ownedBullets[randomIndex];
+        }
+        else
+        {
+            return null;
+        }
+    }
     void DisableButtons(Bullet s_bullet)
     {
         for (int i = 0; i < ownedBullets.Count; i++) 
