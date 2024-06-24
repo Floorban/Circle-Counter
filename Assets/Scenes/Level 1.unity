@@ -32670,7 +32670,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1192906918
 RectTransform:
   m_ObjectHideFlags: 0
@@ -44802,7 +44802,7 @@ MonoBehaviour:
   shootTran2: {fileID: 60076024}
   bulletPrefab: {fileID: 8901784874312576233, guid: 2020312ce9e5a694ba014b92dbf73198,
     type: 3}
-  hasStarted: 0
+  hasStarted: 1
   pausePanel: {fileID: 140161360}
   isPaused: 0
   canPause: 0
