@@ -51,6 +51,11 @@ public class Player : MonoBehaviour, IDrinkEffect
     {
         Actions.OnLevelEnd -= InitializeStatus;
     }
+    public void EndGame()
+    {
+        revolver.PauseGame();
+        SceneManager.LoadScene(2);
+    }
     void EndRound()
     {
         Debug.Log("round ends");
