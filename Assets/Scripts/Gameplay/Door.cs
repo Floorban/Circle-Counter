@@ -22,6 +22,7 @@ public class Door : MonoBehaviour, IInteractable
         {
             //timer.canRun = false;
             player.GetComponent<Player>().isHome = true;
+            Actions.OnLevelEnd.Invoke();
             Debug.Log("level ends");
         }
         else

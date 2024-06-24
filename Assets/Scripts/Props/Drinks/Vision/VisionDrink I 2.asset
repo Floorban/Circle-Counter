@@ -15,6 +15,6 @@ MonoBehaviour:
   drinkName: VisionDrink 3
   drinkValue: 30
   icon: {fileID: 21300000, guid: 18e769843683593408e8628940496f1b, type: 3}
-  description: 
+  description: Your vision is much better now
   targetType: 0
   visionBoost: 0.6

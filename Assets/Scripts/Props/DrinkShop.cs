@@ -23,7 +23,7 @@ public class DrinkShop : MonoBehaviour
 
         // Instantiate 3 random different types of drink
         List<Drink> selectedDrinks = new List<Drink>();
-        while (selectedDrinks.Count < 3)
+        while (selectedDrinks.Count < 15)
         {
             Drink randomDrink = availableDrinks[Random.Range(0, availableDrinks.Length)];
             if (!selectedDrinks.Contains(randomDrink))

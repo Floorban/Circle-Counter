@@ -66,8 +66,10 @@ public class Player : MonoBehaviour, IDrinkEffect
         {
             this.vignette = vignette;
         }
-        revolver = FindObjectOfType<RevolverController>();  
-        InitializeStatus();
+        revolver = FindObjectOfType<RevolverController>();
+        hp = maxHp;
+        sanity = maxSanity / 2f;
+        isHome = true;
         vigIntensity = 0.85f;
     }
     private void Update()
@@ -79,10 +81,10 @@ public class Player : MonoBehaviour, IDrinkEffect
     public void InitializeStatus()
     {
         gold += addedGold;
-        hp = maxHp;
-        sanity = maxSanity / 2f;
+        //hp = maxHp;
+        //sanity = maxSanity / 2f;
         isHome = true;
-        isDead = false;
+        //isDead = false;
     }
     public void ApplyEffect(Drink drink)
     {

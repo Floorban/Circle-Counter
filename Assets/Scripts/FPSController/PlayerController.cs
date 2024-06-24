@@ -112,6 +112,7 @@ public class PlayerController : MonoBehaviour, IDrinkEffect
         {
             case SpeedDrink speedDrink:
                 walkSpeed += speedDrink.speedBoost;
+                sprintSpeed += speedDrink.speedBoost;
                 break;
         }
     }

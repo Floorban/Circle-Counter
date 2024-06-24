@@ -15,6 +15,6 @@ MonoBehaviour:
   drinkName: BankDrink 1
   drinkValue: 5
   icon: {fileID: 21300000, guid: 8b8501a35b70984488ae1d22d2ab77fb, type: 3}
-  description: 
+  description: Gain $0 every time when you finish a circle.
   targetType: 0
-  rewardBoost: 10
+  goldBoost: 15

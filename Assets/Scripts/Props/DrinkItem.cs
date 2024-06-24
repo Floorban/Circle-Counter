@@ -31,8 +31,13 @@ public class DrinkItem : MonoBehaviour
         IDrinkEffect target = GetTargetBasedOnType(drink.targetType);
         if (target != null)
         {
-            FindObjectOfType<Player>().gold -= cost;
-            UseDrink(target);
+            var player = FindObjectOfType<Player>();
+
+            if (player.gold >= cost)
+            {
+                player.gold -= cost;
+                UseDrink(target);
+            }
         }
     }
 

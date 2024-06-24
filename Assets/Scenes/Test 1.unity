@@ -46548,10 +46548,10 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 500, y: 500}
-  m_Spacing: {x: 200, y: 90}
+  m_CellSize: {x: 250, y: 250}
+  m_Spacing: {x: 50, y: 90}
   m_Constraint: 1
-  m_ConstraintCount: 3
+  m_ConstraintCount: 6
 --- !u!114 &1701244130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46568,6 +46568,28 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4b11de5542706974ea5f91f1e29ab4d2, type: 2}
   - {fileID: 11400000, guid: 8308a3859aa8c1340978acf0f243bc31, type: 2}
   - {fileID: 11400000, guid: c3d7297db74bf034485f0dc4e7d255bf, type: 2}
+  - {fileID: 11400000, guid: 464d13a890e4b4a4e8a949ab24410395, type: 2}
+  - {fileID: 11400000, guid: 90daad3e0b0857e4da41881a8f847150, type: 2}
+  - {fileID: 11400000, guid: 2d53cfb62d1e7504092385e57abc004d, type: 2}
+  - {fileID: 11400000, guid: 501e50f51f4ee584e8a3ab0ff9be97ba, type: 2}
+  - {fileID: 11400000, guid: 4c6e81a7e8fb2f34799fa54a9fbb7494, type: 2}
+  - {fileID: 11400000, guid: 7bc4f6402a382b34a985ef964abd8de7, type: 2}
+  - {fileID: 11400000, guid: 8242cfae4c27bf54a93624ad6abda4b2, type: 2}
+  - {fileID: 11400000, guid: c1f6028fa30c44e4fa56ba9dfaab6dfe, type: 2}
+  - {fileID: 11400000, guid: 01758fc7b7261d1469f096b5924e636e, type: 2}
+  - {fileID: 11400000, guid: c7126daa70ae587479424a15aecc34b2, type: 2}
+  - {fileID: 11400000, guid: 6583118f61c80e346aeb96b87cbb6099, type: 2}
+  - {fileID: 11400000, guid: 8d5aabc455d00624d9de1ed78eac11d8, type: 2}
+  - {fileID: 11400000, guid: fc716ea51f52c98468d0f028ad4eafac, type: 2}
+  - {fileID: 11400000, guid: fb4685fbee5cb514199fa7c0ebb25ebf, type: 2}
+  - {fileID: 11400000, guid: d2b3d66898fb86c43b2d0bf9d9196938, type: 2}
+  - {fileID: 11400000, guid: fa177a147f970d84f8b8a24662980464, type: 2}
+  - {fileID: 11400000, guid: 3af526042840cd84e8f065a3baabaa3d, type: 2}
+  - {fileID: 11400000, guid: e87e79b679bd7e447a9c8f3d2458763d, type: 2}
+  - {fileID: 11400000, guid: 65601f455aa424142b638ac31197eb4d, type: 2}
+  - {fileID: 11400000, guid: c3302cf3717f9e84f8241fccbbd7fc9c, type: 2}
+  - {fileID: 11400000, guid: 3fa68ed7fbfc83245b261415dd429e30, type: 2}
+  - {fileID: 11400000, guid: ba69c9dd943908644802dc180d6ec8a8, type: 2}
   drinkItemPrefab: {fileID: 3430698369605780390, guid: 172a73007f1016d4daaeb9b53b482e6a,
     type: 3}
   drinkShopContainer: {fileID: 1701244128}
@@ -52638,7 +52660,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2032009963
 MonoBehaviour:
   m_ObjectHideFlags: 0
