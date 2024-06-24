@@ -6,7 +6,8 @@ public class DrinkShop : MonoBehaviour
 {
     public Drink[] availableDrinks; 
     public GameObject drinkItemPrefab; 
-    public Transform drinkShopContainer; 
+    public Transform drinkShopContainer;
+    public int spawnNum;
 
     private void Start()
     {
@@ -23,7 +24,7 @@ public class DrinkShop : MonoBehaviour
 
         // Instantiate 3 random different types of drink
         List<Drink> selectedDrinks = new List<Drink>();
-        while (selectedDrinks.Count < 15)
+        while (selectedDrinks.Count < spawnNum)
         {
             Drink randomDrink = availableDrinks[Random.Range(0, availableDrinks.Length)];
             if (!selectedDrinks.Contains(randomDrink))

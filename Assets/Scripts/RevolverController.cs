@@ -293,11 +293,13 @@ public class RevolverController : MonoBehaviour, IDrinkEffect
 
         if (inChamber)
         {
+            canInteract = true;
             CloseChamber();
             inChamber = false;
         }
         else
         {
+            canInteract = false;
             OpenChamber();
             inChamber = true;
         }

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: SpeedDrink I 1
   m_EditorClassIdentifier: 
   drinkName: SpeedDrink 1
-  drinkValue: 30
+  drinkValue: 80
   icon: {fileID: 21300000, guid: 68489a1f214560a4db6b8aebca7c3c55, type: 3}
   description: You move faster
   targetType: 1
-  speedBoost: 5
+  speedBoost: 2

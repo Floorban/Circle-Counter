@@ -45,12 +45,14 @@ public class DrinkItem : MonoBehaviour
     {
         switch (targetType)
         {
+            case Drink.TargetType.Inventory:
+                return FindObjectOfType<Inventory>();
             case Drink.TargetType.Player:
                 return FindObjectOfType<Player>(); 
-
             case Drink.TargetType.PlayerController:
-                return FindObjectOfType<PlayerController>(); 
-
+                return FindObjectOfType<PlayerController>();
+            case Drink.TargetType.RevolverController:
+                return FindObjectOfType<RevolverController>();
 
             default:
                 return null;

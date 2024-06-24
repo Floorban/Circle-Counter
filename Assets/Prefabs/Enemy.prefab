@@ -136,6 +136,7 @@ MonoBehaviour:
   hp: 0
   maxHp: 0
   isDead: 0
+  value: 10
   radius: 8
   angle: 360
   playerRef: {fileID: 0}

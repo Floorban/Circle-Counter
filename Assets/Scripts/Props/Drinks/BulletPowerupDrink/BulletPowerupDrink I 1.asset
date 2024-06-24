@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: BulletPowerupDrink I 1
   m_EditorClassIdentifier: 
   drinkName: BulletPowerupDrink 2
-  drinkValue: 50
+  drinkValue: 10
   icon: {fileID: 21300000, guid: e9a52d02ef80e2348a77062393a51cf1, type: 3}
-  description: Decrease a bullet's damage by 1 from your inventory
+  description: Decrease 0 bullet's damage by 5 from your inventory
   targetType: 3
-  bulletDmgBoost: 5
+  bulletDmgBoost: 2
+  bulletNum: 1

@@ -35,13 +35,13 @@ public class Bartender : NPCController, IInteractable
         {
             if (inShop)
             {
-                revolver.OnShopPause(inShop, shopPanel);
+                revolver.OnAmmoShopPause(inShop, shopPanel);
                 inShop = false;
                 chamberTextbox.SetActive(true);
             }
             else
             {
-                revolver.OnShopPause(inShop, shopPanel);
+                revolver.OnAmmoShopPause(inShop, shopPanel);
                 inShop = true;
             }
         }

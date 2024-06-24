@@ -27139,7 +27139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &832575518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37893,7 +37893,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1363373159915496976, guid: e2c75324c2e4d26408bda69ec241d7fa,
     type: 3}
   ammoShopContainer: {fileID: 1558133984}
-  maxAmmoNum: 10
+  maxAmmoNum: 12
 --- !u!1001 &1567104646
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46566,11 +46566,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   availableDrinks:
   - {fileID: 11400000, guid: 4b11de5542706974ea5f91f1e29ab4d2, type: 2}
-  - {fileID: 11400000, guid: 8308a3859aa8c1340978acf0f243bc31, type: 2}
-  - {fileID: 11400000, guid: c3d7297db74bf034485f0dc4e7d255bf, type: 2}
+  - {fileID: 11400000, guid: 4c6e81a7e8fb2f34799fa54a9fbb7494, type: 2}
+  - {fileID: 11400000, guid: c1f6028fa30c44e4fa56ba9dfaab6dfe, type: 2}
   drinkItemPrefab: {fileID: 3430698369605780390, guid: 172a73007f1016d4daaeb9b53b482e6a,
     type: 3}
   drinkShopContainer: {fileID: 1701244128}
+  spawnNum: 3
 --- !u!1001 &1714819979
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52638,7 +52639,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2032009963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52695,8 +52696,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 103.849976, y: -155}
-  m_SizeDelta: {x: 181.696, y: 350}
+  m_AnchoredPosition: {x: 4.550171, y: -155}
+  m_SizeDelta: {x: 590.8972, y: 350}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2033076852
 GameObject:

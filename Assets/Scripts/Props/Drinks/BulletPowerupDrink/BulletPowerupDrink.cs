@@ -6,10 +6,11 @@ using UnityEngine;
 public class BulletPowerupDrink : Drink
 {
     public int bulletDmgBoost;
+    public int bulletNum;
 
     private void OnEnable()
     {
-        description = $"Decrease a bullet's damage by {bulletDmgBoost} from your inventory";
+        description = $"Decrease {bulletNum} bullet's damage by {bulletDmgBoost} from your inventory";
         targetType = TargetType.Inventory;
     }
 

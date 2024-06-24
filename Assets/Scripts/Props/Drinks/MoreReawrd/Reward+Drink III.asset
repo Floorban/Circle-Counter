@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Reward+Drink III
   m_EditorClassIdentifier: 
   drinkName: Reward+Drink 3
-  drinkValue: 20
+  drinkValue: 80
   icon: {fileID: 21300000, guid: 8e03b0bba1428ad4794d835c31c4e86d, type: 3}
-  description: Increases sanity reward from each shot by 0.
+  description: Increases sanity reward from each shot by 3.
   targetType: 0
   rewardBoost: 3

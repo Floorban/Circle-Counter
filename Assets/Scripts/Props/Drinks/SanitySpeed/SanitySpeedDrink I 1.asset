@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: SanitySpeedDrink I 1
   m_EditorClassIdentifier: 
   drinkName: SanitySpeedDrink 2
-  drinkValue: 80
+  drinkValue: 60
   icon: {fileID: 21300000, guid: c36ed0b3dc6d33d4892f3c09d7ee8c36, type: 3}
   description: sanity losing speed would be slower
   targetType: 0
-  sanitySpeedBoost: 0.6
+  sanitySpeedBoost: 0.92

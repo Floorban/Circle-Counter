@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: VisionDrink I
   m_EditorClassIdentifier: 
   drinkName: VisionDrink 1
-  drinkValue: 5
+  drinkValue: 15
   icon: {fileID: 21300000, guid: 18e769843683593408e8628940496f1b, type: 3}
   description: Your vision is a bit better now
   targetType: 0
-  visionBoost: 0.75
+  visionBoost: 0.8

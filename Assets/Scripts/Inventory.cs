@@ -40,15 +40,17 @@ public class Inventory : MonoBehaviour, IDrinkEffect
         switch (drink)
         {
             case BulletPowerupDrink bulletDrink:
-                Bullet bulletToUpgrade = GetRandomBullet();
-                if (bulletToUpgrade != null)
+                for (int i = 0; i < bulletDrink.bulletNum; i++)
                 {
-                    Debug.Log($"Upgrading bullet with damage {bulletToUpgrade.dmg} by {bulletDrink.bulletDmgBoost}");
-                    bulletToUpgrade.dmg -= bulletDrink.bulletDmgBoost;
-                }
-                else
-                {
-                    Debug.LogWarning("No bullet available to upgrade.");
+                    Bullet bulletToUpgrade = GetRandomBullet();
+                    if (bulletToUpgrade != null)
+                    {
+                        bulletToUpgrade.dmg -= bulletDrink.bulletDmgBoost;
+                    }
+                    else
+                    {
+                        break;
+                    }
                 }
                 break;
         }

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: BankDrink III
   m_EditorClassIdentifier: 
   drinkName: BankDrink 3
-  drinkValue: 30
+  drinkValue: 50
   icon: {fileID: 21300000, guid: 8b8501a35b70984488ae1d22d2ab77fb, type: 3}
-  description: Gain $0 every time when you finish a circle.
+  description: Gain $100 every time when you finish a circle.
   targetType: 0
-  goldBoost: 100
+  goldBoost: 150

@@ -38,6 +38,7 @@ public class EnemyAgent : MonoBehaviour
     public int hp;
     public int maxHp;
     public bool isDead;
+    public int value;
 
     [Header("FOV")]
     public float radius;
@@ -281,6 +282,7 @@ public class EnemyAgent : MonoBehaviour
 
         if (hp <= 0)
         {
+            FindObjectOfType<Player>().gold += value;
             isDead = true;
             Destroy(gameObject);
         }
