@@ -63550,7 +63550,7 @@ MonoBehaviour:
   shootTran2: {fileID: 60076024}
   bulletPrefab: {fileID: 8901784874312576233, guid: 2020312ce9e5a694ba014b92dbf73198,
     type: 3}
-  hasStarted: 0
+  hasStarted: 1
   pausePanel: {fileID: 140161360}
   isPaused: 0
   canPause: 0
@@ -80669,7 +80669,7 @@ MonoBehaviour:
   - Now come on, this one is on me
   typeSpeed: 3
   canTalk: 0
-  hasTalked: 0
+  hasTalked: 1
 --- !u!114 &2073468495
 MonoBehaviour:
   m_ObjectHideFlags: 0

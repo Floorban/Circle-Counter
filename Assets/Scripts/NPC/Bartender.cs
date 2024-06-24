@@ -12,7 +12,14 @@ public class Bartender : NPCController, IInteractable
     public GameObject chamberTextbox;
     [SerializeField] DrinkShop shop;
     public bool canSpawn;
-
+    private void OnEnable()
+    {
+        Actions.OnLevelStart += RefreshShop;
+    }
+    private void OnDisable()
+    {
+        Actions.OnLevelStart -= RefreshShop;
+    }
     protected override void Start()
     {
         base.Start();
@@ -25,7 +32,10 @@ public class Bartender : NPCController, IInteractable
     {
         base.Update();
     }
-
+    void RefreshShop()
+    {
+        canSpawn = true;
+    }
     public void OnInteract()
     {
         if (!revolver.canInteract) return;

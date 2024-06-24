@@ -56891,6 +56891,8 @@ MonoBehaviour:
   shopPanel: {fileID: 2032009962}
   inShop: 0
   chamberTextbox: {fileID: 1192906917}
+  shop: {fileID: 0}
+  canSpawn: 0
 --- !u!114 &2073468492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57300,6 +57302,8 @@ MonoBehaviour:
   prompt: Bullet Trader
   shopPanel: {fileID: 1754895871}
   inShop: 0
+  shop: {fileID: 0}
+  canSpawn: 0
 --- !u!1001 &2105400685
 PrefabInstance:
   m_ObjectHideFlags: 0
