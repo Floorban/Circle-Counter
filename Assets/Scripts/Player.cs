@@ -21,7 +21,8 @@ public class Player : MonoBehaviour, IDrinkEffect
     public bool isDead;
     public int gold;
     public int addedGold;
-    public bool isHome;
+    public bool isHome, canEnd;
+    [SerializeField] RawImage camOutput;
 
     [Header("UI")]
     [SerializeField] Image sanityBar;
@@ -53,15 +54,22 @@ public class Player : MonoBehaviour, IDrinkEffect
     void EndRound()
     {
         Debug.Log("round ends");
-        StartCoroutine(NextRound());
+        if (canEnd) 
+        {
+            StartCoroutine(NextRound());
+            canEnd = false;
+        }
     }
     IEnumerator NextRound()
     {
-        yield return new WaitForSeconds(0.07f);
+        camOutput.color = Color.black;
+        FindObjectOfType<SoundManager>().PlayRand("Death");
+        yield return new WaitForSeconds(7f);
         SceneManager.LoadScene(2);
     }
     void Start()
     {
+        canEnd = true;
         if (volume.profile.TryGet(out Vignette vignette))
         {
             this.vignette = vignette;

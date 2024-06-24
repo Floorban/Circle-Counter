@@ -21139,6 +21139,8 @@ MonoBehaviour:
   gold: 10
   addedGold: 0
   isHome: 0
+  canEnd: 0
+  camOutput: {fileID: 99611988}
   sanityBar: {fileID: 182893976}
   sanityText: {fileID: 357361999}
   hpText: {fileID: 1366087392}
@@ -37794,7 +37796,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b6d75e2e114270e4a95da0d41ea7cc76, type: 2}
   bulletPrefab: {fileID: 1363373159915496976, guid: e2c75324c2e4d26408bda69ec241d7fa,
     type: 3}
-  ammoShopContainer: {fileID: 0}
+  ammoShopContainer: {fileID: 1558133984}
   maxAmmoNum: 12
 --- !u!1001 &1567104646
 PrefabInstance:
@@ -42943,6 +42945,8 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: 98a01ce1f6971834ebcdb45eb145851e, type: 3}
   - name: TraderVoice3
     audioClip: {fileID: 8300000, guid: 8e91ce70b872df24f8e8f2df23f9800a, type: 3}
+  - name: Death
+    audioClip: {fileID: 8300000, guid: 275ab57bddcf95140a94ffa867c5603b, type: 3}
   sfxSounds:
   - name: LoadBullet
     audioClip: {fileID: 8300000, guid: 9c9d448cbb7b0ee439f0a571466cd27b, type: 3}
@@ -55091,7 +55095,7 @@ MonoBehaviour:
   - Now come on, this one is on me
   typeSpeed: 3
   canTalk: 0
-  hasTalked: 0
+  hasTalked: 1
 --- !u!1001 &2083316364
 PrefabInstance:
   m_ObjectHideFlags: 0
