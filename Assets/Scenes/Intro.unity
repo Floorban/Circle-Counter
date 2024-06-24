@@ -13356,7 +13356,7 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.3
-  m_Height: 1.2
+  m_Height: 1.4
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &160494269
@@ -25146,10 +25146,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Themes: ''Count'' and Circle
+  m_text: 'Themes: ''Count'' and ''Circle''
 
-    Except the character sprites, 3D assets
-    and sound effects from online, it was all made by Eric (456873)'
+    Except the character sprites, 3D
+    assets and sound effects from online, it was all made by Eric (456873)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -26093,10 +26093,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Losing sanity when you're not in the bar\nShoot at yourself to gain sanity\nCount
-    your bullets in the chamber to you wouldn't kill yourself \nYou also die when
+    your bullets in the chamber so you wouldn't kill yourself \nYou also die when
     you're insane / outside of the map\nFinish a circle to get gold and refresh all
     the shops\nCircles would be bigger and bigger (longer path)\nEnemy are always
-    trying to push you off the circles\nYou are alcoholic"
+    trying to push you off the circles\nYou are an alcoholic"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -29558,7 +29558,7 @@ MonoBehaviour:
   sanitySpeed: 1.5
   sanitySpeedMultiplier: 1
   isDead: 0
-  gold: 50
+  gold: 100
   addedGold: 50
   isHome: 0
   canEnd: 0
@@ -47648,8 +47648,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "I focused on:\n\t` Mechanics programming / design\n\t` Visual / amtosphere
-    design\n\t` Creating a rogue-like game experience\n\t` Making a fun and replayable
+  m_text: "I focused on:\n\t- Mechanics programming / design\n\t- Visual / amtosphere
+    design\n\t- Creating a rogue-like game experience\n\t- Making a fun and replayable
     game"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -81084,7 +81084,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
