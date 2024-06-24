@@ -62,7 +62,7 @@ public class DrinkItem : MonoBehaviour
     public void UseDrink(IDrinkEffect target)
     {
         drink.ApplyTo(target);
-
+        FindObjectOfType<SoundManager>().PlaySound("Drink", 1f);
         if (oneTimeUse) 
         Destroy(gameObject);
     }

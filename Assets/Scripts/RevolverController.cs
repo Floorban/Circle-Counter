@@ -414,7 +414,6 @@ public class RevolverController : MonoBehaviour, IDrinkEffect
             OpenChamberP();
             Time.timeScale = 0f;
             canPause = false;
-            FindObjectOfType<SoundManager>().PlayAmbient("TraderVoice1");
         }
         else if (_isPaused)
         {

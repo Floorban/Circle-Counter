@@ -43,6 +43,7 @@ public class Bartender : NPCController, IInteractable
             {
                 revolver.OnAmmoShopPause(inShop, shopPanel);
                 inShop = true;
+                FindObjectOfType<SoundManager>().PlayAmbient("TraderVoice1");
             }
         }
     }

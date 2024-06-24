@@ -32,6 +32,7 @@ public class Woman : NPCController, IInteractable
         {
             revolver.OnShopPause(inShop, shopPanel);
             inShop = true;
+            FindObjectOfType<SoundManager>().PlayAmbient("TraderVoice3");
         }
     }
     public string GetPrompt()

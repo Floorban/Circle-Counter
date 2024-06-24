@@ -34,6 +34,7 @@ public class AmmoTrader : NPCController, IInteractable
         {
             revolver.OnAmmoShopPause(inShop, shopPanel);
             inShop = true;
+            FindObjectOfType<SoundManager>().PlayAmbient("TraderVoice2");
         }
     }
     public string GetPrompt()
