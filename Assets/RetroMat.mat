@@ -39,10 +39,10 @@ Material:
     m_Ints: []
     m_Floats:
     - _Add: 0
-    - _ColorResolution: 6
-    - _DitherSpread: 0.04
+    - _ColorResolution: 10
+    - _DitherSpread: 0.03
     - _Substract: 0
     m_Colors:
-    - _Add: {r: -0.1, g: -0.1, b: 0, a: 0}
-    - _Substract: {r: -1.5, g: -1.5, b: 0, a: 0}
+    - _Add: {r: -0.2, g: -0.2, b: -0.1, a: 0}
+    - _Substract: {r: -2, g: -2, b: 1.5, a: 0}
   m_BuildTextureStacks: []

@@ -23878,8 +23878,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.2, y: 35.3, z: -19.8}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 69864289}
   m_Father: {fileID: 0}
@@ -25980,7 +25980,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 461236409}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -29552,13 +29552,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 0
-  maxHp: 10
+  maxHp: 15
   sanity: 0
   maxSanity: 25
   sanitySpeed: 1.5
   sanitySpeedMultiplier: 1
   isDead: 0
-  gold: 10
+  gold: 50
   addedGold: 50
   isHome: 0
   canEnd: 0
@@ -30811,7 +30811,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.3221342, g: 0.5377358, b: 0.5377358, a: 0.6666667}
+  m_BackGroundColor: {r: 0.3221342, g: 0.5377358, b: 0.5377358, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -80683,11 +80683,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   availableDrinks:
-  - {fileID: 11400000, guid: fd6964a46ad1e1f41bc31f3349766157, type: 2}
+  - {fileID: 11400000, guid: 464d13a890e4b4a4e8a949ab24410395, type: 2}
+  - {fileID: 11400000, guid: 2d53cfb62d1e7504092385e57abc004d, type: 2}
+  - {fileID: 11400000, guid: 501e50f51f4ee584e8a3ab0ff9be97ba, type: 2}
+  - {fileID: 11400000, guid: 42ec185e4e36e864c955bb21d24bc42e, type: 2}
+  - {fileID: 11400000, guid: 4b11de5542706974ea5f91f1e29ab4d2, type: 2}
+  - {fileID: 11400000, guid: 4c6e81a7e8fb2f34799fa54a9fbb7494, type: 2}
+  - {fileID: 11400000, guid: c1f6028fa30c44e4fa56ba9dfaab6dfe, type: 2}
+  - {fileID: 11400000, guid: 6583118f61c80e346aeb96b87cbb6099, type: 2}
+  - {fileID: 11400000, guid: fb4685fbee5cb514199fa7c0ebb25ebf, type: 2}
+  - {fileID: 11400000, guid: 3af526042840cd84e8f065a3baabaa3d, type: 2}
+  - {fileID: 11400000, guid: c3302cf3717f9e84f8241fccbbd7fc9c, type: 2}
   drinkItemPrefab: {fileID: 3430698369605780390, guid: 172a73007f1016d4daaeb9b53b482e6a,
     type: 3}
   drinkShopContainer: {fileID: 1701244128}
-  spawnNum: 1
+  spawnNum: 6
 --- !u!1001 &2077986850
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -80930,7 +80940,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!64 &2092119589
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -81012,8 +81022,8 @@ Transform:
   m_GameObject: {fileID: 2092119588}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -248.4, z: 0}
-  m_LocalScale: {x: 6.666667, y: 1, z: 10}
+  m_LocalPosition: {x: 0, y: -150, z: 0}
+  m_LocalScale: {x: 100, y: 14.999999, z: 149.99998}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1152642861}
@@ -81178,10 +81188,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   availableProjectiles:
   - {fileID: 11400000, guid: 805891b1998f5c549b1ba0fe4a727398, type: 2}
+  - {fileID: 11400000, guid: 285d73da69996af4088534b940e28468, type: 2}
+  - {fileID: 11400000, guid: b6d75e2e114270e4a95da0d41ea7cc76, type: 2}
   bulletPrefab: {fileID: 1363373159915496976, guid: e2c75324c2e4d26408bda69ec241d7fa,
     type: 3}
   ammoShopContainer: {fileID: 1558133984}
-  maxAmmoNum: 3
+  maxAmmoNum: 12
 --- !u!1001 &2103577592
 PrefabInstance:
   m_ObjectHideFlags: 0
