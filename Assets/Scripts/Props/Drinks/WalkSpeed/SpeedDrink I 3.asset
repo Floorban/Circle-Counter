@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6664b69446ddb4344916e95b5aea8432, type: 3}
-  m_Name: SpeedDrink I
+  m_Name: SpeedDrink I 3
   m_EditorClassIdentifier: 
   drinkName: SpeedDrink 1
-  drinkValue: 20
+  drinkValue: 300
   icon: {fileID: 21300000, guid: 68489a1f214560a4db6b8aebca7c3c55, type: 3}
-  description: You move a bit faster
+  description: You are fast as Bolt
   targetType: 1
-  speedBoost: 2
+  speedBoost: 15

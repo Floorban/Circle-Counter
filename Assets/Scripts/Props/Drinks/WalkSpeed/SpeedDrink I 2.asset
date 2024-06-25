@@ -17,4 +17,4 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 68489a1f214560a4db6b8aebca7c3c55, type: 3}
   description: You move much faster
   targetType: 1
-  speedBoost: 3
+  speedBoost: 8
