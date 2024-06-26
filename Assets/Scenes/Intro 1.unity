@@ -490,6 +490,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 8
       objectReference: {fileID: 0}
@@ -1105,6 +1115,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 10
       objectReference: {fileID: 0}
@@ -1221,6 +1241,16 @@ PrefabInstance:
         type: 3}
       propertyPath: radius
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: walkSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
@@ -11734,6 +11764,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 10
       objectReference: {fileID: 0}
@@ -12399,6 +12439,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 10
       objectReference: {fileID: 0}
@@ -12835,6 +12885,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 8
       objectReference: {fileID: 0}
@@ -13021,6 +13081,16 @@ PrefabInstance:
         type: 3}
       propertyPath: radius
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: walkSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
@@ -13220,6 +13290,16 @@ PrefabInstance:
         type: 3}
       propertyPath: radius
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: walkSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
@@ -13528,6 +13608,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 5
       objectReference: {fileID: 0}
@@ -13545,6 +13635,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5745955439840248098, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: m_Speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5745955439840248098, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: m_Acceleration
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5745955439840248098, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: m_AngularSpeed
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 6771595061692498295, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
@@ -13931,6 +14036,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 10
       objectReference: {fileID: 0}
@@ -14047,6 +14162,16 @@ PrefabInstance:
         type: 3}
       propertyPath: radius
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: walkSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
@@ -15908,6 +16033,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 10
       objectReference: {fileID: 0}
@@ -16220,6 +16355,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 5
       objectReference: {fileID: 0}
@@ -16242,6 +16387,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5745955439840248098, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: m_Speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5745955439840248098, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: m_Acceleration
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5745955439840248098, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: m_AngularSpeed
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 6771595061692498295, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
@@ -16681,6 +16841,16 @@ PrefabInstance:
         type: 3}
       propertyPath: activated
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: walkSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
@@ -17462,6 +17632,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 8
       objectReference: {fileID: 0}
@@ -17869,6 +18049,16 @@ PrefabInstance:
         type: 3}
       propertyPath: radius
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: walkSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
@@ -18293,6 +18483,16 @@ PrefabInstance:
         type: 3}
       propertyPath: radius
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: walkSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
@@ -23909,6 +24109,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 6
       objectReference: {fileID: 0}
@@ -24198,6 +24408,16 @@ PrefabInstance:
         type: 3}
       propertyPath: radius
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: walkSpeed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
@@ -24560,7 +24780,7 @@ Transform:
   m_GameObject: {fileID: 395173096}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -119.7, z: 0}
+  m_LocalPosition: {x: 0, y: -121.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -25559,6 +25779,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 8
       objectReference: {fileID: 0}
@@ -25706,6 +25936,16 @@ PrefabInstance:
         type: 3}
       propertyPath: radius
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: walkSpeed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
@@ -27827,6 +28067,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 10
       objectReference: {fileID: 0}
@@ -28095,6 +28345,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 10
       objectReference: {fileID: 0}
@@ -28214,6 +28474,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 10
       objectReference: {fileID: 0}
@@ -28330,6 +28600,16 @@ PrefabInstance:
         type: 3}
       propertyPath: radius
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: walkSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
@@ -28569,6 +28849,16 @@ PrefabInstance:
         type: 3}
       propertyPath: radius
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: walkSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
@@ -29038,6 +29328,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 8
       objectReference: {fileID: 0}
@@ -29254,6 +29554,16 @@ PrefabInstance:
         type: 3}
       propertyPath: activated
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: walkSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
@@ -29554,7 +29864,7 @@ MonoBehaviour:
   hp: 0
   maxHp: 15
   sanity: 0
-  maxSanity: 25
+  maxSanity: 2500
   sanitySpeed: 1.5
   sanitySpeedMultiplier: 1
   isDead: 0
@@ -29827,6 +30137,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 10
       objectReference: {fileID: 0}
@@ -30063,6 +30383,16 @@ PrefabInstance:
         type: 3}
       propertyPath: radius
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: walkSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
@@ -30666,7 +30996,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   availableDrinks:
   - {fileID: 11400000, guid: 464d13a890e4b4a4e8a949ab24410395, type: 2}
-  - {fileID: 11400000, guid: 99c3680d071909d49bde37aa48511cf4, type: 2}
   - {fileID: 11400000, guid: 037f4c157134e894d9a268b70c72d463, type: 2}
   - {fileID: 11400000, guid: f0fbf2b0bb390df4dbc87a174927ca72, type: 2}
   - {fileID: 11400000, guid: be1e57e07b6ae694a9fad301710c9a2c, type: 2}
@@ -31306,6 +31635,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 10
       objectReference: {fileID: 0}
@@ -31749,6 +32088,16 @@ PrefabInstance:
         type: 3}
       propertyPath: radius
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: walkSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
@@ -36840,6 +37189,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 8
       objectReference: {fileID: 0}
@@ -37071,6 +37430,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 10
       objectReference: {fileID: 0}
@@ -37190,6 +37559,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 10
       objectReference: {fileID: 0}
@@ -37306,6 +37685,16 @@ PrefabInstance:
         type: 3}
       propertyPath: radius
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: walkSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
@@ -37557,6 +37946,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 8
       objectReference: {fileID: 0}
@@ -37667,7 +38066,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &832575518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38138,6 +38537,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 10
       objectReference: {fileID: 0}
@@ -38254,6 +38663,16 @@ PrefabInstance:
         type: 3}
       propertyPath: radius
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: walkSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
@@ -38551,6 +38970,16 @@ PrefabInstance:
         type: 3}
       propertyPath: radius
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: walkSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
@@ -39643,6 +40072,16 @@ PrefabInstance:
         type: 3}
       propertyPath: radius
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: walkSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
@@ -41763,10 +42202,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   availableProjectiles:
-  - {fileID: 11400000, guid: 285d73da69996af4088534b940e28468, type: 2}
   - {fileID: 11400000, guid: b6d75e2e114270e4a95da0d41ea7cc76, type: 2}
   - {fileID: 11400000, guid: a898c21f904cf7740b6b62a513873b90, type: 2}
   - {fileID: 11400000, guid: 826c728e7d6b9064282c7622f4cab863, type: 2}
+  - {fileID: 11400000, guid: 38e8be9b28725ca4090e8ec4ca9477b6, type: 2}
   - {fileID: 11400000, guid: 38e8be9b28725ca4090e8ec4ca9477b6, type: 2}
   bulletPrefab: {fileID: 1363373159915496976, guid: e2c75324c2e4d26408bda69ec241d7fa,
     type: 3}
@@ -42182,6 +42621,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 8
       objectReference: {fileID: 0}
@@ -42408,6 +42857,16 @@ PrefabInstance:
         type: 3}
       propertyPath: radius
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: walkSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
@@ -43419,6 +43878,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 10
       objectReference: {fileID: 0}
@@ -43700,6 +44169,16 @@ PrefabInstance:
         type: 3}
       propertyPath: radius
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: walkSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
@@ -45125,6 +45604,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 10
       objectReference: {fileID: 0}
@@ -45437,6 +45926,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 10
       objectReference: {fileID: 0}
@@ -45556,6 +46055,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 10
       objectReference: {fileID: 0}
@@ -45672,6 +46181,16 @@ PrefabInstance:
         type: 3}
       propertyPath: radius
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: walkSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
@@ -45799,6 +46318,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 6
       objectReference: {fileID: 0}
@@ -45910,6 +46439,16 @@ PrefabInstance:
         type: 3}
       propertyPath: radius
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: walkSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
@@ -47043,6 +47582,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 10
       objectReference: {fileID: 0}
@@ -47476,6 +48025,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 5
       objectReference: {fileID: 0}
@@ -47493,6 +48052,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5745955439840248098, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: m_Speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5745955439840248098, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: m_Acceleration
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5745955439840248098, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: m_AngularSpeed
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 6771595061692498295, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
@@ -47580,7 +48154,7 @@ Transform:
   m_GameObject: {fileID: 1262063579}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -29.3, z: 0}
+  m_LocalPosition: {x: 0, y: -31, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -48735,6 +49309,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 10
       objectReference: {fileID: 0}
@@ -49331,6 +49915,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 10
       objectReference: {fileID: 0}
@@ -49681,7 +50275,7 @@ Transform:
   m_GameObject: {fileID: 1358449601}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -59.3, z: 0}
+  m_LocalPosition: {x: 0, y: -60.332, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -50687,6 +51281,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 10
       objectReference: {fileID: 0}
@@ -51601,6 +52205,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 10
       objectReference: {fileID: 0}
@@ -51855,6 +52469,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 6
       objectReference: {fileID: 0}
@@ -51966,6 +52590,16 @@ PrefabInstance:
         type: 3}
       propertyPath: radius
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: walkSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
@@ -55083,6 +55717,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 6
       objectReference: {fileID: 0}
@@ -55842,6 +56486,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 8
       objectReference: {fileID: 0}
@@ -56062,6 +56716,16 @@ PrefabInstance:
         type: 3}
       propertyPath: radius
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: walkSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
@@ -57062,6 +57726,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 5
       objectReference: {fileID: 0}
@@ -57079,6 +57753,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5745955439840248098, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: m_Speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5745955439840248098, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: m_Acceleration
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5745955439840248098, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: m_AngularSpeed
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 6771595061692498295, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
@@ -62353,6 +63042,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 8
       objectReference: {fileID: 0}
@@ -62983,7 +63682,7 @@ Transform:
   m_GameObject: {fileID: 1602335676}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -89.3, z: 0}
+  m_LocalPosition: {x: 0, y: -90.33, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -63203,7 +63902,7 @@ Transform:
   m_GameObject: {fileID: 1624445628}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3, z: 0}
+  m_LocalPosition: {x: 0, y: -4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -63235,6 +63934,16 @@ PrefabInstance:
         type: 3}
       propertyPath: radius
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: walkSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
@@ -63354,6 +64063,16 @@ PrefabInstance:
         type: 3}
       propertyPath: radius
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: walkSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
@@ -63604,6 +64323,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 10
       objectReference: {fileID: 0}
@@ -63725,6 +64454,16 @@ PrefabInstance:
         type: 3}
       propertyPath: activated
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: walkSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
@@ -66555,6 +67294,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 6
       objectReference: {fileID: 0}
@@ -68093,6 +68842,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 10
       objectReference: {fileID: 0}
@@ -68402,6 +69161,16 @@ PrefabInstance:
         type: 3}
       propertyPath: radius
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: walkSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
@@ -69676,6 +70445,16 @@ PrefabInstance:
         type: 3}
       propertyPath: activated
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: walkSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
@@ -73632,6 +74411,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 10
       objectReference: {fileID: 0}
@@ -73748,6 +74537,16 @@ PrefabInstance:
         type: 3}
       propertyPath: radius
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: walkSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
@@ -73959,6 +74758,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 8
       objectReference: {fileID: 0}
@@ -74078,6 +74887,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 10
       objectReference: {fileID: 0}
@@ -74194,6 +75013,16 @@ PrefabInstance:
         type: 3}
       propertyPath: radius
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: walkSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
@@ -76677,6 +77506,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 10
       objectReference: {fileID: 0}
@@ -77228,6 +78067,16 @@ PrefabInstance:
         type: 3}
       propertyPath: activated
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: walkSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
@@ -81056,6 +81905,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 10
       objectReference: {fileID: 0}
@@ -81930,6 +82789,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}
+      propertyPath: walkSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
       propertyPath: patrolZoneRange
       value: 10
       objectReference: {fileID: 0}
@@ -82517,6 +83386,16 @@ PrefabInstance:
         type: 3}
       propertyPath: radius
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: walkSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 517858118112190818, guid: 9876ea5440139514db2453bd861f4592,
         type: 3}

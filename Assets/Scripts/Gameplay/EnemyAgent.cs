@@ -26,6 +26,8 @@ public class EnemyAgent : MonoBehaviour
     public bool canPatrol;
     public Vector3 centerPoint;
     public bool isHit;
+    public float walkSpeed;
+    public float chaseSpeed;
 
     [Header("Attack")]
     public float attackRange;
@@ -174,7 +176,7 @@ public class EnemyAgent : MonoBehaviour
                 break;
             case EnemyState.Follow:
                 if (playerRef != null)
-                    ChaseTarget(playerRef.transform, 2f);
+                    ChaseTarget(playerRef.transform, chaseSpeed);
                 break;
             case EnemyState.Attack:
                 if (playerRef != null)
@@ -185,7 +187,7 @@ public class EnemyAgent : MonoBehaviour
     void Patrol()
     {
         spriteRend.color = Color.white;
-        agent.speed = 1f;
+        agent.speed = walkSpeed;
 
         if (agent.remainingDistance <= agent.stoppingDistance)
         {
