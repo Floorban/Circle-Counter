@@ -38,6 +38,9 @@ public class RevolverController : MonoBehaviour, IDrinkEffect
     [SerializeField] GameObject pausePanel;
     public bool isPaused, canPause, canInteract;
 
+    [Header("Sounds")]
+    [SerializeField] ProceduralGun GunSound;
+
     /*    private void OnEnable()
         {
             Actions.OnPanelOpen += ToggleCanPause;
@@ -232,7 +235,7 @@ public class RevolverController : MonoBehaviour, IDrinkEffect
             self_gunAnimator.SetTrigger("Shoot");
             shootPrc1.Play();
             shootPrc2.Play();
-            FindObjectOfType<SoundManager>().PlaySound("Fire", 1);
+            GunSound.PlaySound(shootTran1.position);
             FindObjectOfType<PlayerCam>().ShakeCam();
             isShot = true;
             StartCoroutine(InstantiateBulletVisual());
@@ -243,7 +246,6 @@ public class RevolverController : MonoBehaviour, IDrinkEffect
             isShot = false;
             gunAnimator.SetTrigger("DryFire");
             self_gunAnimator.SetTrigger("DryFire");
-            FindObjectOfType<SoundManager>().PlaySound("DryFire", 1);
         }
 
         shootCount++;

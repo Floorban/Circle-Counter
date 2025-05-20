@@ -31124,11 +31124,11 @@ GameObject:
   m_Component:
   - component: {fileID: 709779230}
   - component: {fileID: 709779229}
-  - component: {fileID: 709779234}
   - component: {fileID: 709779228}
   - component: {fileID: 709779231}
   - component: {fileID: 709779233}
   - component: {fileID: 709779232}
+  - component: {fileID: 709779234}
   m_Layer: 6
   m_Name: 'PixelCamera '
   m_TagString: MainCamera
@@ -31324,14 +31324,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TargetTransform: {fileID: 1903960420}
   Offset: {x: 0, y: 0, z: 0}
---- !u!81 &709779234
-AudioListener:
+--- !u!114 &709779234
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 709779227}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nonRigidbodyVelocity: 0
+  attenuationObject: {fileID: 625904568}
 --- !u!1 &711036953
 GameObject:
   m_ObjectHideFlags: 0
@@ -42387,6 +42393,65 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1016398284}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1018964790
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1018964792}
+  - component: {fileID: 1018964791}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1018964791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018964790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8975ee5338f748f47903515a0cef41bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MasterVolume: 50
+  AmbientVolume: 100
+  MusicVolume: 100
+  SFXVolume: 100
+  GlobalRandomnessIntensityValue: 50
+  CustomParameter: []
+  developerMode: 0
+  SFX_TestAudio:
+    Guid:
+      Data1: 1557828108
+      Data2: 1305980872
+      Data3: -857165934
+      Data4: 792768825
+    Path: event:/Procedural_Gun
+  gameState: 1
+--- !u!4 &1018964792
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018964790}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1020239745
 GameObject:
   m_ObjectHideFlags: 0
@@ -64430,6 +64495,7 @@ MonoBehaviour:
   isPaused: 0
   canPause: 0
   canInteract: 0
+  GunSound: {fileID: 11400000, guid: a2aa1451f6e492646a2d212443678c92, type: 2}
 --- !u!95 &1625975506
 Animator:
   serializedVersion: 7
@@ -84114,3 +84180,4 @@ SceneRoots:
   - {fileID: 395173097}
   - {fileID: 360711472}
   - {fileID: 1094929951}
+  - {fileID: 1018964792}

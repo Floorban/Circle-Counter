@@ -1,13 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.Rendering;
-using static UnityEngine.Rendering.DebugUI;
 
 public class Player : MonoBehaviour, IDrinkEffect
 {
@@ -68,7 +66,7 @@ public class Player : MonoBehaviour, IDrinkEffect
     IEnumerator NextRound()
     {
         camOutput.color = Color.black;
-        FindObjectOfType<SoundManager>().PlayRand("Death");
+        //FindObjectOfType<SoundManager>().PlayRand("Death");
         yield return new WaitForSeconds(7f);
         SceneManager.LoadScene(2);
     }
