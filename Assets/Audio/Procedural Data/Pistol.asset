@@ -19,5 +19,15 @@ MonoBehaviour:
       Data3: -857165934
       Data4: 792768825
     Path: event:/Procedural_Gun
-  barrelLength: 15
-  barrelDiameter: 9
+  ammunition: 1
+  randomizeAmmunition: 0
+  ammoSize: 4.306189
+  randomizeAmmoSize: 1
+  ammoWeight: 14.459994
+  randomizeAmmoWeight: 1
+  muzzle: 0
+  randomizeMuzzle: 0
+  barrelLength: 100
+  randomizeBarrelLength: 1
+  barrelDiameter: 14.345935
+  randomizeBarrelDiameter: 1

@@ -32,8 +32,8 @@ public class AudioManager : MonoBehaviour
     [Header("Developer Attributes")]
     [SerializeField] bool developerMode = false;
     [SerializeField] EventReference SFX_TestAudio;
-    [Range(0,25)][SerializeField] float BarrelDiameter;
-    [Range(0,100)][SerializeField] float BarrelLength;
+
+    [SerializeField] ProceduralGun proc;
 
     public enum GameState { MainMenu, Play, Pause }
     public GameState gameState = GameState.Play;
@@ -72,7 +72,8 @@ public class AudioManager : MonoBehaviour
     }*/
 
     private void Update() {
-        if (developerMode) if (Input.GetKeyDown(KeyCode.P)) PlaySound(SFX_TestAudio, transform.position, "Barrel Diameter", BarrelDiameter, "Barrel Length", BarrelLength);
+        if (developerMode) if (Input.GetKeyDown(KeyCode.P)) proc.PlaySound(transform.position);
+        if (developerMode) if (Input.GetKeyDown(KeyCode.R)) proc.RandomizeSound(transform.position);
     }
 
     public void PlaySound( // Plays a oneshot SFX with position-dependent audio, where parameters cannot be changed after initiation, ideal for short-duration SFX
