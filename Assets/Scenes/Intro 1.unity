@@ -18185,7 +18185,6 @@ GameObject:
   m_Component:
   - component: {fileID: 330585546}
   - component: {fileID: 330585545}
-  - component: {fileID: 330585544}
   - component: {fileID: 330585547}
   m_Layer: 0
   m_Name: Main Camera
@@ -18194,14 +18193,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!81 &330585544
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 330585543}
-  m_Enabled: 0
 --- !u!20 &330585545
 Camera:
   m_ObjectHideFlags: 0
@@ -42428,14 +42419,16 @@ MonoBehaviour:
   SFXVolume: 100
   GlobalRandomnessIntensityValue: 50
   CustomParameter: []
-  developerMode: 0
+  developerMode: 1
   SFX_TestAudio:
     Guid:
-      Data1: 1557828108
-      Data2: 1305980872
-      Data3: -857165934
-      Data4: 792768825
-    Path: event:/Procedural_Gun
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  BarrelDiameter: 0
+  BarrelLength: 0
   gameState: 1
 --- !u!4 &1018964792
 Transform:

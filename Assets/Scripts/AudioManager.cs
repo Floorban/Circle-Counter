@@ -32,6 +32,8 @@ public class AudioManager : MonoBehaviour
     [Header("Developer Attributes")]
     [SerializeField] bool developerMode = false;
     [SerializeField] EventReference SFX_TestAudio;
+    [Range(0,25)][SerializeField] float BarrelDiameter;
+    [Range(0,100)][SerializeField] float BarrelLength;
 
     public enum GameState { MainMenu, Play, Pause }
     public GameState gameState = GameState.Play;
@@ -70,19 +72,26 @@ public class AudioManager : MonoBehaviour
     }*/
 
     private void Update() {
-        if (developerMode) if (Input.GetKeyDown(KeyCode.P)) PlaySound(SFX_TestAudio, transform.position);
+        if (developerMode) if (Input.GetKeyDown(KeyCode.P)) PlaySound(SFX_TestAudio, transform.position, "Barrel Diameter", BarrelDiameter, "Barrel Length", BarrelLength);
     }
 
     public void PlaySound( // Plays a oneshot SFX with position-dependent audio, where parameters cannot be changed after initiation, ideal for short-duration SFX
         EventReference sfx,
         Vector3 playPosition,
-        int randomnessIntensityValue = 1
+
+        string customParameter = null,
+        float customParameterValue = 0f,
+
+        string customParameter2 = null,
+        float customParameter2Value = 0f
+
     ) {
         if (!sfx.IsNull) {
             EventInstance sfxInstance = CreateInstance(sfx, playPosition);
             sfxInstance = CreateInstance(sfx, playPosition);
-            if (randomnessIntensityValue != 0) sfxInstance.setParameterByName(RandomnessIntensity, randomnessIntensityValue);
-            if (randomnessIntensityValue < 0) sfxInstance.setParameterByName(RandomnessIntensity, GlobalRandomnessIntensityValue);
+
+            sfxInstance.setParameterByName(customParameter, customParameterValue);
+            sfxInstance.setParameterByName(customParameter2, customParameter2Value);
 
             sfxInstance.start();
             sfxInstance.release();

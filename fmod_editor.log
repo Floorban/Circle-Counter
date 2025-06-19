@@ -9,7 +9,7 @@
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 0
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000001F8D8EF1F98 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 00000255D462DD28 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -22,16 +22,25 @@
 [LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
 [LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 5664
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 8832
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 9760
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000057A6E4EFF8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000005EB30FEFA8
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC3DBBD3E0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC3DBBD3A0
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC3DBBD4C0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC3DBBD580
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001F7D3D218A8
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFA8D09D3E0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFA8D09D3A0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFA8D09D4C0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFA8D09D580
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000254BFB56488
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 4
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Procedural_Gun', format=5, channels=2, frequency=48000, lengthbytes=5536, lengthpcm=24000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] SoundI::release                          :  (0000025281C2ED48)
+[LOG] SoundI::release                          :     Procedural_Gun (00000255D3BB4628)
+[LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
+[LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
+[LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
+[LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
