@@ -96,7 +96,7 @@ MonoBehaviour:
   Path: Assets/Audio/Banks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638859448305421698
+  lastModified: 638870946698438204
   FileSizes: []
   Exists: 1
 --- !u!114 &-1810221181000849282
@@ -251,7 +251,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 1571192671733939207}
   cacheVersion: 131847
-  cacheTime: 638859448305452089
+  cacheTime: 638870946698438204
   SerializableEventsDict:
   - key: event:/Procedural_Gun
     index: 0
@@ -296,7 +296,7 @@ MonoBehaviour:
   Path: Assets/Audio/Banks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638859448305452089
+  lastModified: 638870946698438204
   FileSizes:
   - Name: 
     Value: 1116
