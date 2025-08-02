@@ -17,7 +17,7 @@ MonoBehaviour:
   isReal: 1
   isUsed: 0
   dmg: 15
-  price: 40
+  price: 30
   reward: 30
   activeChance: 0
   effect: {fileID: 11400000, guid: 7701dfb385fff1a4081503d49498ea70, type: 2}

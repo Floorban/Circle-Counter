@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: BurnEffect II
   m_EditorClassIdentifier: 
   name: burn for 5s
-  damagePerSecond: 1
+  damagePerSecond: 2
   duration: 5

@@ -45,7 +45,7 @@ public class Bullet : MonoBehaviour
     {
         attributeText.text = $"Damage: {dmg} \nReward: {reward} \nPrice: {price}";
         if (effect)
-            attributeText.text = $"Damage: {dmg} \nReward: {reward} \nPrice: {price} \nEffect: {effect.name}";
+            attributeText.text = $"Damage: {dmg} \nReward: {reward} \nPrice: {price} \n {effect.name}";
 
         if (dmg <= 0) dmg = 0;
     }

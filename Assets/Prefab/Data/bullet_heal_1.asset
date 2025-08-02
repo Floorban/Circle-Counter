@@ -18,6 +18,6 @@ MonoBehaviour:
   isUsed: 0
   dmg: 10
   price: 30
-  reward: 15
+  reward: 10
   activeChance: 0
   effect: {fileID: 11400000, guid: a63fd28ceed07784aa5c599dc6236fb7, type: 2}

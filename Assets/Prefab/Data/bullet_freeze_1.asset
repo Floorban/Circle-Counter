@@ -16,8 +16,8 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: 4cde78016f1d4d447b817b0bbd03a8f2, type: 3}
   isReal: 1
   isUsed: 0
-  dmg: 3
-  price: 10
-  reward: 5
+  dmg: 7
+  price: 15
+  reward: 15
   activeChance: 0
   effect: {fileID: 11400000, guid: b978e7974ce7df44487ae4992f9693e4, type: 2}
