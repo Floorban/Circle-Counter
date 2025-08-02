@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Net;
 
 public class StatusEffectHandler : MonoBehaviour
 {
@@ -19,4 +20,19 @@ public class StatusEffectHandler : MonoBehaviour
         }
     }
 
+    public void ApplyFreeze(float duration)
+    {
+        StartCoroutine(FreezeRoutine(duration));
+    }
+
+    private IEnumerator FreezeRoutine(float duration)
+    {
+        var controller = GetComponent<PlayerController>();
+        if (controller != null)
+        {
+            controller.canMove = false;
+            yield return new WaitForSeconds(duration);
+            controller.canMove = true;
+        }
+    }
 }

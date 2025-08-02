@@ -29800,6 +29800,7 @@ GameObject:
   - component: {fileID: 625904570}
   - component: {fileID: 625904571}
   - component: {fileID: 625904572}
+  - component: {fileID: 625904573}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -29935,6 +29936,18 @@ MonoBehaviour:
   reward: 0
   addedReward: 0
   avoidFirstShot: 0
+--- !u!114 &625904573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625904568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c6f44af226acb249bf0043465afd4ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &643611636
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -82018,8 +82031,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   availableProjectiles:
   - {fileID: 11400000, guid: 805891b1998f5c549b1ba0fe4a727398, type: 2}
-  - {fileID: 11400000, guid: 285d73da69996af4088534b940e28468, type: 2}
-  - {fileID: 11400000, guid: b6d75e2e114270e4a95da0d41ea7cc76, type: 2}
+  - {fileID: 11400000, guid: 2e09f14ef470da445a27de5d4f25d6ee, type: 2}
+  - {fileID: 11400000, guid: 784bd67c710bf404485e7a40cc26d1aa, type: 2}
   bulletPrefab: {fileID: 1363373159915496976, guid: e2c75324c2e4d26408bda69ec241d7fa,
     type: 3}
   ammoShopContainer: {fileID: 1558133984}
