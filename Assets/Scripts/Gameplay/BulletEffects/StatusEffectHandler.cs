@@ -40,6 +40,7 @@ public class StatusEffectHandler : MonoBehaviour
     {
         int finalDamage = Mathf.RoundToInt(bullet.dmg * amount);
         GetComponent<Player>().hp += finalDamage;
+        Debug.Log("f" + finalDamage);
     }
 
     public void ApplyCritical(float chance, Bullet curBullet)

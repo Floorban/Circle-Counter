@@ -90,8 +90,9 @@ public class Bullet : MonoBehaviour
 
     public void AddToInventory()
     {
-        inventory.ownedBullets.Add(this);
-        this.gameObject.transform.SetParent(inventory.gameObject.transform);
+        Bullet new_bul = new Bullet();
+        inventory.ownedBullets.Add(new_bul);
+        new_bul.gameObject.transform.SetParent(inventory.gameObject.transform);
         ResetBullet();
     }
 
