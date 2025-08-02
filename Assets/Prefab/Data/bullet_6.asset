@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: bullet_6
   m_EditorClassIdentifier: 
   name: basic_6
-  sprite: {fileID: 21300000, guid: 4cde78016f1d4d447b817b0bbd03a8f2, type: 3}
+  sprite: {fileID: -943966879, guid: 9bed5b77cd19c6745a088ff1f234dde2, type: 3}
   isReal: 1
   isUsed: 0
   dmg: 100
   price: 100
   reward: 100
   activeChance: 0
+  effect: {fileID: 0}
