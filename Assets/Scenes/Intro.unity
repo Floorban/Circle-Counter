@@ -29461,7 +29461,7 @@ MonoBehaviour:
   hp: 0
   maxHp: 15
   sanity: 0
-  maxSanity: 25
+  maxSanity: 35
   sanitySpeed: 1.5
   sanitySpeedMultiplier: 1
   isDead: 0
