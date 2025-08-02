@@ -20,3 +20,4 @@ MonoBehaviour:
   price: 5
   reward: 2
   activeChance: 0
+  effect: {fileID: 11400000, guid: 67b4934a1a8f7df499320070dd9f686a, type: 2}

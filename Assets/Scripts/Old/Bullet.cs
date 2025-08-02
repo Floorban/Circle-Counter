@@ -8,6 +8,7 @@ public class Bullet : MonoBehaviour
 {
     [Header ("Bullet Attributes")]
     public Projectile projectile;
+    public BulletEffect effect;
     public Image image;
     public bool isReal;
     public bool isUsed;
@@ -38,6 +39,7 @@ public class Bullet : MonoBehaviour
         dmg = projectile.dmg;
         reward = projectile.reward;
         price = projectile.price;
+        effect = projectile.effect;
     }
     private void Update()
     {

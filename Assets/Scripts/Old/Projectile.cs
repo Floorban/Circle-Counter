@@ -13,4 +13,5 @@ public class Projectile : ScriptableObject
     public int price;
     public int reward;
     [Range(0, 1)] public float activeChance;
+    public BulletEffect effect;
 }

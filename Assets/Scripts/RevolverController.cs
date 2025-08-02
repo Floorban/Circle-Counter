@@ -123,7 +123,6 @@ public class RevolverController : MonoBehaviour, IDrinkEffect
         }
 
         rectTransform.rotation = Quaternion.Euler(0, 0, targetRotation);
-        Debug.Log(targetRotation);
     }
     void HandleControl()
     {
@@ -213,6 +212,11 @@ public class RevolverController : MonoBehaviour, IDrinkEffect
                 if (player.shootSelf)
                 {
                     player.TakeDamage(currentBullet.dmg);
+                    if (currentBullet.effect != null)
+                    {
+                        currentBullet.effect.Apply(player.gameObject);
+                    }
+
                     Destroy(currentBullet.gameObject);
                     inventory.ownedBullets.Remove(currentBullet);
                 }
