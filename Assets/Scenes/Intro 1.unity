@@ -17943,9 +17943,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   availableProjectiles:
-  - {fileID: 11400000, guid: 805891b1998f5c549b1ba0fe4a727398, type: 2}
   - {fileID: 11400000, guid: 285d73da69996af4088534b940e28468, type: 2}
   - {fileID: 11400000, guid: b6d75e2e114270e4a95da0d41ea7cc76, type: 2}
+  - {fileID: 11400000, guid: c3b813d17fc85944e8ef97d80ac84370, type: 2}
+  - {fileID: 11400000, guid: c798d716d9cab3d4f99264c410683ce6, type: 2}
+  - {fileID: 11400000, guid: 2e09f14ef470da445a27de5d4f25d6ee, type: 2}
+  - {fileID: 11400000, guid: f62cbe95f53cf3042b8fc8f269987641, type: 2}
+  - {fileID: 11400000, guid: 805891b1998f5c549b1ba0fe4a727398, type: 2}
+  - {fileID: 11400000, guid: b6d75e2e114270e4a95da0d41ea7cc76, type: 2}
+  - {fileID: 11400000, guid: f62cbe95f53cf3042b8fc8f269987641, type: 2}
+  - {fileID: 11400000, guid: 2e09f14ef470da445a27de5d4f25d6ee, type: 2}
   bulletPrefab: {fileID: 1363373159915496976, guid: e2c75324c2e4d26408bda69ec241d7fa,
     type: 3}
   ammoShopContainer: {fileID: 1558133984}
@@ -18743,11 +18750,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   availableProjectiles:
-  - {fileID: 11400000, guid: 285d73da69996af4088534b940e28468, type: 2}
   - {fileID: 11400000, guid: b6d75e2e114270e4a95da0d41ea7cc76, type: 2}
   - {fileID: 11400000, guid: a898c21f904cf7740b6b62a513873b90, type: 2}
   - {fileID: 11400000, guid: 826c728e7d6b9064282c7622f4cab863, type: 2}
   - {fileID: 11400000, guid: 38e8be9b28725ca4090e8ec4ca9477b6, type: 2}
+  - {fileID: 11400000, guid: e9bd85a8d5bbf0a4b90b7cd5f68618ce, type: 2}
+  - {fileID: 11400000, guid: 784bd67c710bf404485e7a40cc26d1aa, type: 2}
+  - {fileID: 11400000, guid: f62cbe95f53cf3042b8fc8f269987641, type: 2}
+  - {fileID: 11400000, guid: 32ea575bb9cd9904fb00bad438f264f3, type: 2}
+  - {fileID: 11400000, guid: c3b813d17fc85944e8ef97d80ac84370, type: 2}
+  - {fileID: 11400000, guid: 41a1aa73c8f084d4d81262856e00fb3c, type: 2}
+  - {fileID: 11400000, guid: 41a1aa73c8f084d4d81262856e00fb3c, type: 2}
+  - {fileID: 11400000, guid: 826c728e7d6b9064282c7622f4cab863, type: 2}
+  - {fileID: 11400000, guid: 784bd67c710bf404485e7a40cc26d1aa, type: 2}
+  - {fileID: 11400000, guid: e9bd85a8d5bbf0a4b90b7cd5f68618ce, type: 2}
   bulletPrefab: {fileID: 1363373159915496976, guid: e2c75324c2e4d26408bda69ec241d7fa,
     type: 3}
   ammoShopContainer: {fileID: 1558133984}
@@ -42487,11 +42503,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   availableProjectiles:
-  - {fileID: 11400000, guid: b6d75e2e114270e4a95da0d41ea7cc76, type: 2}
   - {fileID: 11400000, guid: a898c21f904cf7740b6b62a513873b90, type: 2}
   - {fileID: 11400000, guid: 826c728e7d6b9064282c7622f4cab863, type: 2}
   - {fileID: 11400000, guid: 38e8be9b28725ca4090e8ec4ca9477b6, type: 2}
   - {fileID: 11400000, guid: 38e8be9b28725ca4090e8ec4ca9477b6, type: 2}
+  - {fileID: 11400000, guid: 41a1aa73c8f084d4d81262856e00fb3c, type: 2}
+  - {fileID: 11400000, guid: e9bd85a8d5bbf0a4b90b7cd5f68618ce, type: 2}
+  - {fileID: 11400000, guid: 784bd67c710bf404485e7a40cc26d1aa, type: 2}
+  - {fileID: 11400000, guid: 32ea575bb9cd9904fb00bad438f264f3, type: 2}
+  - {fileID: 11400000, guid: 784bd67c710bf404485e7a40cc26d1aa, type: 2}
+  - {fileID: 11400000, guid: e9bd85a8d5bbf0a4b90b7cd5f68618ce, type: 2}
+  - {fileID: 11400000, guid: 41a1aa73c8f084d4d81262856e00fb3c, type: 2}
+  - {fileID: 11400000, guid: c3b813d17fc85944e8ef97d80ac84370, type: 2}
+  - {fileID: 11400000, guid: f62cbe95f53cf3042b8fc8f269987641, type: 2}
+  - {fileID: 11400000, guid: 41a1aa73c8f084d4d81262856e00fb3c, type: 2}
   bulletPrefab: {fileID: 1363373159915496976, guid: e2c75324c2e4d26408bda69ec241d7fa,
     type: 3}
   ammoShopContainer: {fileID: 1558133984}
@@ -67724,7 +67749,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b6d75e2e114270e4a95da0d41ea7cc76, type: 2}
   - {fileID: 11400000, guid: a898c21f904cf7740b6b62a513873b90, type: 2}
   - {fileID: 11400000, guid: 826c728e7d6b9064282c7622f4cab863, type: 2}
-  - {fileID: 11400000, guid: 38e8be9b28725ca4090e8ec4ca9477b6, type: 2}
+  - {fileID: 11400000, guid: c798d716d9cab3d4f99264c410683ce6, type: 2}
+  - {fileID: 11400000, guid: e9bd85a8d5bbf0a4b90b7cd5f68618ce, type: 2}
+  - {fileID: 11400000, guid: 784bd67c710bf404485e7a40cc26d1aa, type: 2}
+  - {fileID: 11400000, guid: f62cbe95f53cf3042b8fc8f269987641, type: 2}
+  - {fileID: 11400000, guid: 32ea575bb9cd9904fb00bad438f264f3, type: 2}
+  - {fileID: 11400000, guid: c3b813d17fc85944e8ef97d80ac84370, type: 2}
+  - {fileID: 11400000, guid: a898c21f904cf7740b6b62a513873b90, type: 2}
+  - {fileID: 11400000, guid: c798d716d9cab3d4f99264c410683ce6, type: 2}
+  - {fileID: 11400000, guid: c3b813d17fc85944e8ef97d80ac84370, type: 2}
   bulletPrefab: {fileID: 1363373159915496976, guid: e2c75324c2e4d26408bda69ec241d7fa,
     type: 3}
   ammoShopContainer: {fileID: 1558133984}
@@ -82032,6 +82065,8 @@ MonoBehaviour:
   availableProjectiles:
   - {fileID: 11400000, guid: 805891b1998f5c549b1ba0fe4a727398, type: 2}
   - {fileID: 11400000, guid: 285d73da69996af4088534b940e28468, type: 2}
+  - {fileID: 11400000, guid: c798d716d9cab3d4f99264c410683ce6, type: 2}
+  - {fileID: 11400000, guid: 2e09f14ef470da445a27de5d4f25d6ee, type: 2}
   bulletPrefab: {fileID: 1363373159915496976, guid: e2c75324c2e4d26408bda69ec241d7fa,
     type: 3}
   ammoShopContainer: {fileID: 1558133984}
