@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d59d64fbdedb21f429e7c703445d7c4c, type: 3}
-  m_Name: BurnEffect I
+  m_Name: BurnEffect II
   m_EditorClassIdentifier: 
-  name: Burn for 3s
+  name: Burn for 5s
   damagePerSecond: 1
-  duration: 3
+  duration: 5
