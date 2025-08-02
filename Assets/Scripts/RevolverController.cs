@@ -211,11 +211,11 @@ public class RevolverController : MonoBehaviour, IDrinkEffect
             {
                 if (player.shootSelf)
                 {
-                    player.TakeDamage(currentBullet.dmg);
                     if (currentBullet.effect != null)
                     {
-                        currentBullet.effect.Apply(player.gameObject);
+                        currentBullet.effect.Apply(player.gameObject, currentBullet);
                     }
+                    player.TakeDamage(currentBullet.dmg);
 
                     Destroy(currentBullet.gameObject);
                     inventory.ownedBullets.Remove(currentBullet);

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 985a4eb5c5b4175469a20319e5b92beb, type: 3}
   m_Name: FreezeEffect II
   m_EditorClassIdentifier: 
-  name: Freeze for 5s
+  name: freeze for 5s
   duration: 5

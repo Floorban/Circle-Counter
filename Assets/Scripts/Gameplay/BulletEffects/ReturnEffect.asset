@@ -9,9 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d59d64fbdedb21f429e7c703445d7c4c, type: 3}
-  m_Name: BurnEffect II
+  m_Script: {fileID: 11500000, guid: 1a1216f8ab7625245883b912c6a45285, type: 3}
+  m_Name: ReturnEffect
   m_EditorClassIdentifier: 
-  name: burn for 5s
-  damagePerSecond: 1
-  duration: 5
+  name: will return

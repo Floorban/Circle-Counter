@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d59d64fbdedb21f429e7c703445d7c4c, type: 3}
-  m_Name: BurnEffect II
+  m_Script: {fileID: 11500000, guid: 481372d05cef580468c08d4f549f225c, type: 3}
+  m_Name: HealEffect I
   m_EditorClassIdentifier: 
-  name: burn for 5s
-  damagePerSecond: 1
-  duration: 5
+  name: 'heal for 50% of damage '
+  healAmount: 0.5

@@ -35,4 +35,20 @@ public class StatusEffectHandler : MonoBehaviour
             controller.canMove = true;
         }
     }
+
+    public void ApplyHeal(float amount, Bullet bullet)
+    {
+        int finalDamage = Mathf.RoundToInt(bullet.dmg * amount);
+        GetComponent<Player>().hp += finalDamage;
+    }
+
+    public void ApplyCritical(float chance, Bullet curBullet)
+    {
+        if (Random.value <= chance)
+            curBullet.dmg += curBullet.dmg;
+    }
+    public void ReturnBullet(Bullet curBullet)
+    {
+        curBullet.AddToInventory();
+    }
 }

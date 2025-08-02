@@ -82030,9 +82030,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   availableProjectiles:
-  - {fileID: 11400000, guid: 805891b1998f5c549b1ba0fe4a727398, type: 2}
-  - {fileID: 11400000, guid: 2e09f14ef470da445a27de5d4f25d6ee, type: 2}
-  - {fileID: 11400000, guid: 784bd67c710bf404485e7a40cc26d1aa, type: 2}
+  - {fileID: 11400000, guid: c798d716d9cab3d4f99264c410683ce6, type: 2}
+  - {fileID: 11400000, guid: c798d716d9cab3d4f99264c410683ce6, type: 2}
+  - {fileID: 11400000, guid: c798d716d9cab3d4f99264c410683ce6, type: 2}
   bulletPrefab: {fileID: 1363373159915496976, guid: e2c75324c2e4d26408bda69ec241d7fa,
     type: 3}
   ammoShopContainer: {fileID: 1558133984}

@@ -88,6 +88,13 @@ public class Bullet : MonoBehaviour
         }
     }
 
+    public void AddToInventory()
+    {
+        inventory.ownedBullets.Add(this);
+        this.gameObject.transform.SetParent(inventory.gameObject.transform);
+        ResetBullet();
+    }
+
     public void ResetBullet()
     {
         isSelected = false;
