@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using NUnit.Framework;
 
 public class RevolverController : MonoBehaviour, IDrinkEffect
 {
@@ -341,6 +342,7 @@ public class RevolverController : MonoBehaviour, IDrinkEffect
         gunAnimator.SetTrigger("Ready");
         self_gunAnimator.SetTrigger("Ready");
         player.GetComponent<PlayerController>().canMove = true;
+        chamber.SetHolesInvisible();
     }
     public void OpenChamberP()
     {

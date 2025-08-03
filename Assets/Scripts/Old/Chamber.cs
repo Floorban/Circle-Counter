@@ -42,6 +42,7 @@ public class Chamber : MonoBehaviour
             holes[i].isFull = false;
         }
     }
+
 /*    public void RandomizeChamber()
     {
         int selectedSlotIndex = Random.Range(0, holes.Count);
@@ -78,7 +79,13 @@ public class Chamber : MonoBehaviour
 
         FindObjectOfType<Player>().reward = 0;
     }
-
+    public void SetHolesInvisible()
+    {
+        for (int i = 0; i < holes.Count; i++)
+        {
+            holes[i].image.sprite = holes[i].hole_sprite;
+        }
+    }
     public void EnableHoles()
     {
         for (int i = 0; i < holes.Count; i++)
